@@ -1,0 +1,41 @@
+Συσκευή Εκτέλεσης: cuda (NVIDIA GeForce RTX 4080)
+Φάκελος Dataset  : /home/mkolliniatis/Dataset
+Φάκελος Splits   : /home/mkolliniatis/Dataset/splits
+Mode Εκτέλεσης   : test
+
+################################################################################
+ΤΕΛΙΚΗ ΑΞΙΟΛΟΓΗΣΗ ΣΤΟ ΑΝΕΞΑΡΤΗΤΟ 20% TEST SET
+  Checkpoint : models/UNet_final_dev80.pt
+  Test CSV   : /home/mkolliniatis/Dataset/splits/test.csv
+################################################################################
+
+============================================================
+Χωρητικότητα & Πολυπλοκότητα Μοντέλου (UNet)
+  Συνολικές Παράμετροι (Total):      31,042,564 (31.04M)
+  Εκπαιδεύσιμες Παράμετροι:          31,042,564 (31.04M)
+  Μέγεθος Μοντέλου στη Μνήμη:        118.46 MB
+  Υπολογιστική Πολυπλοκότητα (256²): 96.21 GFLOPs
+============================================================
+
+
+Independent Test (20%) set: Average loss: 0.3226, Average IOU: 0.6770, Average Dice: 0.7946, Average HD: 77.98px, Average ASD: 70.05px
+  IoU ανά δομή  -> Brain: 0.9275 | CSP: 0.5814 | LV: 0.5220
+  Dice ανά δομή -> Brain: 0.9624 | CSP: 0.7353 | LV: 0.6860
+  HD ανά δομή   -> Brain: 25.29px | CSP: 99.35px | LV: 109.31px
+  ASD ανά δομή  -> Brain: 6.61px | CSP: 97.45px | LV: 106.09px
+
+
+----------------------------------------------------------------------
+ΤΕΛΙΚΑ ΑΠΟΤΕΛΕΣΜΑΤΑ ΑΝΕΞΑΡΤΗΤΟΥ TEST SET (20%) (UNet)
+----------------------------------------------------------------------
+Model Complexity (UNet) -> Params: 31.04M (Trainable: 31.04M) | Size: 118.46 MB | Complexity: 96.21 GFLOPs
+Best Average Dice Score (Epoch 23): 0.7946
+  Best Dice ανά δομή -> Brain: 0.9624 | CSP: 0.7353 | LV: 0.6860
+IoU (at Best Dice): 0.6770
+  IoU ανά δομή       -> Brain: 0.9275 | CSP: 0.5814 | LV: 0.5220
+Hausdorff Distance (at Best Dice): 77.98px
+  HD ανά δομή        -> Brain: 25.29px | CSP: 99.35px | LV: 109.31px
+Average Surface Distance (at Best Dice): 70.05px
+  ASD ανά δομή       -> Brain: 6.61px | CSP: 97.45px | LV: 106.09px
+----------------------------------------------------------------------
+
