@@ -12,6 +12,20 @@ import numpy as np
 from PIL import Image, ImageDraw
 
 from unet import UNet
+from att_unet import AttU_Net
+from r2_unet import R2U_Net
+from r2_att_unet import R2AttU_Net
+from transunet import TransUNet, TransUNet_Pretrained
+
+
+MODEL_REGISTRY = {
+    'UNet': UNet,
+    'AttU_Net': AttU_Net,
+    'R2U_Net': R2U_Net,
+    'R2AttU_Net': R2AttU_Net,
+    'TransUNet': TransUNet,
+    'TransUNet_Pretrained': TransUNet_Pretrained,
+}
 
 
 # Χρωματική παλέτα RGB για οπτικοποίηση των κλάσεων (0..3)
@@ -28,8 +42,19 @@ def parse_args():
         description='Make segmentation predictions and save visualizations'
     )
     parser.add_argument(
+        '--arch', type=str, default='UNet', choices=list(MODEL_REGISTRY.keys()),
+        help=(
+            'αρχιτεκτονική μοντέλου: "UNet", "AttU_Net", "R2U_Net", "R2AttU_Net", '
+            '"TransUNet", "TransUNet_Pretrained" (default: UNet)'
+        )
+    )
+    parser.add_argument(
+        '--pretrained', action='store_true', default=False,
+        help='αν δοθεί μαζί με --arch TransUNet, επιλέγει το TransUNet_Pretrained'
+    )
+    parser.add_argument(
         '--model', type=str, default=None,
-        help='όνομα αρχείου checkpoint στον φάκελο models/ (προεπιλογή: UNet_final_dev80.pt ή UNet_fold0_best.pt)'
+        help='όνομα αρχείου checkpoint στον φάκελο models/ (προεπιλογή: <arch>_final_dev80.pt ή <arch>_fold0_best.pt)'
     )
     parser.add_argument(
         '--data-dir', type=str, default=os.path.expanduser('~/Dataset'),
@@ -55,7 +80,10 @@ def parse_args():
         '--no-cuda', action='store_true', default=False,
         help='εκτέλεση σε CPU'
     )
-    return parser.parse_args()
+    args = parser.parse_args()
+    if args.pretrained and args.arch == 'TransUNet':
+        args.arch = 'TransUNet_Pretrained'
+    return args
 
 
 def rgb_mask_to_class_indices(mask_np):
@@ -174,7 +202,7 @@ def save_visualization(image_np, gt_class, pred_class, sample_info, out_path):
     canvas.save(out_path)
 
 
-def resolve_checkpoint_path(model_arg):
+def resolve_checkpoint_path(model_arg, arch='UNet'):
     """Βρίσκει το κατάλληλο checkpoint στον φάκελο models/."""
     models_dir = os.path.join(os.getcwd(), 'models')
     if model_arg is not None:
@@ -184,13 +212,13 @@ def resolve_checkpoint_path(model_arg):
         raise FileNotFoundError(f"Δεν βρέθηκε το checkpoint: {candidate}")
 
     # Αυτόματη αναζήτηση αν δεν δόθηκε --model
-    for default_name in ('UNet_final_dev80.pt', 'UNet_fold0_best.pt'):
+    for default_name in (f'{arch}_final_dev80.pt', f'{arch}_fold0_best.pt'):
         candidate = os.path.join(models_dir, default_name)
         if os.path.isfile(candidate):
             return candidate
 
     raise FileNotFoundError(
-        f"Δεν βρέθηκε εκπαιδευμένο μοντέλο στον φάκελο {models_dir}. "
+        f"Δεν βρέθηκε εκπαιδευμένο μοντέλο ({arch}) στον φάκελο {models_dir}. "
         f"Δώσε το όνομα με `--model <checkpoint.pt>`."
     )
 
@@ -232,7 +260,7 @@ if __name__ == '__main__':
     args = parse_args()
     device = torch.device('cuda' if torch.cuda.is_available() and not args.no_cuda else 'cpu')
 
-    ckpt_path = resolve_checkpoint_path(args.model)
+    ckpt_path = resolve_checkpoint_path(args.model, arch=args.arch)
     csv_path = args.csv if args.csv is not None else os.path.join(args.data_dir, 'splits', 'test.csv')
 
     if not os.path.isfile(csv_path):
@@ -242,7 +270,22 @@ if __name__ == '__main__':
     checkpoint = torch.load(ckpt_path, map_location=device, weights_only=False)
     n_classes = checkpoint.get('n_classes', 4)
 
-    model = UNet(n_classes).to(device)
+    # Αυτόματος εντοπισμός αρχιτεκτονικής από το checkpoint ή το όνομα αρχείου ή το --arch
+    arch_name = checkpoint.get('arch', None)
+    if arch_name is None:
+        base_ckpt = os.path.basename(ckpt_path)
+        for k in ('TransUNet_Pretrained', 'TransUNet', 'R2AttU_Net', 'AttU_Net', 'R2U_Net', 'UNet'):
+            if base_ckpt.startswith(k):
+                arch_name = k
+                break
+        else:
+            arch_name = args.arch
+
+    model_cls = MODEL_REGISTRY[arch_name]
+    if arch_name in ('TransUNet', 'TransUNet_Pretrained'):
+        model = model_cls(n_classes, pretrained=False).to(device)
+    else:
+        model = model_cls(n_classes).to(device)
     model.load_state_dict(checkpoint['model_state_dict'])
     model.eval()
 

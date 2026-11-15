@@ -18,10 +18,23 @@ from torch.utils.tensorboard import SummaryWriter
 import numpy as np
 
 from unet import UNet
+from att_unet import AttU_Net
+from r2_unet import R2U_Net
+from r2_att_unet import R2AttU_Net
+from transunet import TransUNet, TransUNet_Pretrained
 from dataloader import get_dataloader
 from metric import iou, dice_coef, hausdorff_distance, average_surface_distance, compute_model_complexity
 from loss import CEDiceLoss
 
+
+MODEL_REGISTRY = {
+    'UNet': UNet,
+    'AttU_Net': AttU_Net,
+    'R2U_Net': R2U_Net,
+    'R2AttU_Net': R2AttU_Net,
+    'TransUNet': TransUNet,
+    'TransUNet_Pretrained': TransUNet_Pretrained,
+}
 
 CLASS_NAMES = ['Background', 'Brain', 'CSP', 'LV']
 
@@ -45,6 +58,21 @@ def parse_args():
     """parse command line arguments"""
     parser = argparse.ArgumentParser(description='Train & Evaluate Fetal Ultrasound Segmentation')
     parser.add_argument(
+        '--arch', type=str, default='UNet', choices=list(MODEL_REGISTRY.keys()),
+        help=(
+            'αρχιτεκτονική μοντέλου: "UNet", "AttU_Net", "R2U_Net", "R2AttU_Net", '
+            '"TransUNet" (από το μηδέν), "TransUNet_Pretrained" (με προ-εκπαιδευμένα βάρη) (default: UNet)'
+        )
+    )
+    parser.add_argument(
+        '--pretrained', action='store_true', default=False,
+        help='αν δοθεί μαζί με --arch TransUNet, ενεργοποιεί τα προ-εκπαιδευμένα βάρη (ισοδύναμο με --arch TransUNet_Pretrained)'
+    )
+    parser.add_argument(
+        '--pretrained-path', type=str, default=None,
+        help='προαιρετικά: μονοπάτι για το αρχείο R50+ViT-B_16.npz (προεπιλογή: αυτόματη εύρεση στο <data-dir>/R50+ViT-B_16.npz)'
+    )
+    parser.add_argument(
         '--mode', type=str, default='cv', choices=['cv', 'final_train', 'test'],
         help='mode εκτέλεσης: "cv" (5-fold CV στο 80%), "final_train" (εκπαίδευση σε όλο το 80%), "test" (αξιολόγηση στο 20% test set)'
     )
@@ -55,6 +83,10 @@ def parse_args():
     parser.add_argument(
         '--skip-completed', action='store_true', default=False,
         help='προσπερνάει όσα folds έχουν ήδη αποθηκευμένο checkpoint στον φάκελο models/'
+    )
+    parser.add_argument(
+        '--resume', action='store_true', default=False,
+        help='συνεχίζει την εκπαίδευση από το υπάρχον checkpoint (π.χ. όταν αυξάνουμε το --epochs)'
     )
     parser.add_argument(
         '--seed', type=int, default=42,
@@ -73,8 +105,8 @@ def parse_args():
         help='input batch size for validation/testing (default: 4)'
     )
     parser.add_argument(
-        '--epochs', type=int, default=50, metavar='N',
-        help='number of epochs to train (default: 50)'
+        '--epochs', type=int, default=200, metavar='N',
+        help='number of epochs to train (default: 200)'
     )
     parser.add_argument(
         '--lr', type=float, default=0.0001, metavar='LR',
@@ -117,6 +149,8 @@ def parse_args():
         help='μονοπάτι φακέλου με τα CSV splits (default: <data-dir>/splits)'
     )
     args = parser.parse_args()
+    if args.pretrained and args.arch == 'TransUNet':
+        args.arch = 'TransUNet_Pretrained'
     if args.splits_dir is None:
         args.splits_dir = os.path.join(args.data_dir, 'splits')
     return args
@@ -262,6 +296,7 @@ def validate(model, device, data_loader, criterion, n_classes, split_name="Valid
 def initialize_model(args):
     """Initialize model checkpoint dictionary for storing training progress"""
     model_dict = {
+        'arch': args.arch,
         'total_epoch': args.epochs,
         'n_classes': args.n_classes,
         'model_state_dict': None,
@@ -299,26 +334,72 @@ def initialize_model(args):
     return model_dict
 
 
-def get_model(args, device, load_checkpoint=None, print_complexity=True):
+def _state_dict_to_cpu(state_dict):
+    """Μεταφέρει ένα model state_dict στη RAM (CPU) ώστε να μην καταλαμβάνει διπλή μνήμη στην GPU (VRAM)."""
+    return {k: v.detach().cpu().clone() if torch.is_tensor(v) else copy.deepcopy(v) for k, v in state_dict.items()}
+
+
+def _optimizer_state_dict_to_cpu(opt_state_dict):
+    """Μεταφέρει το state_dict του optimizer στη RAM (CPU) ώστε να μην δεσμεύει επιπλέον VRAM."""
+    cpu_state = {'state': {}, 'param_groups': copy.deepcopy(opt_state_dict['param_groups'])}
+    for k, v in opt_state_dict['state'].items():
+        cpu_state['state'][k] = {
+            sk: sv.detach().cpu().clone() if torch.is_tensor(sv) else copy.deepcopy(sv)
+            for sk, sv in v.items()
+        }
+    return cpu_state
+
+
+def _move_optimizer_to_device(optimizer, device):
+    """Μεταφέρει τους εσωτερικούς tensors του optimizer στη συσκευή εκτέλεσης (GPU/CPU) μετά από load_state_dict."""
+    for state in optimizer.state.values():
+        for k, v in state.items():
+            if torch.is_tensor(v):
+                state[k] = v.to(device)
+
+
+def get_model(args, device, load_checkpoint=None, print_complexity=True, preloaded_dict=None):
     """Initialize or load model checkpoint and initialize model and optimizer from scratch"""
-    if load_checkpoint:
+    if preloaded_dict is not None:
+        model_dict = preloaded_dict
+    elif load_checkpoint:
         model_path = os.path.join(os.getcwd(), 'models', load_checkpoint)
-        model_dict = torch.load(model_path, map_location=device, weights_only=False)
+        # Φόρτωση στη RAM (CPU) ώστε τα αποθηκευμένα state_dicts να μην γεμίζουν τη VRAM της GPU
+        model_dict = torch.load(model_path, map_location='cpu', weights_only=False)
     else:
         model_dict = initialize_model(args)
 
     n_classes = model_dict['n_classes']
-    model = UNet(n_classes).to(device)
+    arch_name = model_dict.get('arch', args.arch)
+    model_cls = MODEL_REGISTRY[arch_name]
+    if arch_name == 'TransUNet_Pretrained':
+        model = model_cls(
+            n_classes,
+            pretrained=(load_checkpoint is None and preloaded_dict is None),
+            pretrained_path=getattr(args, 'pretrained_path', None),
+            data_dir=getattr(args, 'data_dir', None),
+        ).to(device)
+    elif arch_name == 'TransUNet':
+        if load_checkpoint is None and preloaded_dict is None:
+            print("  [TransUNet] Αρχικοποίηση από το μηδέν (From Scratch - χωρίς προ-εκπαιδευμένα βάρη).")
+        model = model_cls(n_classes, pretrained=False).to(device)
+    else:
+        model = model_cls(n_classes).to(device)
     optimizer = optim.Adam(model.parameters(), args.lr)
 
-    if load_checkpoint:
+    if load_checkpoint or preloaded_dict is not None:
         model.load_state_dict(model_dict['model_state_dict'])
         if model_dict.get('optimizer_state_dict') is not None:
             optimizer.load_state_dict(model_dict['optimizer_state_dict'])
+            _move_optimizer_to_device(optimizer, device)
 
-    # Υπολογισμός χωρητικότητας & υπολογιστικής πολυπλοκότητας
-    complexity = compute_model_complexity(model, device, input_size=(1, 1, 256, 256))
-    model_dict['complexity'] = complexity
+    # Υπολογισμός χωρητικότητας & υπολογιστικής πολυπλοκότητας (μόνο όταν χρειάζεται)
+    if print_complexity or not model_dict.get('complexity') or not model_dict['complexity'].get('total_params'):
+        complexity = compute_model_complexity(model, device, input_size=(1, 1, 256, 256))
+        model_dict['complexity'] = complexity
+    else:
+        complexity = model_dict['complexity']
+
     if print_complexity:
         gflops_str = f"{complexity['gflops']:.2f} GFLOPs" if complexity['gflops'] is not None else "N/A"
         print(
@@ -388,7 +469,7 @@ def print_best_summary(model_name, best_metrics, n_classes, complexity=None, hea
     print("-" * 70 + "\n")
 
 
-def print_cv_summary_across_folds(fold_best_list, n_classes):
+def print_cv_summary_across_folds(fold_best_list, n_classes, arch_name='UNet'):
     """
     Υπολογίζει και τυπώνει το mean ± standard deviation (mean ± std)
     όλων των μετρικών πάνω στα 5 folds του Cross-Validation,
@@ -407,7 +488,7 @@ def print_cv_summary_across_folds(fold_best_list, n_classes):
     class_asds = np.array([b['class_ASD'] for b in fold_best_list])    # (F, C)
 
     print("\n" + "=" * 85)
-    print(f"ΣΥΓΚΕΝΤΡΩΤΙΚΑ ΑΠΟΤΕΛΕΣΜΑΤΑ {n_folds}-FOLD CROSS-VALIDATION (mean ± std)")
+    print(f"ΣΥΓΚΕΝΤΡΩΤΙΚΑ ΑΠΟΤΕΛΕΣΜΑΤΑ {n_folds}-FOLD CROSS-VALIDATION [{arch_name}] (mean ± std)")
     print("=" * 85)
     print(f"  Average Dice : {np.mean(dices):.4f} ± {np.std(dices):.4f}  ({100*np.mean(dices):.2f}% ± {100*np.std(dices):.2f}%)")
     print(f"  Average IoU  : {np.mean(ious):.4f} ± {np.std(ious):.4f}  ({100*np.mean(ious):.2f}% ± {100*np.std(ious):.2f}%)")
@@ -448,10 +529,11 @@ def run_cv_mode(args, device):
         ce_weight=1.0, dice_weight=1.0, class_weights=(0.5, 1.0, 15.0, 5.0)
     ).to(device)
 
+    printed_complexity = False
     for idx, fold in enumerate(folds_to_run):
-        existing_ckpt = os.path.join(models_dir, f'UNet_fold{fold}_best.pt')
-        if args.skip_completed and os.path.isfile(existing_ckpt):
-            print(f"\n[Skip] Το Fold {fold} έχει ήδη ολοκληρωθεί ({existing_ckpt}) -> Προσπερνάται.")
+        existing_ckpt = os.path.join(models_dir, f'{args.arch}_fold{fold}_best.pt')
+        if args.skip_completed and not args.resume and os.path.isfile(existing_ckpt):
+            print(f"\n[Skip] Το Fold {fold} ({args.arch}) έχει ήδη ολοκληρωθεί ({existing_ckpt}) -> Προσπερνάται.")
             continue
 
         fold_seed = args.seed + fold
@@ -460,18 +542,94 @@ def run_cv_mode(args, device):
         train_csv = os.path.join(args.splits_dir, f'fold_{fold}_train.csv')
         val_csv = os.path.join(args.splits_dir, f'fold_{fold}_val.csv')
 
-        print("\n" + "#" * 80)
-        print(f"ΕΚΚΙΝΗΣΗ FOLD {fold} / 4  (Seed = {fold_seed})")
-        print(f"  Train CSV : {train_csv}")
-        print(f"  Val CSV   : {val_csv}")
-        print("#" * 80)
+        resuming_fold = args.resume and os.path.isfile(existing_ckpt)
+        if resuming_fold:
+            # Φόρτωση του checkpoint στη RAM (CPU) ΠΡΙΝ δεσμεύσουμε μνήμη στην GPU
+            preloaded_dict = torch.load(existing_ckpt, map_location='cpu', weights_only=False)
+            best_ep = preloaded_dict['metrics']['best']['epoch']
+            prev_total_epoch = preloaded_dict.get('total_epoch', 50)
 
-        # Πλήρης επαναρχικοποίηση μοντέλου και optimizer από το μηδέν για το τρέχον fold
-        model, optimizer, model_dict = get_model(
-            args, device, load_checkpoint=None, print_complexity=(idx == 0)
-        )
-        model_dict['fold'] = fold
-        model_dict['seed'] = fold_seed
+            # Συμβατότητα και με παλαιότερα checkpoints (πριν προστεθεί το πεδίο 'early_stopped'):
+            # Αν best_ep + patience <= prev_total_epoch (π.χ. 20 + 15 = 35 <= 50), τότε το fold
+            # είχε ήδη σταματήσει με Early Stopping στην εποχή best_ep + patience.
+            already_early_stopped = preloaded_dict.get('early_stopped', False) or (
+                'early_stopped' not in preloaded_dict
+                and preloaded_dict.get('last_model_state_dict') is None
+                and args.patience > 0
+                and (best_ep + args.patience <= prev_total_epoch)
+            )
+            if already_early_stopped:
+                print(
+                    f"\n[Resume] Το Fold {fold} ({args.arch}) είχε ήδη ολοκληρωθεί με Early Stopping "
+                    f"(Best Epoch: {best_ep}) -> Προσπερνάται."
+                )
+                del preloaded_dict
+                continue
+
+            if preloaded_dict.get('last_model_state_dict') is not None:
+                start_epoch = preloaded_dict['last_epoch'] + 1
+            else:
+                start_epoch = preloaded_dict['metrics']['best']['epoch'] + 1
+
+            if start_epoch > args.epochs:
+                print(
+                    f"\n[Resume] Το Fold {fold} ({args.arch}) βρίσκεται ήδη στο Epoch {start_epoch - 1} "
+                    f"(>= --epochs {args.epochs}) -> Δώσε μεγαλύτερο --epochs για συνέχιση."
+                )
+                del preloaded_dict
+                continue
+
+            model, optimizer, model_dict = get_model(
+                args, device, preloaded_dict=preloaded_dict, print_complexity=(not printed_complexity)
+            )
+            printed_complexity = True
+
+            if model_dict.get('last_model_state_dict') is not None:
+                model.load_state_dict(model_dict.pop('last_model_state_dict'))
+                if model_dict.get('last_optimizer_state_dict') is not None:
+                    optimizer.load_state_dict(model_dict.pop('last_optimizer_state_dict'))
+                    _move_optimizer_to_device(optimizer, device)
+                start_epoch = model_dict['last_epoch'] + 1
+                epochs_no_improve = model_dict.get('epochs_no_improve', 0)
+            else:
+                best_ep = model_dict['metrics']['best']['epoch']
+                start_epoch = best_ep + 1
+                epochs_no_improve = 0
+                model_dict['train_loss'] = model_dict['train_loss'][:best_ep]
+                model_dict['test_loss'] = model_dict['test_loss'][:best_ep]
+                for m_key in ('IOU', 'class_IOU', 'Dice', 'class_Dice', 'HD', 'class_HD', 'ASD', 'class_ASD'):
+                    if m_key in model_dict['metrics']:
+                        model_dict['metrics'][m_key] = model_dict['metrics'][m_key][:best_ep]
+
+            model_dict['total_epoch'] = args.epochs
+            print("\n" + "#" * 80)
+            print(
+                f"ΣΥΝΕΧΙΣΗ (RESUME) FOLD {fold} / 4  (Model = {args.arch}, "
+                f"Epochs = {start_epoch}..{args.epochs}, Seed = {fold_seed})"
+            )
+            print(
+                f"  Τρέχον Best Validation Dice: {model_dict['metrics']['best']['Dice']:.4f} "
+                f"(Epoch {model_dict['metrics']['best']['epoch']}, Patience counter: {epochs_no_improve}/{args.patience})"
+            )
+            print(f"  Train CSV : {train_csv}")
+            print(f"  Val CSV   : {val_csv}")
+            print("#" * 80)
+        else:
+            print("\n" + "#" * 80)
+            print(f"ΕΚΚΙΝΗΣΗ FOLD {fold} / 4  (Model = {args.arch}, Seed = {fold_seed})")
+            print(f"  Train CSV : {train_csv}")
+            print(f"  Val CSV   : {val_csv}")
+            print("#" * 80)
+
+            # Πλήρης επαναρχικοποίηση μοντέλου και optimizer από το μηδέν για το τρέχον fold
+            model, optimizer, model_dict = get_model(
+                args, device, load_checkpoint=None, print_complexity=(not printed_complexity)
+            )
+            printed_complexity = True
+            model_dict['fold'] = fold
+            model_dict['seed'] = fold_seed
+            start_epoch = 1
+            epochs_no_improve = 0
 
         train_loader = get_dataloader(
             csv_path=train_csv,
@@ -494,12 +652,10 @@ def run_cv_mode(args, device):
             seed=fold_seed
         )
 
-        writer = SummaryWriter(log_dir=f'runs/fold_{fold}') if args.tensorboard else None
+        writer = SummaryWriter(log_dir=f'runs/{args.arch}_fold_{fold}') if args.tensorboard else None
         checkpoint_path = os.path.join(models_dir, f'{model.name}_fold{fold}_best.pt')
 
-        epochs_no_improve = 0
-
-        for epoch in range(1, args.epochs + 1):
+        for epoch in range(start_epoch, args.epochs + 1):
             train_loss = train(
                 model, device, train_loader, optimizer, criterion, epoch, log_interval=args.log_interval
             )
@@ -534,8 +690,8 @@ def run_cv_mode(args, device):
 
             # Αποθήκευση καλύτερου μοντέλου αποκλειστικά βάσει Validation Dice
             if epoch == 1 or val_dice > model_dict['metrics']['best']['Dice']:
-                model_dict['model_state_dict'] = copy.deepcopy(model.state_dict())
-                model_dict['optimizer_state_dict'] = copy.deepcopy(optimizer.state_dict())
+                model_dict['model_state_dict'] = _state_dict_to_cpu(model.state_dict())
+                model_dict['optimizer_state_dict'] = _optimizer_state_dict_to_cpu(optimizer.state_dict())
                 model_dict['metrics']['best']['IOU'] = val_iou
                 model_dict['metrics']['best']['class_IOU'] = val_c_iou
                 model_dict['metrics']['best']['Dice'] = val_dice
@@ -558,7 +714,22 @@ def run_cv_mode(args, device):
                 )
                 if args.patience > 0 and epochs_no_improve >= args.patience:
                     print(f"\n>>> Early Stopping ενεργοποιήθηκε στο Fold {fold} (Epoch {epoch})! <<<")
+                    model_dict['early_stopped'] = True
+                    model_dict.pop('last_model_state_dict', None)
+                    model_dict.pop('last_optimizer_state_dict', None)
+                    model_dict['last_epoch'] = epoch
+                    model_dict['epochs_no_improve'] = epochs_no_improve
+                    if args.save:
+                        torch.save(model_dict, checkpoint_path)
                     break
+
+        if not model_dict.get('early_stopped', False):
+            model_dict['last_epoch'] = args.epochs
+            model_dict['epochs_no_improve'] = epochs_no_improve
+            model_dict['last_model_state_dict'] = _state_dict_to_cpu(model.state_dict())
+            model_dict['last_optimizer_state_dict'] = _optimizer_state_dict_to_cpu(optimizer.state_dict())
+            if args.save:
+                torch.save(model_dict, checkpoint_path)
 
         if writer is not None:
             writer.close()
@@ -571,16 +742,21 @@ def run_cv_mode(args, device):
             header=f"ΚΑΛΥΤΕΡΑ ΑΠΟΤΕΛΕΣΜΑΤΑ FOLD {fold}"
         )
 
+        # Αποδέσμευση μνήμης GPU πριν το επόμενο fold
+        del model, optimizer, model_dict
+        if device == 'cuda':
+            torch.cuda.empty_cache()
+
     # Αν υπάρχουν αποθηκευμένα και τα 5 folds στον φάκελο models/, τυπώνουμε το συνολικό mean ± std
     all_fold_bests = []
     for k in range(5):
-        ckpt_file = os.path.join(models_dir, f'UNet_fold{k}_best.pt')
+        ckpt_file = os.path.join(models_dir, f'{args.arch}_fold{k}_best.pt')
         if os.path.isfile(ckpt_file):
             ckpt_data = torch.load(ckpt_file, map_location='cpu', weights_only=False)
             all_fold_bests.append(ckpt_data['metrics']['best'])
 
     if len(all_fold_bests) == 5:
-        print_cv_summary_across_folds(all_fold_bests, args.n_classes)
+        print_cv_summary_across_folds(all_fold_bests, args.n_classes, arch_name=args.arch)
 
 
 def run_final_train_mode(args, device):
@@ -594,12 +770,28 @@ def run_final_train_mode(args, device):
     os.makedirs(models_dir, exist_ok=True)
 
     dev_csv = os.path.join(args.splits_dir, 'dev_80.csv')
-    print("\n" + "#" * 80)
-    print(f"ΤΕΛΙΚΗ ΕΚΠΑΙΔΕΥΣΗ ΣΕ ΟΛΟΚΛΗΡΟ ΤΟ 80% DEVELOPMENT SET (Epochs = {args.epochs}, Seed = {args.seed})")
-    print(f"  Dev 80% CSV: {dev_csv}")
-    print("#" * 80)
+    final_ckpt_Name = f'{args.arch}_final_dev80.pt'
+    final_ckpt_path = os.path.join(models_dir, final_ckpt_Name)
 
-    model, optimizer, model_dict = get_model(args, device, load_checkpoint=None, print_complexity=True)
+    if args.resume and os.path.isfile(final_ckpt_path):
+        model, optimizer, model_dict = get_model(
+            args, device, load_checkpoint=final_ckpt_Name, print_complexity=True
+        )
+        start_epoch = model_dict.get('total_epoch', len(model_dict.get('train_loss', []))) + 1
+        print("\n" + "#" * 80)
+        print(
+            f"ΣΥΝΕΧΙΣΗ (RESUME) ΤΕΛΙΚΗΣ ΕΚΠΑΙΔΕΥΣΗΣ [{args.arch}] ΣΤΟ 80% DEVELOPMENT SET "
+            f"(Epochs = {start_epoch}..{args.epochs}, Seed = {args.seed})"
+        )
+        print(f"  Dev 80% CSV: {dev_csv}")
+        print("#" * 80)
+    else:
+        print("\n" + "#" * 80)
+        print(f"ΤΕΛΙΚΗ ΕΚΠΑΙΔΕΥΣΗ [{args.arch}] ΣΕ ΟΛΟΚΛΗΡΟ ΤΟ 80% DEVELOPMENT SET (Epochs = {args.epochs}, Seed = {args.seed})")
+        print(f"  Dev 80% CSV: {dev_csv}")
+        print("#" * 80)
+        model, optimizer, model_dict = get_model(args, device, load_checkpoint=None, print_complexity=True)
+        start_epoch = 1
 
     train_loader = get_dataloader(
         csv_path=dev_csv,
@@ -616,7 +808,7 @@ def run_final_train_mode(args, device):
         ce_weight=1.0, dice_weight=1.0, class_weights=(0.5, 1.0, 15.0, 5.0)
     ).to(device)
 
-    for epoch in range(1, args.epochs + 1):
+    for epoch in range(start_epoch, args.epochs + 1):
         train_loss = train(
             model, device, train_loader, optimizer, criterion, epoch, log_interval=args.log_interval
         )
@@ -624,8 +816,8 @@ def run_final_train_mode(args, device):
         print(f"Epoch {epoch}/{args.epochs} ολοκληρώθηκε -> Μέσο Train Loss: {train_loss:.4f}")
 
     model_dict['total_epoch'] = args.epochs
-    model_dict['model_state_dict'] = copy.deepcopy(model.state_dict())
-    model_dict['optimizer_state_dict'] = copy.deepcopy(optimizer.state_dict())
+    model_dict['model_state_dict'] = _state_dict_to_cpu(model.state_dict())
+    model_dict['optimizer_state_dict'] = _optimizer_state_dict_to_cpu(optimizer.state_dict())
 
     final_ckpt_path = os.path.join(models_dir, f'{model.name}_final_dev80.pt')
     torch.save(model_dict, final_ckpt_path)
@@ -642,11 +834,11 @@ def run_test_mode(args, device):
     πάνω στο ανεξάρτητο 20% Test Set (`test.csv`).
     """
     seed_everything(args.seed)
-    ckpt_name = args.model if args.model is not None else 'UNet_final_dev80.pt'
+    ckpt_name = args.model if args.model is not None else f'{args.arch}_final_dev80.pt'
     test_csv = os.path.join(args.splits_dir, 'test.csv')
 
     print("\n" + "#" * 80)
-    print(f"ΤΕΛΙΚΗ ΑΞΙΟΛΟΓΗΣΗ ΣΤΟ ΑΝΕΞΑΡΤΗΤΟ 20% TEST SET")
+    print(f"ΤΕΛΙΚΗ ΑΞΙΟΛΟΓΗΣΗ [{args.arch}] ΣΤΟ ΑΝΕΞΑΡΤΗΤΟ 20% TEST SET")
     print(f"  Checkpoint : models/{ckpt_name}")
     print(f"  Test CSV   : {test_csv}")
     print("#" * 80)
@@ -698,6 +890,7 @@ if __name__ == '__main__':
     device = ('cuda' if torch.cuda.is_available() and not args.no_cuda else 'cpu')
     gpu_info = f" ({torch.cuda.get_device_name(0)})" if device == 'cuda' else ""
     print(f"Συσκευή Εκτέλεσης: {device}{gpu_info}")
+    print(f"Αρχιτεκτονική    : {args.arch}")
     print(f"Φάκελος Dataset  : {args.data_dir}")
     print(f"Φάκελος Splits   : {args.splits_dir}")
     print(f"Mode Εκτέλεσης   : {args.mode}")
