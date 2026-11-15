@@ -1,0 +1,42 @@
+Συσκευή Εκτέλεσης: cuda (NVIDIA GeForce RTX 4080)
+Αρχιτεκτονική    : TransUNet
+Φάκελος Dataset  : /home/mkolliniatis/Dataset
+Φάκελος Splits   : /home/mkolliniatis/Dataset/splits
+Mode Εκτέλεσης   : test
+
+################################################################################
+ΤΕΛΙΚΗ ΑΞΙΟΛΟΓΗΣΗ [TransUNet] ΣΤΟ ΑΝΕΞΑΡΤΗΤΟ 20% TEST SET
+  Checkpoint : models/TransUNet_final_dev80.pt
+  Test CSV   : /home/mkolliniatis/Dataset/splits/test.csv
+################################################################################
+
+============================================================
+Χωρητικότητα & Πολυπλοκότητα Μοντέλου (TransUNet)
+  Συνολικές Παράμετροι (Total):      105,322,436 (105.32M)
+  Εκπαιδεύσιμες Παράμετροι:          105,322,436 (105.32M)
+  Μέγεθος Μοντέλου στη Μνήμη:        401.78 MB
+  Υπολογιστική Πολυπλοκότητα (256²): 76.83 GFLOPs
+============================================================
+
+
+Independent Test (20%) set: Average loss: 0.3190, Average IOU: 0.6723, Average Dice: 0.7907, Average HD: 81.48px, Average ASD: 73.77px
+  IoU ανά δομή  -> Brain: 0.9294 | CSP: 0.5568 | LV: 0.5307
+  Dice ανά δομή -> Brain: 0.9634 | CSP: 0.7153 | LV: 0.6934
+  HD ανά δομή   -> Brain: 23.99px | CSP: 104.79px | LV: 115.64px
+  ASD ανά δομή  -> Brain: 6.61px | CSP: 102.70px | LV: 112.00px
+
+
+----------------------------------------------------------------------
+ΤΕΛΙΚΑ ΑΠΟΤΕΛΕΣΜΑΤΑ ΑΝΕΞΑΡΤΗΤΟΥ TEST SET (20%) (TransUNet)
+----------------------------------------------------------------------
+Model Complexity (TransUNet) -> Params: 105.32M (Trainable: 105.32M) | Size: 401.78 MB | Complexity: 76.83 GFLOPs
+Best Average Dice Score (Epoch 53): 0.7907
+  Best Dice ανά δομή -> Brain: 0.9634 | CSP: 0.7153 | LV: 0.6934
+IoU (at Best Dice): 0.6723
+  IoU ανά δομή       -> Brain: 0.9294 | CSP: 0.5568 | LV: 0.5307
+Hausdorff Distance (at Best Dice): 81.48px
+  HD ανά δομή        -> Brain: 23.99px | CSP: 104.79px | LV: 115.64px
+Average Surface Distance (at Best Dice): 73.77px
+  ASD ανά δομή       -> Brain: 6.61px | CSP: 102.70px | LV: 112.00px
+----------------------------------------------------------------------
+

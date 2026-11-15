@@ -1,0 +1,42 @@
+Συσκευή Εκτέλεσης: cuda (NVIDIA GeForce RTX 4080)
+Αρχιτεκτονική    : AttU_Net
+Φάκελος Dataset  : /home/mkolliniatis/Dataset
+Φάκελος Splits   : /home/mkolliniatis/Dataset/splits
+Mode Εκτέλεσης   : test
+
+################################################################################
+ΤΕΛΙΚΗ ΑΞΙΟΛΟΓΗΣΗ [AttU_Net] ΣΤΟ ΑΝΕΞΑΡΤΗΤΟ 20% TEST SET
+  Checkpoint : models/AttU_Net_final_dev80.pt
+  Test CSV   : /home/mkolliniatis/Dataset/splits/test.csv
+################################################################################
+
+============================================================
+Χωρητικότητα & Πολυπλοκότητα Μοντέλου (AttU_Net)
+  Συνολικές Παράμετροι (Total):      34,877,616 (34.88M)
+  Εκπαιδεύσιμες Παράμετροι:          34,877,616 (34.88M)
+  Μέγεθος Μοντέλου στη Μνήμη:        133.11 MB
+  Υπολογιστική Πολυπλοκότητα (256²): 132.72 GFLOPs
+============================================================
+
+
+Independent Test (20%) set: Average loss: 0.3234, Average IOU: 0.6883, Average Dice: 0.8037, Average HD: 73.95px, Average ASD: 66.97px
+  IoU ανά δομή  -> Brain: 0.9315 | CSP: 0.5859 | LV: 0.5474
+  Dice ανά δομή -> Brain: 0.9645 | CSP: 0.7389 | LV: 0.7075
+  HD ανά δομή   -> Brain: 22.72px | CSP: 95.06px | LV: 104.06px
+  ASD ανά δομή  -> Brain: 6.39px | CSP: 93.34px | LV: 101.17px
+
+
+----------------------------------------------------------------------
+ΤΕΛΙΚΑ ΑΠΟΤΕΛΕΣΜΑΤΑ ΑΝΕΞΑΡΤΗΤΟΥ TEST SET (20%) (AttU_Net)
+----------------------------------------------------------------------
+Model Complexity (AttU_Net) -> Params: 34.88M (Trainable: 34.88M) | Size: 133.11 MB | Complexity: 132.72 GFLOPs
+Best Average Dice Score (Epoch 46): 0.8037
+  Best Dice ανά δομή -> Brain: 0.9645 | CSP: 0.7389 | LV: 0.7075
+IoU (at Best Dice): 0.6883
+  IoU ανά δομή       -> Brain: 0.9315 | CSP: 0.5859 | LV: 0.5474
+Hausdorff Distance (at Best Dice): 73.95px
+  HD ανά δομή        -> Brain: 22.72px | CSP: 95.06px | LV: 104.06px
+Average Surface Distance (at Best Dice): 66.97px
+  ASD ανά δομή       -> Brain: 6.39px | CSP: 93.34px | LV: 101.17px
+----------------------------------------------------------------------
+

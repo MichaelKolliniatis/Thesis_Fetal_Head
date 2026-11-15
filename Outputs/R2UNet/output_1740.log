@@ -1,0 +1,42 @@
+Συσκευή Εκτέλεσης: cuda (NVIDIA GeForce RTX 4080)
+Αρχιτεκτονική    : R2U_Net
+Φάκελος Dataset  : /home/mkolliniatis/Dataset
+Φάκελος Splits   : /home/mkolliniatis/Dataset/splits
+Mode Εκτέλεσης   : test
+
+################################################################################
+ΤΕΛΙΚΗ ΑΞΙΟΛΟΓΗΣΗ [R2U_Net] ΣΤΟ ΑΝΕΞΑΡΤΗΤΟ 20% TEST SET
+  Checkpoint : models/R2U_Net_final_dev80.pt
+  Test CSV   : /home/mkolliniatis/Dataset/splits/test.csv
+################################################################################
+
+============================================================
+Χωρητικότητα & Πολυπλοκότητα Μοντέλου (R2U_Net)
+  Συνολικές Παράμετροι (Total):      39,091,460 (39.09M)
+  Εκπαιδεύσιμες Παράμετροι:          39,091,460 (39.09M)
+  Μέγεθος Μοντέλου στη Μνήμη:        149.17 MB
+  Υπολογιστική Πολυπλοκότητα (256²): 304.98 GFLOPs
+============================================================
+
+
+Independent Test (20%) set: Average loss: 0.5899, Average IOU: 0.6136, Average Dice: 0.7493, Average HD: 88.75px, Average ASD: 79.58px
+  IoU ανά δομή  -> Brain: 0.8331 | CSP: 0.5380 | LV: 0.4698
+  Dice ανά δομή -> Brain: 0.9090 | CSP: 0.6996 | LV: 0.6393
+  HD ανά δομή   -> Brain: 33.48px | CSP: 110.87px | LV: 121.91px
+  ASD ανά δομή  -> Brain: 11.16px | CSP: 108.92px | LV: 118.65px
+
+
+----------------------------------------------------------------------
+ΤΕΛΙΚΑ ΑΠΟΤΕΛΕΣΜΑΤΑ ΑΝΕΞΑΡΤΗΤΟΥ TEST SET (20%) (R2U_Net)
+----------------------------------------------------------------------
+Model Complexity (R2U_Net) -> Params: 39.09M (Trainable: 39.09M) | Size: 149.17 MB | Complexity: 304.98 GFLOPs
+Best Average Dice Score (Epoch 28): 0.7493
+  Best Dice ανά δομή -> Brain: 0.9090 | CSP: 0.6996 | LV: 0.6393
+IoU (at Best Dice): 0.6136
+  IoU ανά δομή       -> Brain: 0.8331 | CSP: 0.5380 | LV: 0.4698
+Hausdorff Distance (at Best Dice): 88.75px
+  HD ανά δομή        -> Brain: 33.48px | CSP: 110.87px | LV: 121.91px
+Average Surface Distance (at Best Dice): 79.58px
+  ASD ανά δομή       -> Brain: 11.16px | CSP: 108.92px | LV: 118.65px
+----------------------------------------------------------------------
+

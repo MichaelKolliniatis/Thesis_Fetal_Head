@@ -1,0 +1,3252 @@
+Συσκευή Εκτέλεσης: cuda (NVIDIA GeForce RTX 4080)
+Αρχιτεκτονική    : R2AttU_Net
+Φάκελος Dataset  : /home/mkolliniatis/Dataset
+Φάκελος Splits   : /home/mkolliniatis/Dataset/splits
+Mode Εκτέλεσης   : cv
+
+################################################################################
+ΕΚΚΙΝΗΣΗ FOLD 0 / 4  (Model = R2AttU_Net, Seed = 42)
+  Train CSV : /home/mkolliniatis/Dataset/splits/fold_0_train.csv
+  Val CSV   : /home/mkolliniatis/Dataset/splits/fold_0_val.csv
+################################################################################
+
+============================================================
+Χωρητικότητα & Πολυπλοκότητα Μοντέλου (R2AttU_Net)
+  Συνολικές Παράμετροι (Total):      39,442,992 (39.44M)
+  Εκπαιδεύσιμες Παράμετροι:          39,442,992 (39.44M)
+  Μέγεθος Μοντέλου στη Μνήμη:        150.52 MB
+  Υπολογιστική Πολυπλοκότητα (256²): 307.14 GFLOPs
+============================================================
+
+Train Epoch: 1 [400/2451 (16%)]	Loss: 0.939944
+Train Epoch: 1 [800/2451 (33%)]	Loss: 0.779033
+Train Epoch: 1 [1200/2451 (49%)]	Loss: 0.604653
+Train Epoch: 1 [1600/2451 (65%)]	Loss: 0.840668
+Train Epoch: 1 [2000/2451 (82%)]	Loss: 0.498382
+Train Epoch: 1 [2400/2451 (98%)]	Loss: 0.576468
+Train Epoch: 1 [2451/2451 (100%)]	Loss: 0.487104
+
+Fold 0 Validation set: Average loss: 0.7138, Average IOU: 0.4455, Average Dice: 0.5721, Average HD: 139.93px, Average ASD: 120.79px
+  IoU ανά δομή  -> Brain: 0.8044 | CSP: 0.3564 | LV: 0.1759
+  Dice ανά δομή -> Brain: 0.8916 | CSP: 0.5255 | LV: 0.2992
+  HD ανά δομή   -> Brain: 62.87px | CSP: 162.82px | LV: 194.10px
+  ASD ανά δομή  -> Brain: 16.06px | CSP: 155.85px | LV: 190.45px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.5721) στο Epoch 1 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold0_best.pt
+Train Epoch: 2 [400/2451 (16%)]	Loss: 0.240213
+Train Epoch: 2 [800/2451 (33%)]	Loss: 0.320944
+Train Epoch: 2 [1200/2451 (49%)]	Loss: 0.559282
+Train Epoch: 2 [1600/2451 (65%)]	Loss: 0.420933
+Train Epoch: 2 [2000/2451 (82%)]	Loss: 0.416313
+Train Epoch: 2 [2400/2451 (98%)]	Loss: 0.494558
+Train Epoch: 2 [2451/2451 (100%)]	Loss: 0.403598
+
+Fold 0 Validation set: Average loss: 0.7480, Average IOU: 0.4486, Average Dice: 0.5593, Average HD: 155.99px, Average ASD: 145.97px
+  IoU ανά δομή  -> Brain: 0.8904 | CSP: 0.2798 | LV: 0.1756
+  Dice ανά δομή -> Brain: 0.9420 | CSP: 0.4373 | LV: 0.2987
+  HD ανά δομή   -> Brain: 38.30px | CSP: 194.99px | LV: 234.68px
+  ASD ανά δομή  -> Brain: 12.34px | CSP: 193.05px | LV: 232.51px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.5721 @ Epoch 1)
+Train Epoch: 3 [400/2451 (16%)]	Loss: 0.361972
+Train Epoch: 3 [800/2451 (33%)]	Loss: 0.215523
+Train Epoch: 3 [1200/2451 (49%)]	Loss: 0.391604
+Train Epoch: 3 [1600/2451 (65%)]	Loss: 0.408928
+Train Epoch: 3 [2000/2451 (82%)]	Loss: 0.468397
+Train Epoch: 3 [2400/2451 (98%)]	Loss: 0.434242
+Train Epoch: 3 [2451/2451 (100%)]	Loss: 0.317886
+
+Fold 0 Validation set: Average loss: 0.5302, Average IOU: 0.5645, Average Dice: 0.6933, Average HD: 111.75px, Average ASD: 99.45px
+  IoU ανά δομή  -> Brain: 0.8885 | CSP: 0.4807 | LV: 0.3243
+  Dice ανά δομή -> Brain: 0.9410 | CSP: 0.6493 | LV: 0.4898
+  HD ανά δομή   -> Brain: 37.44px | CSP: 125.58px | LV: 172.24px
+  ASD ανά δομή  -> Brain: 10.00px | CSP: 122.89px | LV: 165.46px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.6933) στο Epoch 3 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold0_best.pt
+Train Epoch: 4 [400/2451 (16%)]	Loss: 0.378789
+Train Epoch: 4 [800/2451 (33%)]	Loss: 0.394608
+Train Epoch: 4 [1200/2451 (49%)]	Loss: 0.225868
+Train Epoch: 4 [1600/2451 (65%)]	Loss: 0.703334
+Train Epoch: 4 [2000/2451 (82%)]	Loss: 0.402481
+Train Epoch: 4 [2400/2451 (98%)]	Loss: 0.614900
+Train Epoch: 4 [2451/2451 (100%)]	Loss: 0.273606
+
+Fold 0 Validation set: Average loss: 0.4993, Average IOU: 0.5844, Average Dice: 0.7117, Average HD: 101.43px, Average ASD: 92.65px
+  IoU ανά δομή  -> Brain: 0.9090 | CSP: 0.4796 | LV: 0.3647
+  Dice ανά δομή -> Brain: 0.9523 | CSP: 0.6482 | LV: 0.5345
+  HD ανά δομή   -> Brain: 30.04px | CSP: 127.21px | LV: 147.05px
+  ASD ανά δομή  -> Brain: 9.43px | CSP: 125.01px | LV: 143.50px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7117) στο Epoch 4 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold0_best.pt
+Train Epoch: 5 [400/2451 (16%)]	Loss: 0.336600
+Train Epoch: 5 [800/2451 (33%)]	Loss: 0.508022
+Train Epoch: 5 [1200/2451 (49%)]	Loss: 0.320427
+Train Epoch: 5 [1600/2451 (65%)]	Loss: 0.290681
+Train Epoch: 5 [2000/2451 (82%)]	Loss: 0.313879
+Train Epoch: 5 [2400/2451 (98%)]	Loss: 0.455248
+Train Epoch: 5 [2451/2451 (100%)]	Loss: 0.239478
+
+Fold 0 Validation set: Average loss: 0.7376, Average IOU: 0.5087, Average Dice: 0.6350, Average HD: 122.90px, Average ASD: 112.59px
+  IoU ανά δομή  -> Brain: 0.8914 | CSP: 0.2926 | LV: 0.3421
+  Dice ανά δομή -> Brain: 0.9426 | CSP: 0.4527 | LV: 0.5098
+  HD ανά δομή   -> Brain: 36.51px | CSP: 189.29px | LV: 142.90px
+  ASD ανά δομή  -> Brain: 11.11px | CSP: 187.34px | LV: 139.32px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.7117 @ Epoch 4)
+Train Epoch: 6 [400/2451 (16%)]	Loss: 0.264548
+Train Epoch: 6 [800/2451 (33%)]	Loss: 0.320154
+Train Epoch: 6 [1200/2451 (49%)]	Loss: 0.336271
+Train Epoch: 6 [1600/2451 (65%)]	Loss: 0.260589
+Train Epoch: 6 [2000/2451 (82%)]	Loss: 0.285487
+Train Epoch: 6 [2400/2451 (98%)]	Loss: 0.418078
+Train Epoch: 6 [2451/2451 (100%)]	Loss: 0.122226
+
+Fold 0 Validation set: Average loss: 0.4207, Average IOU: 0.6228, Average Dice: 0.7496, Average HD: 92.47px, Average ASD: 83.76px
+  IoU ανά δομή  -> Brain: 0.9074 | CSP: 0.5064 | LV: 0.4545
+  Dice ανά δομή -> Brain: 0.9514 | CSP: 0.6723 | LV: 0.6250
+  HD ανά δομή   -> Brain: 29.12px | CSP: 116.97px | LV: 131.32px
+  ASD ανά δομή  -> Brain: 8.87px | CSP: 114.32px | LV: 128.08px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7496) στο Epoch 6 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold0_best.pt
+Train Epoch: 7 [400/2451 (16%)]	Loss: 0.382711
+Train Epoch: 7 [800/2451 (33%)]	Loss: 0.213526
+Train Epoch: 7 [1200/2451 (49%)]	Loss: 0.390889
+Train Epoch: 7 [1600/2451 (65%)]	Loss: 0.322638
+Train Epoch: 7 [2000/2451 (82%)]	Loss: 0.510024
+Train Epoch: 7 [2400/2451 (98%)]	Loss: 0.307243
+Train Epoch: 7 [2451/2451 (100%)]	Loss: 0.402591
+
+Fold 0 Validation set: Average loss: 0.4425, Average IOU: 0.6029, Average Dice: 0.7323, Average HD: 91.73px, Average ASD: 82.48px
+  IoU ανά δομή  -> Brain: 0.8989 | CSP: 0.4796 | LV: 0.4304
+  Dice ανά δομή -> Brain: 0.9467 | CSP: 0.6482 | LV: 0.6018
+  HD ανά δομή   -> Brain: 30.68px | CSP: 116.57px | LV: 127.95px
+  ASD ανά δομή  -> Brain: 9.21px | CSP: 113.92px | LV: 124.31px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.7496 @ Epoch 6)
+Train Epoch: 8 [400/2451 (16%)]	Loss: 0.422263
+Train Epoch: 8 [800/2451 (33%)]	Loss: 0.238484
+Train Epoch: 8 [1200/2451 (49%)]	Loss: 0.363701
+Train Epoch: 8 [1600/2451 (65%)]	Loss: 0.302841
+Train Epoch: 8 [2000/2451 (82%)]	Loss: 0.390490
+Train Epoch: 8 [2400/2451 (98%)]	Loss: 0.228274
+Train Epoch: 8 [2451/2451 (100%)]	Loss: 0.332793
+
+Fold 0 Validation set: Average loss: 0.4055, Average IOU: 0.6219, Average Dice: 0.7480, Average HD: 95.78px, Average ASD: 86.59px
+  IoU ανά δομή  -> Brain: 0.9126 | CSP: 0.5105 | LV: 0.4426
+  Dice ανά δομή -> Brain: 0.9543 | CSP: 0.6760 | LV: 0.6136
+  HD ανά δομή   -> Brain: 30.60px | CSP: 123.90px | LV: 132.84px
+  ASD ανά δομή  -> Brain: 9.32px | CSP: 121.04px | LV: 129.42px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 2/15 epochs (Best: 0.7496 @ Epoch 6)
+Train Epoch: 9 [400/2451 (16%)]	Loss: 0.482027
+Train Epoch: 9 [800/2451 (33%)]	Loss: 0.149921
+Train Epoch: 9 [1200/2451 (49%)]	Loss: 0.344952
+Train Epoch: 9 [1600/2451 (65%)]	Loss: 0.241211
+Train Epoch: 9 [2000/2451 (82%)]	Loss: 0.218070
+Train Epoch: 9 [2400/2451 (98%)]	Loss: 0.238980
+Train Epoch: 9 [2451/2451 (100%)]	Loss: 0.176326
+
+Fold 0 Validation set: Average loss: 0.3962, Average IOU: 0.6347, Average Dice: 0.7599, Average HD: 81.74px, Average ASD: 73.72px
+  IoU ανά δομή  -> Brain: 0.9096 | CSP: 0.5294 | LV: 0.4650
+  Dice ανά δομή -> Brain: 0.9526 | CSP: 0.6923 | LV: 0.6348
+  HD ανά δομή   -> Brain: 26.70px | CSP: 100.73px | LV: 117.81px
+  ASD ανά δομή  -> Brain: 8.60px | CSP: 98.17px | LV: 114.41px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7599) στο Epoch 9 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold0_best.pt
+Train Epoch: 10 [400/2451 (16%)]	Loss: 0.404881
+Train Epoch: 10 [800/2451 (33%)]	Loss: 0.325806
+Train Epoch: 10 [1200/2451 (49%)]	Loss: 0.300818
+Train Epoch: 10 [1600/2451 (65%)]	Loss: 0.416012
+Train Epoch: 10 [2000/2451 (82%)]	Loss: 0.446700
+Train Epoch: 10 [2400/2451 (98%)]	Loss: 0.262823
+Train Epoch: 10 [2451/2451 (100%)]	Loss: 0.222109
+
+Fold 0 Validation set: Average loss: 0.3798, Average IOU: 0.6420, Average Dice: 0.7663, Average HD: 84.33px, Average ASD: 75.87px
+  IoU ανά δομή  -> Brain: 0.9116 | CSP: 0.5335 | LV: 0.4809
+  Dice ανά δομή -> Brain: 0.9537 | CSP: 0.6958 | LV: 0.6494
+  HD ανά δομή   -> Brain: 28.27px | CSP: 108.17px | LV: 116.54px
+  ASD ανά δομή  -> Brain: 8.69px | CSP: 105.66px | LV: 113.25px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7663) στο Epoch 10 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold0_best.pt
+Train Epoch: 11 [400/2451 (16%)]	Loss: 0.445560
+Train Epoch: 11 [800/2451 (33%)]	Loss: 0.339697
+Train Epoch: 11 [1200/2451 (49%)]	Loss: 0.451939
+Train Epoch: 11 [1600/2451 (65%)]	Loss: 0.332240
+Train Epoch: 11 [2000/2451 (82%)]	Loss: 0.281926
+Train Epoch: 11 [2400/2451 (98%)]	Loss: 0.725329
+Train Epoch: 11 [2451/2451 (100%)]	Loss: 0.463799
+
+Fold 0 Validation set: Average loss: 0.3778, Average IOU: 0.6203, Average Dice: 0.7472, Average HD: 85.05px, Average ASD: 76.36px
+  IoU ανά δομή  -> Brain: 0.9080 | CSP: 0.5017 | LV: 0.4511
+  Dice ανά δομή -> Brain: 0.9518 | CSP: 0.6682 | LV: 0.6218
+  HD ανά δομή   -> Brain: 28.23px | CSP: 104.55px | LV: 122.36px
+  ASD ανά δομή  -> Brain: 8.72px | CSP: 101.95px | LV: 118.42px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.7663 @ Epoch 10)
+Train Epoch: 12 [400/2451 (16%)]	Loss: 0.299558
+Train Epoch: 12 [800/2451 (33%)]	Loss: 0.287849
+Train Epoch: 12 [1200/2451 (49%)]	Loss: 0.309457
+Train Epoch: 12 [1600/2451 (65%)]	Loss: 0.264897
+Train Epoch: 12 [2000/2451 (82%)]	Loss: 0.339285
+Train Epoch: 12 [2400/2451 (98%)]	Loss: 0.300378
+Train Epoch: 12 [2451/2451 (100%)]	Loss: 0.324723
+
+Fold 0 Validation set: Average loss: 0.4166, Average IOU: 0.6151, Average Dice: 0.7442, Average HD: 94.02px, Average ASD: 84.69px
+  IoU ανά δομή  -> Brain: 0.8935 | CSP: 0.5022 | LV: 0.4497
+  Dice ανά δομή -> Brain: 0.9438 | CSP: 0.6686 | LV: 0.6204
+  HD ανά δομή   -> Brain: 31.59px | CSP: 119.90px | LV: 130.56px
+  ASD ανά δομή  -> Brain: 9.47px | CSP: 116.92px | LV: 127.67px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 2/15 epochs (Best: 0.7663 @ Epoch 10)
+Train Epoch: 13 [400/2451 (16%)]	Loss: 0.388665
+Train Epoch: 13 [800/2451 (33%)]	Loss: 0.312085
+Train Epoch: 13 [1200/2451 (49%)]	Loss: 0.374033
+Train Epoch: 13 [1600/2451 (65%)]	Loss: 0.303893
+Train Epoch: 13 [2000/2451 (82%)]	Loss: 0.128072
+Train Epoch: 13 [2400/2451 (98%)]	Loss: 0.427475
+Train Epoch: 13 [2451/2451 (100%)]	Loss: 0.158396
+
+Fold 0 Validation set: Average loss: 0.3919, Average IOU: 0.6428, Average Dice: 0.7674, Average HD: 80.82px, Average ASD: 73.38px
+  IoU ανά δομή  -> Brain: 0.9088 | CSP: 0.5336 | LV: 0.4860
+  Dice ανά δομή -> Brain: 0.9522 | CSP: 0.6959 | LV: 0.6541
+  HD ανά δομή   -> Brain: 25.53px | CSP: 99.61px | LV: 117.33px
+  ASD ανά δομή  -> Brain: 8.78px | CSP: 97.34px | LV: 114.02px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7674) στο Epoch 13 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold0_best.pt
+Train Epoch: 14 [400/2451 (16%)]	Loss: 0.270191
+Train Epoch: 14 [800/2451 (33%)]	Loss: 0.215887
+Train Epoch: 14 [1200/2451 (49%)]	Loss: 0.368717
+Train Epoch: 14 [1600/2451 (65%)]	Loss: 0.436167
+Train Epoch: 14 [2000/2451 (82%)]	Loss: 0.269041
+Train Epoch: 14 [2400/2451 (98%)]	Loss: 0.569869
+Train Epoch: 14 [2451/2451 (100%)]	Loss: 0.387884
+
+Fold 0 Validation set: Average loss: 0.3736, Average IOU: 0.6491, Average Dice: 0.7714, Average HD: 80.32px, Average ASD: 72.72px
+  IoU ανά δομή  -> Brain: 0.9203 | CSP: 0.5487 | LV: 0.4785
+  Dice ανά δομή -> Brain: 0.9585 | CSP: 0.7086 | LV: 0.6473
+  HD ανά δομή   -> Brain: 25.48px | CSP: 100.69px | LV: 114.80px
+  ASD ανά δομή  -> Brain: 8.21px | CSP: 98.59px | LV: 111.37px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7714) στο Epoch 14 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold0_best.pt
+Train Epoch: 15 [400/2451 (16%)]	Loss: 0.193605
+Train Epoch: 15 [800/2451 (33%)]	Loss: 0.656789
+Train Epoch: 15 [1200/2451 (49%)]	Loss: 0.418638
+Train Epoch: 15 [1600/2451 (65%)]	Loss: 0.258417
+Train Epoch: 15 [2000/2451 (82%)]	Loss: 0.377826
+Train Epoch: 15 [2400/2451 (98%)]	Loss: 0.457428
+Train Epoch: 15 [2451/2451 (100%)]	Loss: 0.243610
+
+Fold 0 Validation set: Average loss: 0.3640, Average IOU: 0.6368, Average Dice: 0.7631, Average HD: 83.79px, Average ASD: 75.63px
+  IoU ανά δομή  -> Brain: 0.8974 | CSP: 0.5440 | LV: 0.4691
+  Dice ανά δομή -> Brain: 0.9459 | CSP: 0.7047 | LV: 0.6386
+  HD ανά δομή   -> Brain: 27.59px | CSP: 104.42px | LV: 119.35px
+  ASD ανά δομή  -> Brain: 9.17px | CSP: 102.02px | LV: 115.71px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.7714 @ Epoch 14)
+Train Epoch: 16 [400/2451 (16%)]	Loss: 0.202920
+Train Epoch: 16 [800/2451 (33%)]	Loss: 0.267756
+Train Epoch: 16 [1200/2451 (49%)]	Loss: 0.320248
+Train Epoch: 16 [1600/2451 (65%)]	Loss: 0.304884
+Train Epoch: 16 [2000/2451 (82%)]	Loss: 0.251177
+Train Epoch: 16 [2400/2451 (98%)]	Loss: 0.220918
+Train Epoch: 16 [2451/2451 (100%)]	Loss: 0.487933
+
+Fold 0 Validation set: Average loss: 0.3734, Average IOU: 0.6463, Average Dice: 0.7700, Average HD: 80.72px, Average ASD: 73.12px
+  IoU ανά δομή  -> Brain: 0.9095 | CSP: 0.5532 | LV: 0.4762
+  Dice ανά δομή -> Brain: 0.9526 | CSP: 0.7123 | LV: 0.6452
+  HD ανά δομή   -> Brain: 26.80px | CSP: 100.63px | LV: 114.74px
+  ASD ανά δομή  -> Brain: 9.25px | CSP: 98.61px | LV: 111.48px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 2/15 epochs (Best: 0.7714 @ Epoch 14)
+Train Epoch: 17 [400/2451 (16%)]	Loss: 0.333390
+Train Epoch: 17 [800/2451 (33%)]	Loss: 0.364487
+Train Epoch: 17 [1200/2451 (49%)]	Loss: 0.191446
+Train Epoch: 17 [1600/2451 (65%)]	Loss: 0.412707
+Train Epoch: 17 [2000/2451 (82%)]	Loss: 0.359497
+Train Epoch: 17 [2400/2451 (98%)]	Loss: 0.270800
+Train Epoch: 17 [2451/2451 (100%)]	Loss: 0.604176
+
+Fold 0 Validation set: Average loss: 0.4060, Average IOU: 0.6292, Average Dice: 0.7534, Average HD: 85.10px, Average ASD: 77.59px
+  IoU ανά δομή  -> Brain: 0.9165 | CSP: 0.5404 | LV: 0.4309
+  Dice ανά δομή -> Brain: 0.9564 | CSP: 0.7016 | LV: 0.6023
+  HD ανά δομή   -> Brain: 26.89px | CSP: 96.26px | LV: 132.17px
+  ASD ανά δομή  -> Brain: 9.55px | CSP: 94.10px | LV: 129.11px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 3/15 epochs (Best: 0.7714 @ Epoch 14)
+Train Epoch: 18 [400/2451 (16%)]	Loss: 0.275379
+Train Epoch: 18 [800/2451 (33%)]	Loss: 0.401490
+Train Epoch: 18 [1200/2451 (49%)]	Loss: 0.221315
+Train Epoch: 18 [1600/2451 (65%)]	Loss: 0.227707
+Train Epoch: 18 [2000/2451 (82%)]	Loss: 0.296807
+Train Epoch: 18 [2400/2451 (98%)]	Loss: 0.596287
+Train Epoch: 18 [2451/2451 (100%)]	Loss: 0.215976
+
+Fold 0 Validation set: Average loss: 0.4800, Average IOU: 0.6174, Average Dice: 0.7437, Average HD: 98.69px, Average ASD: 89.62px
+  IoU ανά δομή  -> Brain: 0.9102 | CSP: 0.5175 | LV: 0.4246
+  Dice ανά δομή -> Brain: 0.9530 | CSP: 0.6820 | LV: 0.5961
+  HD ανά δομή   -> Brain: 31.24px | CSP: 124.64px | LV: 140.20px
+  ASD ανά δομή  -> Brain: 9.07px | CSP: 122.61px | LV: 137.19px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 4/15 epochs (Best: 0.7714 @ Epoch 14)
+Train Epoch: 19 [400/2451 (16%)]	Loss: 0.278225
+Train Epoch: 19 [800/2451 (33%)]	Loss: 0.913253
+Train Epoch: 19 [1200/2451 (49%)]	Loss: 0.308921
+Train Epoch: 19 [1600/2451 (65%)]	Loss: 0.311539
+Train Epoch: 19 [2000/2451 (82%)]	Loss: 0.116129
+Train Epoch: 19 [2400/2451 (98%)]	Loss: 0.308396
+Train Epoch: 19 [2451/2451 (100%)]	Loss: 0.410532
+
+Fold 0 Validation set: Average loss: 0.4150, Average IOU: 0.6215, Average Dice: 0.7452, Average HD: 88.61px, Average ASD: 81.17px
+  IoU ανά δομή  -> Brain: 0.9202 | CSP: 0.5395 | LV: 0.4049
+  Dice ανά δομή -> Brain: 0.9584 | CSP: 0.7009 | LV: 0.5764
+  HD ανά δομή   -> Brain: 25.30px | CSP: 99.27px | LV: 141.25px
+  ASD ανά δομή  -> Brain: 8.24px | CSP: 97.06px | LV: 138.23px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 5/15 epochs (Best: 0.7714 @ Epoch 14)
+Train Epoch: 20 [400/2451 (16%)]	Loss: 0.412718
+Train Epoch: 20 [800/2451 (33%)]	Loss: 0.197773
+Train Epoch: 20 [1200/2451 (49%)]	Loss: 0.478684
+Train Epoch: 20 [1600/2451 (65%)]	Loss: 0.363628
+Train Epoch: 20 [2000/2451 (82%)]	Loss: 0.304233
+Train Epoch: 20 [2400/2451 (98%)]	Loss: 0.330147
+Train Epoch: 20 [2451/2451 (100%)]	Loss: 0.490942
+
+Fold 0 Validation set: Average loss: 0.4028, Average IOU: 0.6482, Average Dice: 0.7706, Average HD: 81.30px, Average ASD: 73.54px
+  IoU ανά δομή  -> Brain: 0.9226 | CSP: 0.5349 | LV: 0.4871
+  Dice ανά δομή -> Brain: 0.9597 | CSP: 0.6970 | LV: 0.6551
+  HD ανά δομή   -> Brain: 26.43px | CSP: 106.11px | LV: 111.36px
+  ASD ανά δομή  -> Brain: 8.97px | CSP: 104.02px | LV: 107.63px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 6/15 epochs (Best: 0.7714 @ Epoch 14)
+Train Epoch: 21 [400/2451 (16%)]	Loss: 0.198585
+Train Epoch: 21 [800/2451 (33%)]	Loss: 0.311161
+Train Epoch: 21 [1200/2451 (49%)]	Loss: 0.345928
+Train Epoch: 21 [1600/2451 (65%)]	Loss: 0.491815
+Train Epoch: 21 [2000/2451 (82%)]	Loss: 0.415985
+Train Epoch: 21 [2400/2451 (98%)]	Loss: 0.160429
+Train Epoch: 21 [2451/2451 (100%)]	Loss: 0.166422
+
+Fold 0 Validation set: Average loss: 0.3540, Average IOU: 0.6621, Average Dice: 0.7822, Average HD: 76.58px, Average ASD: 69.32px
+  IoU ανά δομή  -> Brain: 0.9255 | CSP: 0.5592 | LV: 0.5015
+  Dice ανά δομή -> Brain: 0.9613 | CSP: 0.7173 | LV: 0.6680
+  HD ανά δομή   -> Brain: 24.56px | CSP: 101.07px | LV: 104.11px
+  ASD ανά δομή  -> Brain: 8.14px | CSP: 99.15px | LV: 100.66px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7822) στο Epoch 21 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold0_best.pt
+Train Epoch: 22 [400/2451 (16%)]	Loss: 0.315872
+Train Epoch: 22 [800/2451 (33%)]	Loss: 0.271451
+Train Epoch: 22 [1200/2451 (49%)]	Loss: 0.209171
+Train Epoch: 22 [1600/2451 (65%)]	Loss: 0.353206
+Train Epoch: 22 [2000/2451 (82%)]	Loss: 0.150919
+Train Epoch: 22 [2400/2451 (98%)]	Loss: 0.247892
+Train Epoch: 22 [2451/2451 (100%)]	Loss: 0.361165
+
+Fold 0 Validation set: Average loss: 0.3693, Average IOU: 0.6428, Average Dice: 0.7668, Average HD: 80.65px, Average ASD: 72.92px
+  IoU ανά δομή  -> Brain: 0.9150 | CSP: 0.5236 | LV: 0.4899
+  Dice ανά δομή -> Brain: 0.9556 | CSP: 0.6874 | LV: 0.6576
+  HD ανά δομή   -> Brain: 26.12px | CSP: 103.99px | LV: 111.84px
+  ASD ανά δομή  -> Brain: 8.57px | CSP: 101.42px | LV: 108.78px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.7822 @ Epoch 21)
+Train Epoch: 23 [400/2451 (16%)]	Loss: 0.333175
+Train Epoch: 23 [800/2451 (33%)]	Loss: 0.277551
+Train Epoch: 23 [1200/2451 (49%)]	Loss: 1.113330
+Train Epoch: 23 [1600/2451 (65%)]	Loss: 0.253605
+Train Epoch: 23 [2000/2451 (82%)]	Loss: 0.313055
+Train Epoch: 23 [2400/2451 (98%)]	Loss: 0.230646
+Train Epoch: 23 [2451/2451 (100%)]	Loss: 0.239662
+
+Fold 0 Validation set: Average loss: 0.3918, Average IOU: 0.6478, Average Dice: 0.7705, Average HD: 79.27px, Average ASD: 71.74px
+  IoU ανά δομή  -> Brain: 0.9169 | CSP: 0.5514 | LV: 0.4750
+  Dice ανά δομή -> Brain: 0.9566 | CSP: 0.7109 | LV: 0.6441
+  HD ανά δομή   -> Brain: 25.80px | CSP: 94.05px | LV: 117.96px
+  ASD ανά δομή  -> Brain: 8.62px | CSP: 91.85px | LV: 114.76px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 2/15 epochs (Best: 0.7822 @ Epoch 21)
+Train Epoch: 24 [400/2451 (16%)]	Loss: 0.297746
+Train Epoch: 24 [800/2451 (33%)]	Loss: 0.313569
+Train Epoch: 24 [1200/2451 (49%)]	Loss: 0.288157
+Train Epoch: 24 [1600/2451 (65%)]	Loss: 0.382186
+Train Epoch: 24 [2000/2451 (82%)]	Loss: 0.381125
+Train Epoch: 24 [2400/2451 (98%)]	Loss: 0.285254
+Train Epoch: 24 [2451/2451 (100%)]	Loss: 0.087162
+
+Fold 0 Validation set: Average loss: 0.4111, Average IOU: 0.6422, Average Dice: 0.7650, Average HD: 82.13px, Average ASD: 74.78px
+  IoU ανά δομή  -> Brain: 0.9275 | CSP: 0.4970 | LV: 0.5020
+  Dice ανά δομή -> Brain: 0.9624 | CSP: 0.6640 | LV: 0.6684
+  HD ανά δομή   -> Brain: 25.19px | CSP: 116.30px | LV: 104.89px
+  ASD ανά δομή  -> Brain: 8.69px | CSP: 114.19px | LV: 101.45px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 3/15 epochs (Best: 0.7822 @ Epoch 21)
+Train Epoch: 25 [400/2451 (16%)]	Loss: 0.601095
+Train Epoch: 25 [800/2451 (33%)]	Loss: 0.225936
+Train Epoch: 25 [1200/2451 (49%)]	Loss: 0.264134
+Train Epoch: 25 [1600/2451 (65%)]	Loss: 0.182504
+Train Epoch: 25 [2000/2451 (82%)]	Loss: 0.270592
+Train Epoch: 25 [2400/2451 (98%)]	Loss: 0.237779
+Train Epoch: 25 [2451/2451 (100%)]	Loss: 0.262397
+
+Fold 0 Validation set: Average loss: 0.3870, Average IOU: 0.6542, Average Dice: 0.7753, Average HD: 81.84px, Average ASD: 74.55px
+  IoU ανά δομή  -> Brain: 0.9225 | CSP: 0.5653 | LV: 0.4749
+  Dice ανά δομή -> Brain: 0.9597 | CSP: 0.7223 | LV: 0.6439
+  HD ανά δομή   -> Brain: 24.98px | CSP: 100.78px | LV: 119.75px
+  ASD ανά δομή  -> Brain: 8.22px | CSP: 98.87px | LV: 116.56px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 4/15 epochs (Best: 0.7822 @ Epoch 21)
+Train Epoch: 26 [400/2451 (16%)]	Loss: 0.342135
+Train Epoch: 26 [800/2451 (33%)]	Loss: 0.346981
+Train Epoch: 26 [1200/2451 (49%)]	Loss: 0.120940
+Train Epoch: 26 [1600/2451 (65%)]	Loss: 0.152947
+Train Epoch: 26 [2000/2451 (82%)]	Loss: 0.197222
+Train Epoch: 26 [2400/2451 (98%)]	Loss: 0.185070
+Train Epoch: 26 [2451/2451 (100%)]	Loss: 0.417729
+
+Fold 0 Validation set: Average loss: 0.3872, Average IOU: 0.6470, Average Dice: 0.7700, Average HD: 83.50px, Average ASD: 75.96px
+  IoU ανά δομή  -> Brain: 0.9133 | CSP: 0.5598 | LV: 0.4681
+  Dice ανά δομή -> Brain: 0.9547 | CSP: 0.7178 | LV: 0.6377
+  HD ανά δομή   -> Brain: 26.39px | CSP: 95.85px | LV: 128.27px
+  ASD ανά δομή  -> Brain: 8.59px | CSP: 93.81px | LV: 125.46px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 5/15 epochs (Best: 0.7822 @ Epoch 21)
+Train Epoch: 27 [400/2451 (16%)]	Loss: 0.234074
+Train Epoch: 27 [800/2451 (33%)]	Loss: 0.335804
+Train Epoch: 27 [1200/2451 (49%)]	Loss: 0.336022
+Train Epoch: 27 [1600/2451 (65%)]	Loss: 0.357147
+Train Epoch: 27 [2000/2451 (82%)]	Loss: 0.187199
+Train Epoch: 27 [2400/2451 (98%)]	Loss: 0.085519
+Train Epoch: 27 [2451/2451 (100%)]	Loss: 0.174182
+
+Fold 0 Validation set: Average loss: 0.3780, Average IOU: 0.6563, Average Dice: 0.7771, Average HD: 76.39px, Average ASD: 69.60px
+  IoU ανά δομή  -> Brain: 0.9238 | CSP: 0.5644 | LV: 0.4806
+  Dice ανά δομή -> Brain: 0.9604 | CSP: 0.7215 | LV: 0.6492
+  HD ανά δομή   -> Brain: 23.21px | CSP: 93.50px | LV: 112.47px
+  ASD ανά δομή  -> Brain: 8.04px | CSP: 91.49px | LV: 109.27px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 6/15 epochs (Best: 0.7822 @ Epoch 21)
+Train Epoch: 28 [400/2451 (16%)]	Loss: 0.238166
+Train Epoch: 28 [800/2451 (33%)]	Loss: 0.387285
+Train Epoch: 28 [1200/2451 (49%)]	Loss: 0.155149
+Train Epoch: 28 [1600/2451 (65%)]	Loss: 0.265891
+Train Epoch: 28 [2000/2451 (82%)]	Loss: 0.521418
+Train Epoch: 28 [2400/2451 (98%)]	Loss: 0.325547
+Train Epoch: 28 [2451/2451 (100%)]	Loss: 0.163343
+
+Fold 0 Validation set: Average loss: 0.3912, Average IOU: 0.6338, Average Dice: 0.7581, Average HD: 92.46px, Average ASD: 83.40px
+  IoU ανά δομή  -> Brain: 0.9220 | CSP: 0.4878 | LV: 0.4916
+  Dice ανά δομή -> Brain: 0.9594 | CSP: 0.6557 | LV: 0.6592
+  HD ανά δομή   -> Brain: 30.09px | CSP: 127.03px | LV: 120.27px
+  ASD ανά δομή  -> Brain: 9.17px | CSP: 124.37px | LV: 116.68px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 7/15 epochs (Best: 0.7822 @ Epoch 21)
+Train Epoch: 29 [400/2451 (16%)]	Loss: 0.443904
+Train Epoch: 29 [800/2451 (33%)]	Loss: 0.415741
+Train Epoch: 29 [1200/2451 (49%)]	Loss: 0.346186
+Train Epoch: 29 [1600/2451 (65%)]	Loss: 0.328591
+Train Epoch: 29 [2000/2451 (82%)]	Loss: 0.497898
+Train Epoch: 29 [2400/2451 (98%)]	Loss: 0.271313
+Train Epoch: 29 [2451/2451 (100%)]	Loss: 0.161243
+
+Fold 0 Validation set: Average loss: 0.3552, Average IOU: 0.6535, Average Dice: 0.7751, Average HD: 76.39px, Average ASD: 68.07px
+  IoU ανά δομή  -> Brain: 0.9248 | CSP: 0.5305 | LV: 0.5052
+  Dice ανά δομή -> Brain: 0.9609 | CSP: 0.6932 | LV: 0.6712
+  HD ανά δομή   -> Brain: 27.87px | CSP: 105.52px | LV: 95.78px
+  ASD ανά δομή  -> Brain: 8.58px | CSP: 103.40px | LV: 92.22px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 8/15 epochs (Best: 0.7822 @ Epoch 21)
+Train Epoch: 30 [400/2451 (16%)]	Loss: 0.453330
+Train Epoch: 30 [800/2451 (33%)]	Loss: 0.262801
+Train Epoch: 30 [1200/2451 (49%)]	Loss: 0.405810
+Train Epoch: 30 [1600/2451 (65%)]	Loss: 0.508547
+Train Epoch: 30 [2000/2451 (82%)]	Loss: 0.263463
+Train Epoch: 30 [2400/2451 (98%)]	Loss: 0.217217
+Train Epoch: 30 [2451/2451 (100%)]	Loss: 0.400861
+
+Fold 0 Validation set: Average loss: 0.4112, Average IOU: 0.6480, Average Dice: 0.7696, Average HD: 75.60px, Average ASD: 68.58px
+  IoU ανά δομή  -> Brain: 0.9314 | CSP: 0.5144 | LV: 0.4982
+  Dice ανά δομή -> Brain: 0.9645 | CSP: 0.6794 | LV: 0.6651
+  HD ανά δομή   -> Brain: 23.66px | CSP: 104.82px | LV: 98.31px
+  ASD ανά δομή  -> Brain: 8.13px | CSP: 102.71px | LV: 94.89px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 9/15 epochs (Best: 0.7822 @ Epoch 21)
+Train Epoch: 31 [400/2451 (16%)]	Loss: 0.334138
+Train Epoch: 31 [800/2451 (33%)]	Loss: 0.308264
+Train Epoch: 31 [1200/2451 (49%)]	Loss: 0.263237
+Train Epoch: 31 [1600/2451 (65%)]	Loss: 0.268558
+Train Epoch: 31 [2000/2451 (82%)]	Loss: 0.172482
+Train Epoch: 31 [2400/2451 (98%)]	Loss: 0.331374
+Train Epoch: 31 [2451/2451 (100%)]	Loss: 0.245574
+
+Fold 0 Validation set: Average loss: 0.4355, Average IOU: 0.6097, Average Dice: 0.7320, Average HD: 91.02px, Average ASD: 83.74px
+  IoU ανά δομή  -> Brain: 0.9271 | CSP: 0.5358 | LV: 0.3662
+  Dice ανά δομή -> Brain: 0.9622 | CSP: 0.6978 | LV: 0.5361
+  HD ανά δομή   -> Brain: 25.09px | CSP: 100.77px | LV: 147.21px
+  ASD ανά δομή  -> Brain: 8.29px | CSP: 98.71px | LV: 144.23px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 10/15 epochs (Best: 0.7822 @ Epoch 21)
+Train Epoch: 32 [400/2451 (16%)]	Loss: 0.401966
+Train Epoch: 32 [800/2451 (33%)]	Loss: 0.294737
+Train Epoch: 32 [1200/2451 (49%)]	Loss: 0.296608
+Train Epoch: 32 [1600/2451 (65%)]	Loss: 0.156159
+Train Epoch: 32 [2000/2451 (82%)]	Loss: 0.197587
+Train Epoch: 32 [2400/2451 (98%)]	Loss: 0.312138
+Train Epoch: 32 [2451/2451 (100%)]	Loss: 0.449042
+
+Fold 0 Validation set: Average loss: 0.4063, Average IOU: 0.6457, Average Dice: 0.7676, Average HD: 79.55px, Average ASD: 72.17px
+  IoU ανά δομή  -> Brain: 0.9290 | CSP: 0.5289 | LV: 0.4791
+  Dice ανά δομή -> Brain: 0.9632 | CSP: 0.6918 | LV: 0.6478
+  HD ανά δομή   -> Brain: 25.20px | CSP: 106.80px | LV: 106.64px
+  ASD ανά δομή  -> Brain: 8.33px | CSP: 104.77px | LV: 103.42px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 11/15 epochs (Best: 0.7822 @ Epoch 21)
+Train Epoch: 33 [400/2451 (16%)]	Loss: 0.380686
+Train Epoch: 33 [800/2451 (33%)]	Loss: 0.367573
+Train Epoch: 33 [1200/2451 (49%)]	Loss: 0.206866
+Train Epoch: 33 [1600/2451 (65%)]	Loss: 0.201981
+Train Epoch: 33 [2000/2451 (82%)]	Loss: 0.253156
+Train Epoch: 33 [2400/2451 (98%)]	Loss: 0.375695
+Train Epoch: 33 [2451/2451 (100%)]	Loss: 0.266981
+
+Fold 0 Validation set: Average loss: 0.4160, Average IOU: 0.6291, Average Dice: 0.7528, Average HD: 80.26px, Average ASD: 72.80px
+  IoU ανά δομή  -> Brain: 0.9288 | CSP: 0.5032 | LV: 0.4552
+  Dice ανά δομή -> Brain: 0.9631 | CSP: 0.6695 | LV: 0.6257
+  HD ανά δομή   -> Brain: 24.54px | CSP: 104.41px | LV: 111.82px
+  ASD ανά δομή  -> Brain: 8.11px | CSP: 102.06px | LV: 108.24px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 12/15 epochs (Best: 0.7822 @ Epoch 21)
+Train Epoch: 34 [400/2451 (16%)]	Loss: 0.269080
+Train Epoch: 34 [800/2451 (33%)]	Loss: 0.221265
+Train Epoch: 34 [1200/2451 (49%)]	Loss: 0.258204
+Train Epoch: 34 [1600/2451 (65%)]	Loss: 0.506598
+Train Epoch: 34 [2000/2451 (82%)]	Loss: 0.297496
+Train Epoch: 34 [2400/2451 (98%)]	Loss: 0.448493
+Train Epoch: 34 [2451/2451 (100%)]	Loss: 0.264406
+
+Fold 0 Validation set: Average loss: 0.3620, Average IOU: 0.6612, Average Dice: 0.7800, Average HD: 76.35px, Average ASD: 69.66px
+  IoU ανά δομή  -> Brain: 0.9341 | CSP: 0.5711 | LV: 0.4784
+  Dice ανά δομή -> Brain: 0.9659 | CSP: 0.7270 | LV: 0.6472
+  HD ανά δομή   -> Brain: 23.14px | CSP: 92.44px | LV: 113.48px
+  ASD ανά δομή  -> Brain: 8.02px | CSP: 90.45px | LV: 110.53px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 13/15 epochs (Best: 0.7822 @ Epoch 21)
+Train Epoch: 35 [400/2451 (16%)]	Loss: 0.261988
+Train Epoch: 35 [800/2451 (33%)]	Loss: 0.262325
+Train Epoch: 35 [1200/2451 (49%)]	Loss: 0.290769
+Train Epoch: 35 [1600/2451 (65%)]	Loss: 0.206066
+Train Epoch: 35 [2000/2451 (82%)]	Loss: 0.177287
+Train Epoch: 35 [2400/2451 (98%)]	Loss: 0.461698
+Train Epoch: 35 [2451/2451 (100%)]	Loss: 0.301976
+
+Fold 0 Validation set: Average loss: 0.3770, Average IOU: 0.6585, Average Dice: 0.7794, Average HD: 76.65px, Average ASD: 69.09px
+  IoU ανά δομή  -> Brain: 0.9218 | CSP: 0.5625 | LV: 0.4913
+  Dice ανά δομή -> Brain: 0.9593 | CSP: 0.7200 | LV: 0.6589
+  HD ανά δομή   -> Brain: 25.86px | CSP: 90.41px | LV: 113.67px
+  ASD ανά δομή  -> Brain: 8.47px | CSP: 88.31px | LV: 110.48px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 14/15 epochs (Best: 0.7822 @ Epoch 21)
+Train Epoch: 36 [400/2451 (16%)]	Loss: 0.324546
+Train Epoch: 36 [800/2451 (33%)]	Loss: 0.234553
+Train Epoch: 36 [1200/2451 (49%)]	Loss: 0.248228
+Train Epoch: 36 [1600/2451 (65%)]	Loss: 0.313988
+Train Epoch: 36 [2000/2451 (82%)]	Loss: 0.212708
+Train Epoch: 36 [2400/2451 (98%)]	Loss: 0.151485
+Train Epoch: 36 [2451/2451 (100%)]	Loss: 0.618221
+
+Fold 0 Validation set: Average loss: 0.3799, Average IOU: 0.6556, Average Dice: 0.7779, Average HD: 71.56px, Average ASD: 64.43px
+  IoU ανά δομή  -> Brain: 0.9125 | CSP: 0.5608 | LV: 0.4935
+  Dice ανά δομή -> Brain: 0.9543 | CSP: 0.7186 | LV: 0.6608
+  HD ανά δομή   -> Brain: 24.64px | CSP: 90.49px | LV: 99.56px
+  ASD ανά δομή  -> Brain: 8.64px | CSP: 88.38px | LV: 96.26px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 15/15 epochs (Best: 0.7822 @ Epoch 21)
+
+>>> Early Stopping ενεργοποιήθηκε στο Fold 0 (Epoch 36)! <<<
+
+----------------------------------------------------------------------
+ΚΑΛΥΤΕΡΑ ΑΠΟΤΕΛΕΣΜΑΤΑ FOLD 0 (R2AttU_Net)
+----------------------------------------------------------------------
+Model Complexity (R2AttU_Net) -> Params: 39.44M (Trainable: 39.44M) | Size: 150.52 MB | Complexity: 307.14 GFLOPs
+Best Average Dice Score (Epoch 21): 0.7822
+  Best Dice ανά δομή -> Brain: 0.9613 | CSP: 0.7173 | LV: 0.6680
+IoU (at Best Dice): 0.6621
+  IoU ανά δομή       -> Brain: 0.9255 | CSP: 0.5592 | LV: 0.5015
+Hausdorff Distance (at Best Dice): 76.58px
+  HD ανά δομή        -> Brain: 24.56px | CSP: 101.07px | LV: 104.11px
+Average Surface Distance (at Best Dice): 69.32px
+  ASD ανά δομή       -> Brain: 8.14px | CSP: 99.15px | LV: 100.66px
+----------------------------------------------------------------------
+
+
+################################################################################
+ΕΚΚΙΝΗΣΗ FOLD 1 / 4  (Model = R2AttU_Net, Seed = 43)
+  Train CSV : /home/mkolliniatis/Dataset/splits/fold_1_train.csv
+  Val CSV   : /home/mkolliniatis/Dataset/splits/fold_1_val.csv
+################################################################################
+Train Epoch: 1 [400/2451 (16%)]	Loss: 0.977128
+Train Epoch: 1 [800/2451 (33%)]	Loss: 0.578749
+Train Epoch: 1 [1200/2451 (49%)]	Loss: 0.924352
+Train Epoch: 1 [1600/2451 (65%)]	Loss: 0.730710
+Train Epoch: 1 [2000/2451 (82%)]	Loss: 0.388752
+Train Epoch: 1 [2400/2451 (98%)]	Loss: 0.395751
+Train Epoch: 1 [2451/2451 (100%)]	Loss: 0.461018
+
+Fold 1 Validation set: Average loss: 1.1786, Average IOU: 0.2874, Average Dice: 0.3313, Average HD: 242.45px, Average ASD: 229.17px
+  IoU ανά δομή  -> Brain: 0.8123 | CSP: 0.0221 | LV: 0.0279
+  Dice ανά δομή -> Brain: 0.8964 | CSP: 0.0433 | LV: 0.0543
+  HD ανά δομή   -> Brain: 52.33px | CSP: 345.26px | LV: 329.78px
+  ASD ανά δομή  -> Brain: 13.72px | CSP: 345.02px | LV: 328.78px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.3313) στο Epoch 1 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold1_best.pt
+Train Epoch: 2 [400/2451 (16%)]	Loss: 0.477006
+Train Epoch: 2 [800/2451 (33%)]	Loss: 1.184571
+Train Epoch: 2 [1200/2451 (49%)]	Loss: 0.452601
+Train Epoch: 2 [1600/2451 (65%)]	Loss: 1.475984
+Train Epoch: 2 [2000/2451 (82%)]	Loss: 0.554733
+Train Epoch: 2 [2400/2451 (98%)]	Loss: 0.639323
+Train Epoch: 2 [2451/2451 (100%)]	Loss: 0.271130
+
+Fold 1 Validation set: Average loss: 0.8290, Average IOU: 0.4812, Average Dice: 0.6174, Average HD: 144.81px, Average ASD: 132.32px
+  IoU ανά δομή  -> Brain: 0.8146 | CSP: 0.3520 | LV: 0.2769
+  Dice ανά δομή -> Brain: 0.8978 | CSP: 0.5207 | LV: 0.4337
+  HD ανά δομή   -> Brain: 44.51px | CSP: 173.02px | LV: 216.91px
+  ASD ανά δομή  -> Brain: 12.94px | CSP: 170.82px | LV: 213.19px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.6174) στο Epoch 2 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold1_best.pt
+Train Epoch: 3 [400/2451 (16%)]	Loss: 0.218344
+Train Epoch: 3 [800/2451 (33%)]	Loss: 0.311999
+Train Epoch: 3 [1200/2451 (49%)]	Loss: 0.546128
+Train Epoch: 3 [1600/2451 (65%)]	Loss: 0.429340
+Train Epoch: 3 [2000/2451 (82%)]	Loss: 0.500709
+Train Epoch: 3 [2400/2451 (98%)]	Loss: 0.529866
+Train Epoch: 3 [2451/2451 (100%)]	Loss: 0.313272
+
+Fold 1 Validation set: Average loss: 0.4989, Average IOU: 0.6014, Average Dice: 0.7282, Average HD: 99.54px, Average ASD: 90.36px
+  IoU ανά δομή  -> Brain: 0.9059 | CSP: 0.5151 | LV: 0.3831
+  Dice ανά δομή -> Brain: 0.9507 | CSP: 0.6799 | LV: 0.5540
+  HD ανά δομή   -> Brain: 29.19px | CSP: 109.74px | LV: 159.68px
+  ASD ανά δομή  -> Brain: 8.41px | CSP: 106.62px | LV: 156.05px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7282) στο Epoch 3 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold1_best.pt
+Train Epoch: 4 [400/2451 (16%)]	Loss: 0.687848
+Train Epoch: 4 [800/2451 (33%)]	Loss: 0.343317
+Train Epoch: 4 [1200/2451 (49%)]	Loss: 0.573161
+Train Epoch: 4 [1600/2451 (65%)]	Loss: 0.469215
+Train Epoch: 4 [2000/2451 (82%)]	Loss: 0.208585
+Train Epoch: 4 [2400/2451 (98%)]	Loss: 0.253213
+Train Epoch: 4 [2451/2451 (100%)]	Loss: 0.378276
+
+Fold 1 Validation set: Average loss: 0.7327, Average IOU: 0.4504, Average Dice: 0.5622, Average HD: 165.90px, Average ASD: 155.02px
+  IoU ανά δομή  -> Brain: 0.8940 | CSP: 0.2556 | LV: 0.2015
+  Dice ανά δομή -> Brain: 0.9440 | CSP: 0.4072 | LV: 0.3354
+  HD ανά δομή   -> Brain: 39.81px | CSP: 221.83px | LV: 236.06px
+  ASD ανά δομή  -> Brain: 11.27px | CSP: 220.23px | LV: 233.54px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.7282 @ Epoch 3)
+Train Epoch: 5 [400/2451 (16%)]	Loss: 0.327324
+Train Epoch: 5 [800/2451 (33%)]	Loss: 0.372952
+Train Epoch: 5 [1200/2451 (49%)]	Loss: 1.040858
+Train Epoch: 5 [1600/2451 (65%)]	Loss: 0.410213
+Train Epoch: 5 [2000/2451 (82%)]	Loss: 0.243308
+Train Epoch: 5 [2400/2451 (98%)]	Loss: 0.746819
+Train Epoch: 5 [2451/2451 (100%)]	Loss: 0.488176
+
+Fold 1 Validation set: Average loss: 0.8099, Average IOU: 0.4580, Average Dice: 0.5755, Average HD: 166.67px, Average ASD: 155.70px
+  IoU ανά δομή  -> Brain: 0.8772 | CSP: 0.2909 | LV: 0.2057
+  Dice ανά δομή -> Brain: 0.9346 | CSP: 0.4507 | LV: 0.3413
+  HD ανά δομή   -> Brain: 41.24px | CSP: 217.01px | LV: 241.75px
+  ASD ανά δομή  -> Brain: 12.06px | CSP: 215.35px | LV: 239.68px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 2/15 epochs (Best: 0.7282 @ Epoch 3)
+Train Epoch: 6 [400/2451 (16%)]	Loss: 0.354533
+Train Epoch: 6 [800/2451 (33%)]	Loss: 0.293756
+Train Epoch: 6 [1200/2451 (49%)]	Loss: 0.284921
+Train Epoch: 6 [1600/2451 (65%)]	Loss: 0.720297
+Train Epoch: 6 [2000/2451 (82%)]	Loss: 0.333578
+Train Epoch: 6 [2400/2451 (98%)]	Loss: 0.475373
+Train Epoch: 6 [2451/2451 (100%)]	Loss: 0.291026
+
+Fold 1 Validation set: Average loss: 1.5103, Average IOU: 0.3031, Average Dice: 0.3971, Average HD: 226.23px, Average ASD: 212.95px
+  IoU ανά δομή  -> Brain: 0.7117 | CSP: 0.1072 | LV: 0.0906
+  Dice ανά δομή -> Brain: 0.8316 | CSP: 0.1936 | LV: 0.1661
+  HD ανά δομή   -> Brain: 72.78px | CSP: 305.09px | LV: 300.84px
+  ASD ανά δομή  -> Brain: 35.16px | CSP: 304.43px | LV: 299.27px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 3/15 epochs (Best: 0.7282 @ Epoch 3)
+Train Epoch: 7 [400/2451 (16%)]	Loss: 0.217613
+Train Epoch: 7 [800/2451 (33%)]	Loss: 0.305654
+Train Epoch: 7 [1200/2451 (49%)]	Loss: 0.403895
+Train Epoch: 7 [1600/2451 (65%)]	Loss: 0.483832
+Train Epoch: 7 [2000/2451 (82%)]	Loss: 1.154357
+Train Epoch: 7 [2400/2451 (98%)]	Loss: 0.328326
+Train Epoch: 7 [2451/2451 (100%)]	Loss: 0.316659
+
+Fold 1 Validation set: Average loss: 0.7667, Average IOU: 0.4718, Average Dice: 0.5940, Average HD: 155.65px, Average ASD: 144.94px
+  IoU ανά δομή  -> Brain: 0.8777 | CSP: 0.2829 | LV: 0.2549
+  Dice ανά δομή -> Brain: 0.9349 | CSP: 0.4410 | LV: 0.4062
+  HD ανά δομή   -> Brain: 38.28px | CSP: 214.35px | LV: 214.32px
+  ASD ανά δομή  -> Brain: 10.42px | CSP: 212.81px | LV: 211.61px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 4/15 epochs (Best: 0.7282 @ Epoch 3)
+Train Epoch: 8 [400/2451 (16%)]	Loss: 0.295089
+Train Epoch: 8 [800/2451 (33%)]	Loss: 0.306156
+Train Epoch: 8 [1200/2451 (49%)]	Loss: 0.487809
+Train Epoch: 8 [1600/2451 (65%)]	Loss: 0.352880
+Train Epoch: 8 [2000/2451 (82%)]	Loss: 0.258485
+Train Epoch: 8 [2400/2451 (98%)]	Loss: 0.293997
+Train Epoch: 8 [2451/2451 (100%)]	Loss: 0.259526
+
+Fold 1 Validation set: Average loss: 0.4031, Average IOU: 0.6386, Average Dice: 0.7633, Average HD: 83.50px, Average ASD: 74.92px
+  IoU ανά δομή  -> Brain: 0.9017 | CSP: 0.5675 | LV: 0.4465
+  Dice ανά δομή -> Brain: 0.9483 | CSP: 0.7241 | LV: 0.6174
+  HD ανά δομή   -> Brain: 28.36px | CSP: 83.34px | LV: 138.79px
+  ASD ανά δομή  -> Brain: 8.63px | CSP: 80.59px | LV: 135.55px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7633) στο Epoch 8 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold1_best.pt
+Train Epoch: 9 [400/2451 (16%)]	Loss: 0.399749
+Train Epoch: 9 [800/2451 (33%)]	Loss: 0.323460
+Train Epoch: 9 [1200/2451 (49%)]	Loss: 0.241775
+Train Epoch: 9 [1600/2451 (65%)]	Loss: 0.220170
+Train Epoch: 9 [2000/2451 (82%)]	Loss: 0.651252
+Train Epoch: 9 [2400/2451 (98%)]	Loss: 0.518380
+Train Epoch: 9 [2451/2451 (100%)]	Loss: 0.070162
+
+Fold 1 Validation set: Average loss: 0.5744, Average IOU: 0.5518, Average Dice: 0.6778, Average HD: 125.78px, Average ASD: 116.33px
+  IoU ανά δομή  -> Brain: 0.9101 | CSP: 0.4324 | LV: 0.3129
+  Dice ανά δομή -> Brain: 0.9529 | CSP: 0.6037 | LV: 0.4767
+  HD ανά δομή   -> Brain: 32.14px | CSP: 159.90px | LV: 185.30px
+  ASD ανά δομή  -> Brain: 8.65px | CSP: 158.00px | LV: 182.33px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.7633 @ Epoch 8)
+Train Epoch: 10 [400/2451 (16%)]	Loss: 0.469640
+Train Epoch: 10 [800/2451 (33%)]	Loss: 0.465451
+Train Epoch: 10 [1200/2451 (49%)]	Loss: 0.303443
+Train Epoch: 10 [1600/2451 (65%)]	Loss: 0.385898
+Train Epoch: 10 [2000/2451 (82%)]	Loss: 0.323872
+Train Epoch: 10 [2400/2451 (98%)]	Loss: 0.461314
+Train Epoch: 10 [2451/2451 (100%)]	Loss: 0.499587
+
+Fold 1 Validation set: Average loss: 0.3948, Average IOU: 0.6527, Average Dice: 0.7734, Average HD: 85.20px, Average ASD: 77.21px
+  IoU ανά δομή  -> Brain: 0.9141 | CSP: 0.5985 | LV: 0.4454
+  Dice ανά δομή -> Brain: 0.9551 | CSP: 0.7489 | LV: 0.6163
+  HD ανά δομή   -> Brain: 27.24px | CSP: 80.95px | LV: 147.41px
+  ASD ανά δομή  -> Brain: 9.09px | CSP: 78.21px | LV: 144.33px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7734) στο Epoch 10 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold1_best.pt
+Train Epoch: 11 [400/2451 (16%)]	Loss: 0.412061
+Train Epoch: 11 [800/2451 (33%)]	Loss: 0.400835
+Train Epoch: 11 [1200/2451 (49%)]	Loss: 0.298263
+Train Epoch: 11 [1600/2451 (65%)]	Loss: 0.462198
+Train Epoch: 11 [2000/2451 (82%)]	Loss: 0.464117
+Train Epoch: 11 [2400/2451 (98%)]	Loss: 0.337310
+Train Epoch: 11 [2451/2451 (100%)]	Loss: 0.285818
+
+Fold 1 Validation set: Average loss: 0.8073, Average IOU: 0.4627, Average Dice: 0.5781, Average HD: 162.93px, Average ASD: 152.04px
+  IoU ανά δομή  -> Brain: 0.8933 | CSP: 0.2102 | LV: 0.2848
+  Dice ανά δομή -> Brain: 0.9436 | CSP: 0.3474 | LV: 0.4433
+  HD ανά δομή   -> Brain: 39.38px | CSP: 243.05px | LV: 206.36px
+  ASD ανά δομή  -> Brain: 10.78px | CSP: 241.54px | LV: 203.80px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.7734 @ Epoch 10)
+Train Epoch: 12 [400/2451 (16%)]	Loss: 0.297474
+Train Epoch: 12 [800/2451 (33%)]	Loss: 0.472871
+Train Epoch: 12 [1200/2451 (49%)]	Loss: 0.195041
+Train Epoch: 12 [1600/2451 (65%)]	Loss: 0.347669
+Train Epoch: 12 [2000/2451 (82%)]	Loss: 0.252768
+Train Epoch: 12 [2400/2451 (98%)]	Loss: 0.282887
+Train Epoch: 12 [2451/2451 (100%)]	Loss: 0.212809
+
+Fold 1 Validation set: Average loss: 0.4147, Average IOU: 0.6486, Average Dice: 0.7700, Average HD: 81.92px, Average ASD: 73.85px
+  IoU ανά δομή  -> Brain: 0.9104 | CSP: 0.5979 | LV: 0.4375
+  Dice ανά δομή -> Brain: 0.9531 | CSP: 0.7484 | LV: 0.6087
+  HD ανά δομή   -> Brain: 26.99px | CSP: 84.58px | LV: 134.19px
+  ASD ανά δομή  -> Brain: 8.77px | CSP: 82.19px | LV: 130.58px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 2/15 epochs (Best: 0.7734 @ Epoch 10)
+Train Epoch: 13 [400/2451 (16%)]	Loss: 0.304938
+Train Epoch: 13 [800/2451 (33%)]	Loss: 0.308364
+Train Epoch: 13 [1200/2451 (49%)]	Loss: 0.365910
+Train Epoch: 13 [1600/2451 (65%)]	Loss: 0.356130
+Train Epoch: 13 [2000/2451 (82%)]	Loss: 0.127343
+Train Epoch: 13 [2400/2451 (98%)]	Loss: 0.278738
+Train Epoch: 13 [2451/2451 (100%)]	Loss: 0.304702
+
+Fold 1 Validation set: Average loss: 0.4212, Average IOU: 0.6370, Average Dice: 0.7608, Average HD: 82.97px, Average ASD: 74.82px
+  IoU ανά δομή  -> Brain: 0.9098 | CSP: 0.5637 | LV: 0.4374
+  Dice ανά δομή -> Brain: 0.9528 | CSP: 0.7210 | LV: 0.6086
+  HD ανά δομή   -> Brain: 26.82px | CSP: 85.48px | LV: 136.61px
+  ASD ανά δομή  -> Brain: 8.31px | CSP: 83.04px | LV: 133.12px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 3/15 epochs (Best: 0.7734 @ Epoch 10)
+Train Epoch: 14 [400/2451 (16%)]	Loss: 0.241568
+Train Epoch: 14 [800/2451 (33%)]	Loss: 0.209707
+Train Epoch: 14 [1200/2451 (49%)]	Loss: 0.604946
+Train Epoch: 14 [1600/2451 (65%)]	Loss: 0.249491
+Train Epoch: 14 [2000/2451 (82%)]	Loss: 0.673276
+Train Epoch: 14 [2400/2451 (98%)]	Loss: 0.228191
+Train Epoch: 14 [2451/2451 (100%)]	Loss: 0.124887
+
+Fold 1 Validation set: Average loss: 0.4441, Average IOU: 0.6000, Average Dice: 0.7176, Average HD: 99.57px, Average ASD: 90.70px
+  IoU ανά δομή  -> Brain: 0.9133 | CSP: 0.5939 | LV: 0.2928
+  Dice ανά δομή -> Brain: 0.9547 | CSP: 0.7452 | LV: 0.4529
+  HD ανά δομή   -> Brain: 29.32px | CSP: 86.61px | LV: 182.76px
+  ASD ανά δομή  -> Brain: 8.33px | CSP: 83.87px | LV: 179.89px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 4/15 epochs (Best: 0.7734 @ Epoch 10)
+Train Epoch: 15 [400/2451 (16%)]	Loss: 0.465543
+Train Epoch: 15 [800/2451 (33%)]	Loss: 0.409377
+Train Epoch: 15 [1200/2451 (49%)]	Loss: 0.311014
+Train Epoch: 15 [1600/2451 (65%)]	Loss: 0.220377
+Train Epoch: 15 [2000/2451 (82%)]	Loss: 0.459030
+Train Epoch: 15 [2400/2451 (98%)]	Loss: 0.294020
+Train Epoch: 15 [2451/2451 (100%)]	Loss: 0.285608
+
+Fold 1 Validation set: Average loss: 0.4680, Average IOU: 0.6057, Average Dice: 0.7261, Average HD: 103.44px, Average ASD: 95.28px
+  IoU ανά δομή  -> Brain: 0.9104 | CSP: 0.5840 | LV: 0.3225
+  Dice ανά δομή -> Brain: 0.9531 | CSP: 0.7374 | LV: 0.4877
+  HD ανά δομή   -> Brain: 28.07px | CSP: 85.14px | LV: 197.10px
+  ASD ανά δομή  -> Brain: 8.35px | CSP: 82.90px | LV: 194.58px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 5/15 epochs (Best: 0.7734 @ Epoch 10)
+Train Epoch: 16 [400/2451 (16%)]	Loss: 0.317482
+Train Epoch: 16 [800/2451 (33%)]	Loss: 0.092412
+Train Epoch: 16 [1200/2451 (49%)]	Loss: 0.300088
+Train Epoch: 16 [1600/2451 (65%)]	Loss: 0.568691
+Train Epoch: 16 [2000/2451 (82%)]	Loss: 0.405386
+Train Epoch: 16 [2400/2451 (98%)]	Loss: 0.297979
+Train Epoch: 16 [2451/2451 (100%)]	Loss: 0.295281
+
+Fold 1 Validation set: Average loss: 0.3693, Average IOU: 0.6422, Average Dice: 0.7629, Average HD: 79.49px, Average ASD: 71.66px
+  IoU ανά δομή  -> Brain: 0.9133 | CSP: 0.6029 | LV: 0.4102
+  Dice ανά δομή -> Brain: 0.9547 | CSP: 0.7523 | LV: 0.5818
+  HD ανά δομή   -> Brain: 25.81px | CSP: 73.27px | LV: 139.39px
+  ASD ανά δομή  -> Brain: 8.09px | CSP: 70.73px | LV: 136.16px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 6/15 epochs (Best: 0.7734 @ Epoch 10)
+Train Epoch: 17 [400/2451 (16%)]	Loss: 0.532909
+Train Epoch: 17 [800/2451 (33%)]	Loss: 0.348205
+Train Epoch: 17 [1200/2451 (49%)]	Loss: 0.343205
+Train Epoch: 17 [1600/2451 (65%)]	Loss: 0.269121
+Train Epoch: 17 [2000/2451 (82%)]	Loss: 0.488558
+Train Epoch: 17 [2400/2451 (98%)]	Loss: 0.173182
+Train Epoch: 17 [2451/2451 (100%)]	Loss: 0.429112
+
+Fold 1 Validation set: Average loss: 0.4883, Average IOU: 0.6041, Average Dice: 0.7283, Average HD: 98.17px, Average ASD: 89.86px
+  IoU ανά δομή  -> Brain: 0.9071 | CSP: 0.5511 | LV: 0.3542
+  Dice ανά δομή -> Brain: 0.9513 | CSP: 0.7106 | LV: 0.5231
+  HD ανά δομή   -> Brain: 28.94px | CSP: 97.29px | LV: 168.27px
+  ASD ανά δομή  -> Brain: 9.19px | CSP: 95.15px | LV: 165.22px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 7/15 epochs (Best: 0.7734 @ Epoch 10)
+Train Epoch: 18 [400/2451 (16%)]	Loss: 0.246058
+Train Epoch: 18 [800/2451 (33%)]	Loss: 0.338313
+Train Epoch: 18 [1200/2451 (49%)]	Loss: 0.246433
+Train Epoch: 18 [1600/2451 (65%)]	Loss: 0.208613
+Train Epoch: 18 [2000/2451 (82%)]	Loss: 0.273620
+Train Epoch: 18 [2400/2451 (98%)]	Loss: 0.387792
+Train Epoch: 18 [2451/2451 (100%)]	Loss: 0.278172
+
+Fold 1 Validation set: Average loss: 0.4033, Average IOU: 0.6478, Average Dice: 0.7701, Average HD: 80.27px, Average ASD: 72.54px
+  IoU ανά δομή  -> Brain: 0.9190 | CSP: 0.5583 | LV: 0.4661
+  Dice ανά δομή -> Brain: 0.9578 | CSP: 0.7166 | LV: 0.6358
+  HD ανά δομή   -> Brain: 25.41px | CSP: 95.26px | LV: 120.13px
+  ASD ανά δομή  -> Brain: 7.91px | CSP: 93.20px | LV: 116.51px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 8/15 epochs (Best: 0.7734 @ Epoch 10)
+Train Epoch: 19 [400/2451 (16%)]	Loss: 0.243062
+Train Epoch: 19 [800/2451 (33%)]	Loss: 0.197550
+Train Epoch: 19 [1200/2451 (49%)]	Loss: 0.380536
+Train Epoch: 19 [1600/2451 (65%)]	Loss: 0.229412
+Train Epoch: 19 [2000/2451 (82%)]	Loss: 0.292833
+Train Epoch: 19 [2400/2451 (98%)]	Loss: 0.349057
+Train Epoch: 19 [2451/2451 (100%)]	Loss: 0.154617
+
+Fold 1 Validation set: Average loss: 0.5216, Average IOU: 0.5951, Average Dice: 0.7226, Average HD: 109.91px, Average ASD: 100.93px
+  IoU ανά δομή  -> Brain: 0.9142 | CSP: 0.4642 | LV: 0.4071
+  Dice ανά δομή -> Brain: 0.9552 | CSP: 0.6340 | LV: 0.5786
+  HD ανά δομή   -> Brain: 30.92px | CSP: 153.33px | LV: 145.48px
+  ASD ανά δομή  -> Brain: 8.96px | CSP: 151.59px | LV: 142.23px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 9/15 epochs (Best: 0.7734 @ Epoch 10)
+Train Epoch: 20 [400/2451 (16%)]	Loss: 0.563277
+Train Epoch: 20 [800/2451 (33%)]	Loss: 0.345044
+Train Epoch: 20 [1200/2451 (49%)]	Loss: 0.295698
+Train Epoch: 20 [1600/2451 (65%)]	Loss: 0.222753
+Train Epoch: 20 [2000/2451 (82%)]	Loss: 0.319434
+Train Epoch: 20 [2400/2451 (98%)]	Loss: 0.382509
+Train Epoch: 20 [2451/2451 (100%)]	Loss: 0.160115
+
+Fold 1 Validation set: Average loss: 0.3464, Average IOU: 0.6466, Average Dice: 0.7685, Average HD: 78.93px, Average ASD: 70.80px
+  IoU ανά δομή  -> Brain: 0.9208 | CSP: 0.5632 | LV: 0.4559
+  Dice ανά δομή -> Brain: 0.9588 | CSP: 0.7206 | LV: 0.6263
+  HD ανά δομή   -> Brain: 26.10px | CSP: 87.04px | LV: 123.65px
+  ASD ανά δομή  -> Brain: 7.86px | CSP: 84.55px | LV: 119.98px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 10/15 epochs (Best: 0.7734 @ Epoch 10)
+Train Epoch: 21 [400/2451 (16%)]	Loss: 0.269236
+Train Epoch: 21 [800/2451 (33%)]	Loss: 0.090204
+Train Epoch: 21 [1200/2451 (49%)]	Loss: 0.509524
+Train Epoch: 21 [1600/2451 (65%)]	Loss: 0.328732
+Train Epoch: 21 [2000/2451 (82%)]	Loss: 0.262692
+Train Epoch: 21 [2400/2451 (98%)]	Loss: 0.348638
+Train Epoch: 21 [2451/2451 (100%)]	Loss: 0.325228
+
+Fold 1 Validation set: Average loss: 0.3469, Average IOU: 0.6652, Average Dice: 0.7841, Average HD: 77.99px, Average ASD: 70.43px
+  IoU ανά δομή  -> Brain: 0.9257 | CSP: 0.5880 | LV: 0.4818
+  Dice ανά δομή -> Brain: 0.9614 | CSP: 0.7406 | LV: 0.6503
+  HD ανά δομή   -> Brain: 24.76px | CSP: 80.34px | LV: 128.88px
+  ASD ανά δομή  -> Brain: 7.76px | CSP: 77.78px | LV: 125.75px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7841) στο Epoch 21 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold1_best.pt
+Train Epoch: 22 [400/2451 (16%)]	Loss: 0.249744
+Train Epoch: 22 [800/2451 (33%)]	Loss: 0.277894
+Train Epoch: 22 [1200/2451 (49%)]	Loss: 0.205345
+Train Epoch: 22 [1600/2451 (65%)]	Loss: 0.279424
+Train Epoch: 22 [2000/2451 (82%)]	Loss: 0.171675
+Train Epoch: 22 [2400/2451 (98%)]	Loss: 0.299589
+Train Epoch: 22 [2451/2451 (100%)]	Loss: 0.216708
+
+Fold 1 Validation set: Average loss: 0.5024, Average IOU: 0.5957, Average Dice: 0.7194, Average HD: 110.76px, Average ASD: 101.98px
+  IoU ανά δομή  -> Brain: 0.9227 | CSP: 0.5114 | LV: 0.3530
+  Dice ανά δομή -> Brain: 0.9598 | CSP: 0.6767 | LV: 0.5218
+  HD ανά δομή   -> Brain: 29.11px | CSP: 121.65px | LV: 181.53px
+  ASD ανά δομή  -> Brain: 8.16px | CSP: 119.42px | LV: 178.37px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.7841 @ Epoch 21)
+Train Epoch: 23 [400/2451 (16%)]	Loss: 0.396670
+Train Epoch: 23 [800/2451 (33%)]	Loss: 0.188803
+Train Epoch: 23 [1200/2451 (49%)]	Loss: 0.225716
+Train Epoch: 23 [1600/2451 (65%)]	Loss: 0.306154
+Train Epoch: 23 [2000/2451 (82%)]	Loss: 0.498814
+Train Epoch: 23 [2400/2451 (98%)]	Loss: 0.270710
+Train Epoch: 23 [2451/2451 (100%)]	Loss: 0.226049
+
+Fold 1 Validation set: Average loss: 0.4147, Average IOU: 0.6510, Average Dice: 0.7718, Average HD: 83.86px, Average ASD: 76.29px
+  IoU ανά δομή  -> Brain: 0.9189 | CSP: 0.5863 | LV: 0.4478
+  Dice ανά δομή -> Brain: 0.9577 | CSP: 0.7392 | LV: 0.6186
+  HD ανά δομή   -> Brain: 26.49px | CSP: 84.84px | LV: 140.26px
+  ASD ανά δομή  -> Brain: 9.04px | CSP: 82.63px | LV: 137.19px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 2/15 epochs (Best: 0.7841 @ Epoch 21)
+Train Epoch: 24 [400/2451 (16%)]	Loss: 0.287378
+Train Epoch: 24 [800/2451 (33%)]	Loss: 0.282118
+Train Epoch: 24 [1200/2451 (49%)]	Loss: 0.148131
+Train Epoch: 24 [1600/2451 (65%)]	Loss: 0.239753
+Train Epoch: 24 [2000/2451 (82%)]	Loss: 0.236339
+Train Epoch: 24 [2400/2451 (98%)]	Loss: 0.180276
+Train Epoch: 24 [2451/2451 (100%)]	Loss: 0.231783
+
+Fold 1 Validation set: Average loss: 0.4431, Average IOU: 0.6171, Average Dice: 0.7412, Average HD: 96.14px, Average ASD: 87.91px
+  IoU ανά δομή  -> Brain: 0.9172 | CSP: 0.5392 | LV: 0.3948
+  Dice ανά δομή -> Brain: 0.9568 | CSP: 0.7007 | LV: 0.5661
+  HD ανά δομή   -> Brain: 27.43px | CSP: 99.30px | LV: 161.69px
+  ASD ανά δομή  -> Brain: 8.24px | CSP: 96.87px | LV: 158.63px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 3/15 epochs (Best: 0.7841 @ Epoch 21)
+Train Epoch: 25 [400/2451 (16%)]	Loss: 0.200791
+Train Epoch: 25 [800/2451 (33%)]	Loss: 0.481162
+Train Epoch: 25 [1200/2451 (49%)]	Loss: 0.358268
+Train Epoch: 25 [1600/2451 (65%)]	Loss: 0.363732
+Train Epoch: 25 [2000/2451 (82%)]	Loss: 0.276302
+Train Epoch: 25 [2400/2451 (98%)]	Loss: 0.506545
+Train Epoch: 25 [2451/2451 (100%)]	Loss: 0.148302
+
+Fold 1 Validation set: Average loss: 0.4136, Average IOU: 0.6435, Average Dice: 0.7659, Average HD: 83.21px, Average ASD: 75.47px
+  IoU ανά δομή  -> Brain: 0.9215 | CSP: 0.5513 | LV: 0.4576
+  Dice ανά δομή -> Brain: 0.9591 | CSP: 0.7108 | LV: 0.6279
+  HD ανά δομή   -> Brain: 25.89px | CSP: 92.54px | LV: 131.21px
+  ASD ανά δομή  -> Brain: 7.98px | CSP: 90.43px | LV: 127.99px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 4/15 epochs (Best: 0.7841 @ Epoch 21)
+Train Epoch: 26 [400/2451 (16%)]	Loss: 0.180261
+Train Epoch: 26 [800/2451 (33%)]	Loss: 0.323501
+Train Epoch: 26 [1200/2451 (49%)]	Loss: 0.278392
+Train Epoch: 26 [1600/2451 (65%)]	Loss: 0.440439
+Train Epoch: 26 [2000/2451 (82%)]	Loss: 0.295207
+Train Epoch: 26 [2400/2451 (98%)]	Loss: 0.243497
+Train Epoch: 26 [2451/2451 (100%)]	Loss: 0.216961
+
+Fold 1 Validation set: Average loss: 0.4022, Average IOU: 0.6375, Average Dice: 0.7608, Average HD: 82.05px, Average ASD: 73.98px
+  IoU ανά δομή  -> Brain: 0.9174 | CSP: 0.5518 | LV: 0.4433
+  Dice ανά δομή -> Brain: 0.9569 | CSP: 0.7112 | LV: 0.6143
+  HD ανά δομή   -> Brain: 26.11px | CSP: 97.26px | LV: 122.77px
+  ASD ανά δομή  -> Brain: 8.13px | CSP: 95.01px | LV: 118.79px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 5/15 epochs (Best: 0.7841 @ Epoch 21)
+Train Epoch: 27 [400/2451 (16%)]	Loss: 0.396991
+Train Epoch: 27 [800/2451 (33%)]	Loss: 0.211820
+Train Epoch: 27 [1200/2451 (49%)]	Loss: 0.267277
+Train Epoch: 27 [1600/2451 (65%)]	Loss: 0.219679
+Train Epoch: 27 [2000/2451 (82%)]	Loss: 0.235721
+Train Epoch: 27 [2400/2451 (98%)]	Loss: 0.401740
+Train Epoch: 27 [2451/2451 (100%)]	Loss: 0.363544
+
+Fold 1 Validation set: Average loss: 0.4147, Average IOU: 0.6442, Average Dice: 0.7656, Average HD: 81.11px, Average ASD: 72.96px
+  IoU ανά δομή  -> Brain: 0.9112 | CSP: 0.5988 | LV: 0.4226
+  Dice ανά δομή -> Brain: 0.9536 | CSP: 0.7490 | LV: 0.5941
+  HD ανά δομή   -> Brain: 27.50px | CSP: 74.86px | LV: 140.98px
+  ASD ανά δομή  -> Brain: 8.98px | CSP: 72.66px | LV: 137.26px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 6/15 epochs (Best: 0.7841 @ Epoch 21)
+Train Epoch: 28 [400/2451 (16%)]	Loss: 0.407145
+Train Epoch: 28 [800/2451 (33%)]	Loss: 0.222986
+Train Epoch: 28 [1200/2451 (49%)]	Loss: 0.266374
+Train Epoch: 28 [1600/2451 (65%)]	Loss: 0.154691
+Train Epoch: 28 [2000/2451 (82%)]	Loss: 0.251459
+Train Epoch: 28 [2400/2451 (98%)]	Loss: 0.158572
+Train Epoch: 28 [2451/2451 (100%)]	Loss: 0.213540
+
+Fold 1 Validation set: Average loss: 0.3765, Average IOU: 0.6535, Average Dice: 0.7727, Average HD: 77.23px, Average ASD: 69.81px
+  IoU ανά δομή  -> Brain: 0.9268 | CSP: 0.5927 | LV: 0.4408
+  Dice ανά δομή -> Brain: 0.9620 | CSP: 0.7443 | LV: 0.6119
+  HD ανά δομή   -> Brain: 24.35px | CSP: 81.16px | LV: 126.17px
+  ASD ανά δομή  -> Brain: 7.71px | CSP: 79.06px | LV: 122.67px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 7/15 epochs (Best: 0.7841 @ Epoch 21)
+Train Epoch: 29 [400/2451 (16%)]	Loss: 0.207784
+Train Epoch: 29 [800/2451 (33%)]	Loss: 0.387212
+Train Epoch: 29 [1200/2451 (49%)]	Loss: 0.227327
+Train Epoch: 29 [1600/2451 (65%)]	Loss: 0.271814
+Train Epoch: 29 [2000/2451 (82%)]	Loss: 0.275616
+Train Epoch: 29 [2400/2451 (98%)]	Loss: 0.081884
+Train Epoch: 29 [2451/2451 (100%)]	Loss: 0.223257
+
+Fold 1 Validation set: Average loss: 0.3299, Average IOU: 0.6697, Average Dice: 0.7880, Average HD: 72.35px, Average ASD: 65.12px
+  IoU ανά δομή  -> Brain: 0.9227 | CSP: 0.6006 | LV: 0.4857
+  Dice ανά δομή -> Brain: 0.9598 | CSP: 0.7505 | LV: 0.6538
+  HD ανά δομή   -> Brain: 23.87px | CSP: 73.31px | LV: 119.87px
+  ASD ανά δομή  -> Brain: 7.77px | CSP: 71.16px | LV: 116.43px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7880) στο Epoch 29 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold1_best.pt
+Train Epoch: 30 [400/2451 (16%)]	Loss: 0.370239
+Train Epoch: 30 [800/2451 (33%)]	Loss: 0.256777
+Train Epoch: 30 [1200/2451 (49%)]	Loss: 0.269901
+Train Epoch: 30 [1600/2451 (65%)]	Loss: 0.078113
+Train Epoch: 30 [2000/2451 (82%)]	Loss: 0.263967
+Train Epoch: 30 [2400/2451 (98%)]	Loss: 0.255361
+Train Epoch: 30 [2451/2451 (100%)]	Loss: 0.322398
+
+Fold 1 Validation set: Average loss: 0.3466, Average IOU: 0.6661, Average Dice: 0.7859, Average HD: 72.58px, Average ASD: 65.19px
+  IoU ανά δομή  -> Brain: 0.9174 | CSP: 0.5891 | LV: 0.4918
+  Dice ανά δομή -> Brain: 0.9569 | CSP: 0.7414 | LV: 0.6593
+  HD ανά δομή   -> Brain: 24.81px | CSP: 75.03px | LV: 117.89px
+  ASD ανά δομή  -> Brain: 7.97px | CSP: 72.92px | LV: 114.68px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.7880 @ Epoch 29)
+Train Epoch: 31 [400/2451 (16%)]	Loss: 0.428997
+Train Epoch: 31 [800/2451 (33%)]	Loss: 0.167886
+Train Epoch: 31 [1200/2451 (49%)]	Loss: 0.111973
+Train Epoch: 31 [1600/2451 (65%)]	Loss: 0.233431
+Train Epoch: 31 [2000/2451 (82%)]	Loss: 0.215297
+Train Epoch: 31 [2400/2451 (98%)]	Loss: 0.327399
+Train Epoch: 31 [2451/2451 (100%)]	Loss: 0.124713
+
+Fold 1 Validation set: Average loss: 0.3577, Average IOU: 0.6731, Average Dice: 0.7914, Average HD: 71.46px, Average ASD: 64.24px
+  IoU ανά δομή  -> Brain: 0.9243 | CSP: 0.5876 | LV: 0.5074
+  Dice ανά δομή -> Brain: 0.9606 | CSP: 0.7403 | LV: 0.6732
+  HD ανά δομή   -> Brain: 24.08px | CSP: 78.02px | LV: 112.27px
+  ASD ανά δομή  -> Brain: 7.85px | CSP: 75.76px | LV: 109.11px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7914) στο Epoch 31 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold1_best.pt
+Train Epoch: 32 [400/2451 (16%)]	Loss: 0.183270
+Train Epoch: 32 [800/2451 (33%)]	Loss: 0.208133
+Train Epoch: 32 [1200/2451 (49%)]	Loss: 0.218372
+Train Epoch: 32 [1600/2451 (65%)]	Loss: 0.409172
+Train Epoch: 32 [2000/2451 (82%)]	Loss: 0.251743
+Train Epoch: 32 [2400/2451 (98%)]	Loss: 0.466838
+Train Epoch: 32 [2451/2451 (100%)]	Loss: 0.121543
+
+Fold 1 Validation set: Average loss: 0.3285, Average IOU: 0.6659, Average Dice: 0.7846, Average HD: 73.80px, Average ASD: 66.45px
+  IoU ανά δομή  -> Brain: 0.9266 | CSP: 0.5893 | LV: 0.4819
+  Dice ανά δομή -> Brain: 0.9619 | CSP: 0.7415 | LV: 0.6504
+  HD ανά δομή   -> Brain: 24.29px | CSP: 76.74px | LV: 120.35px
+  ASD ανά δομή  -> Brain: 7.67px | CSP: 74.65px | LV: 117.03px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.7914 @ Epoch 31)
+Train Epoch: 33 [400/2451 (16%)]	Loss: 0.193386
+Train Epoch: 33 [800/2451 (33%)]	Loss: 0.365669
+Train Epoch: 33 [1200/2451 (49%)]	Loss: 0.271379
+Train Epoch: 33 [1600/2451 (65%)]	Loss: 0.144253
+Train Epoch: 33 [2000/2451 (82%)]	Loss: 0.139804
+Train Epoch: 33 [2400/2451 (98%)]	Loss: 0.417538
+Train Epoch: 33 [2451/2451 (100%)]	Loss: 0.195404
+
+Fold 1 Validation set: Average loss: 0.3684, Average IOU: 0.6719, Average Dice: 0.7899, Average HD: 73.56px, Average ASD: 66.12px
+  IoU ανά δομή  -> Brain: 0.9216 | CSP: 0.6064 | LV: 0.4875
+  Dice ανά δομή -> Brain: 0.9592 | CSP: 0.7550 | LV: 0.6555
+  HD ανά δομή   -> Brain: 24.80px | CSP: 79.26px | LV: 116.63px
+  ASD ανά δομή  -> Brain: 7.86px | CSP: 77.24px | LV: 113.27px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 2/15 epochs (Best: 0.7914 @ Epoch 31)
+Train Epoch: 34 [400/2451 (16%)]	Loss: 0.242900
+Train Epoch: 34 [800/2451 (33%)]	Loss: 0.320716
+Train Epoch: 34 [1200/2451 (49%)]	Loss: 0.314930
+Train Epoch: 34 [1600/2451 (65%)]	Loss: 0.205663
+Train Epoch: 34 [2000/2451 (82%)]	Loss: 0.284446
+Train Epoch: 34 [2400/2451 (98%)]	Loss: 0.519585
+Train Epoch: 34 [2451/2451 (100%)]	Loss: 0.300833
+
+Fold 1 Validation set: Average loss: 0.3823, Average IOU: 0.6469, Average Dice: 0.7692, Average HD: 81.17px, Average ASD: 72.85px
+  IoU ανά δομή  -> Brain: 0.9213 | CSP: 0.5481 | LV: 0.4712
+  Dice ανά δομή -> Brain: 0.9590 | CSP: 0.7081 | LV: 0.6406
+  HD ανά δομή   -> Brain: 27.01px | CSP: 93.45px | LV: 123.04px
+  ASD ανά δομή  -> Brain: 8.54px | CSP: 90.57px | LV: 119.42px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 3/15 epochs (Best: 0.7914 @ Epoch 31)
+Train Epoch: 35 [400/2451 (16%)]	Loss: 0.151618
+Train Epoch: 35 [800/2451 (33%)]	Loss: 0.203642
+Train Epoch: 35 [1200/2451 (49%)]	Loss: 0.266140
+Train Epoch: 35 [1600/2451 (65%)]	Loss: 0.247494
+Train Epoch: 35 [2000/2451 (82%)]	Loss: 0.312532
+Train Epoch: 35 [2400/2451 (98%)]	Loss: 0.299529
+Train Epoch: 35 [2451/2451 (100%)]	Loss: 0.196415
+
+Fold 1 Validation set: Average loss: 0.3519, Average IOU: 0.6553, Average Dice: 0.7761, Average HD: 77.82px, Average ASD: 69.77px
+  IoU ανά δομή  -> Brain: 0.9214 | CSP: 0.5755 | LV: 0.4690
+  Dice ανά δομή -> Brain: 0.9591 | CSP: 0.7306 | LV: 0.6386
+  HD ανά δομή   -> Brain: 26.40px | CSP: 78.46px | LV: 128.62px
+  ASD ανά δομή  -> Brain: 7.92px | CSP: 76.20px | LV: 125.20px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 4/15 epochs (Best: 0.7914 @ Epoch 31)
+Train Epoch: 36 [400/2451 (16%)]	Loss: 0.242896
+Train Epoch: 36 [800/2451 (33%)]	Loss: 0.295802
+Train Epoch: 36 [1200/2451 (49%)]	Loss: 0.343929
+Train Epoch: 36 [1600/2451 (65%)]	Loss: 0.246818
+Train Epoch: 36 [2000/2451 (82%)]	Loss: 0.165417
+Train Epoch: 36 [2400/2451 (98%)]	Loss: 0.213843
+Train Epoch: 36 [2451/2451 (100%)]	Loss: 0.234471
+
+Fold 1 Validation set: Average loss: 0.3966, Average IOU: 0.6413, Average Dice: 0.7620, Average HD: 83.25px, Average ASD: 75.40px
+  IoU ανά δομή  -> Brain: 0.9244 | CSP: 0.5791 | LV: 0.4204
+  Dice ανά δομή -> Brain: 0.9607 | CSP: 0.7334 | LV: 0.5920
+  HD ανά δομή   -> Brain: 25.89px | CSP: 86.20px | LV: 137.65px
+  ASD ανά δομή  -> Brain: 7.78px | CSP: 84.24px | LV: 134.18px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 5/15 epochs (Best: 0.7914 @ Epoch 31)
+Train Epoch: 37 [400/2451 (16%)]	Loss: 0.213930
+Train Epoch: 37 [800/2451 (33%)]	Loss: 0.221143
+Train Epoch: 37 [1200/2451 (49%)]	Loss: 0.218132
+Train Epoch: 37 [1600/2451 (65%)]	Loss: 0.273179
+Train Epoch: 37 [2000/2451 (82%)]	Loss: 0.424064
+Train Epoch: 37 [2400/2451 (98%)]	Loss: 0.336077
+Train Epoch: 37 [2451/2451 (100%)]	Loss: 0.249796
+
+Fold 1 Validation set: Average loss: 0.3835, Average IOU: 0.6673, Average Dice: 0.7862, Average HD: 74.67px, Average ASD: 67.32px
+  IoU ανά δομή  -> Brain: 0.9257 | CSP: 0.5831 | LV: 0.4931
+  Dice ανά δομή -> Brain: 0.9614 | CSP: 0.7367 | LV: 0.6605
+  HD ανά δομή   -> Brain: 24.09px | CSP: 81.79px | LV: 118.13px
+  ASD ανά δομή  -> Brain: 7.66px | CSP: 79.63px | LV: 114.67px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 6/15 epochs (Best: 0.7914 @ Epoch 31)
+Train Epoch: 38 [400/2451 (16%)]	Loss: 0.265020
+Train Epoch: 38 [800/2451 (33%)]	Loss: 0.262637
+Train Epoch: 38 [1200/2451 (49%)]	Loss: 0.263848
+Train Epoch: 38 [1600/2451 (65%)]	Loss: 0.197176
+Train Epoch: 38 [2000/2451 (82%)]	Loss: 0.419706
+Train Epoch: 38 [2400/2451 (98%)]	Loss: 0.229329
+Train Epoch: 38 [2451/2451 (100%)]	Loss: 0.604425
+
+Fold 1 Validation set: Average loss: 0.4342, Average IOU: 0.6200, Average Dice: 0.7366, Average HD: 97.94px, Average ASD: 90.45px
+  IoU ανά δομή  -> Brain: 0.9256 | CSP: 0.6080 | LV: 0.3264
+  Dice ανά δομή -> Brain: 0.9614 | CSP: 0.7562 | LV: 0.4921
+  HD ανά δομή   -> Brain: 25.75px | CSP: 80.75px | LV: 187.32px
+  ASD ανά δομή  -> Brain: 7.81px | CSP: 78.73px | LV: 184.81px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 7/15 epochs (Best: 0.7914 @ Epoch 31)
+Train Epoch: 39 [400/2451 (16%)]	Loss: 0.244945
+Train Epoch: 39 [800/2451 (33%)]	Loss: 0.259292
+Train Epoch: 39 [1200/2451 (49%)]	Loss: 0.287450
+Train Epoch: 39 [1600/2451 (65%)]	Loss: 0.253048
+Train Epoch: 39 [2000/2451 (82%)]	Loss: 0.330148
+Train Epoch: 39 [2400/2451 (98%)]	Loss: 0.459447
+Train Epoch: 39 [2451/2451 (100%)]	Loss: 0.342886
+
+Fold 1 Validation set: Average loss: 0.4545, Average IOU: 0.6084, Average Dice: 0.7315, Average HD: 90.18px, Average ASD: 81.16px
+  IoU ανά δομή  -> Brain: 0.9070 | CSP: 0.5680 | LV: 0.3502
+  Dice ανά δομή -> Brain: 0.9512 | CSP: 0.7245 | LV: 0.5187
+  HD ανά δομή   -> Brain: 29.70px | CSP: 83.52px | LV: 157.31px
+  ASD ανά δομή  -> Brain: 8.58px | CSP: 81.22px | LV: 153.67px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 8/15 epochs (Best: 0.7914 @ Epoch 31)
+Train Epoch: 40 [400/2451 (16%)]	Loss: 0.194233
+Train Epoch: 40 [800/2451 (33%)]	Loss: 0.191530
+Train Epoch: 40 [1200/2451 (49%)]	Loss: 0.262842
+Train Epoch: 40 [1600/2451 (65%)]	Loss: 0.137200
+Train Epoch: 40 [2000/2451 (82%)]	Loss: 0.265673
+Train Epoch: 40 [2400/2451 (98%)]	Loss: 0.436674
+Train Epoch: 40 [2451/2451 (100%)]	Loss: 0.273039
+
+Fold 1 Validation set: Average loss: 0.4789, Average IOU: 0.6244, Average Dice: 0.7467, Average HD: 89.33px, Average ASD: 80.97px
+  IoU ανά δομή  -> Brain: 0.8960 | CSP: 0.6092 | LV: 0.3679
+  Dice ανά δομή -> Brain: 0.9452 | CSP: 0.7571 | LV: 0.5379
+  HD ανά δομή   -> Brain: 29.14px | CSP: 70.66px | LV: 168.21px
+  ASD ανά δομή  -> Brain: 9.08px | CSP: 68.56px | LV: 165.27px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 9/15 epochs (Best: 0.7914 @ Epoch 31)
+Train Epoch: 41 [400/2451 (16%)]	Loss: 0.372367
+Train Epoch: 41 [800/2451 (33%)]	Loss: 0.311154
+Train Epoch: 41 [1200/2451 (49%)]	Loss: 0.289272
+Train Epoch: 41 [1600/2451 (65%)]	Loss: 0.277994
+Train Epoch: 41 [2000/2451 (82%)]	Loss: 0.262514
+Train Epoch: 41 [2400/2451 (98%)]	Loss: 0.078239
+Train Epoch: 41 [2451/2451 (100%)]	Loss: 0.256077
+
+Fold 1 Validation set: Average loss: 0.4758, Average IOU: 0.6201, Average Dice: 0.7415, Average HD: 97.45px, Average ASD: 89.51px
+  IoU ανά δομή  -> Brain: 0.9178 | CSP: 0.5758 | LV: 0.3668
+  Dice ανά δομή -> Brain: 0.9572 | CSP: 0.7308 | LV: 0.5367
+  HD ανά δομή   -> Brain: 27.50px | CSP: 94.07px | LV: 170.78px
+  ASD ανά δομή  -> Brain: 8.78px | CSP: 91.75px | LV: 168.01px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 10/15 epochs (Best: 0.7914 @ Epoch 31)
+Train Epoch: 42 [400/2451 (16%)]	Loss: 0.251435
+Train Epoch: 42 [800/2451 (33%)]	Loss: 0.217987
+Train Epoch: 42 [1200/2451 (49%)]	Loss: 0.127518
+Train Epoch: 42 [1600/2451 (65%)]	Loss: 0.227613
+Train Epoch: 42 [2000/2451 (82%)]	Loss: 0.309553
+Train Epoch: 42 [2400/2451 (98%)]	Loss: 0.214220
+Train Epoch: 42 [2451/2451 (100%)]	Loss: 0.353870
+
+Fold 1 Validation set: Average loss: 0.5856, Average IOU: 0.5616, Average Dice: 0.6886, Average HD: 121.84px, Average ASD: 112.75px
+  IoU ανά δομή  -> Brain: 0.9182 | CSP: 0.3910 | LV: 0.3756
+  Dice ανά δομή -> Brain: 0.9573 | CSP: 0.5622 | LV: 0.5461
+  HD ανά δομή   -> Brain: 31.20px | CSP: 172.88px | LV: 161.44px
+  ASD ανά δομή  -> Brain: 8.53px | CSP: 171.23px | LV: 158.50px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 11/15 epochs (Best: 0.7914 @ Epoch 31)
+Train Epoch: 43 [400/2451 (16%)]	Loss: 0.314898
+Train Epoch: 43 [800/2451 (33%)]	Loss: 0.299154
+Train Epoch: 43 [1200/2451 (49%)]	Loss: 0.275287
+Train Epoch: 43 [1600/2451 (65%)]	Loss: 0.157260
+Train Epoch: 43 [2000/2451 (82%)]	Loss: 0.207389
+Train Epoch: 43 [2400/2451 (98%)]	Loss: 0.273493
+Train Epoch: 43 [2451/2451 (100%)]	Loss: 0.226108
+
+Fold 1 Validation set: Average loss: 0.3585, Average IOU: 0.6686, Average Dice: 0.7862, Average HD: 70.03px, Average ASD: 62.78px
+  IoU ανά δομή  -> Brain: 0.9223 | CSP: 0.6180 | LV: 0.4654
+  Dice ανά δομή -> Brain: 0.9596 | CSP: 0.7639 | LV: 0.6352
+  HD ανά δομή   -> Brain: 23.80px | CSP: 71.62px | LV: 114.68px
+  ASD ανά δομή  -> Brain: 7.85px | CSP: 69.52px | LV: 110.98px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 12/15 epochs (Best: 0.7914 @ Epoch 31)
+Train Epoch: 44 [400/2451 (16%)]	Loss: 0.220395
+Train Epoch: 44 [800/2451 (33%)]	Loss: 0.181155
+Train Epoch: 44 [1200/2451 (49%)]	Loss: 0.276000
+Train Epoch: 44 [1600/2451 (65%)]	Loss: 0.194435
+Train Epoch: 44 [2000/2451 (82%)]	Loss: 0.111267
+Train Epoch: 44 [2400/2451 (98%)]	Loss: 0.356794
+Train Epoch: 44 [2451/2451 (100%)]	Loss: 0.258876
+
+Fold 1 Validation set: Average loss: 0.3967, Average IOU: 0.6472, Average Dice: 0.7695, Average HD: 77.89px, Average ASD: 70.17px
+  IoU ανά δομή  -> Brain: 0.9140 | CSP: 0.5741 | LV: 0.4536
+  Dice ανά δομή -> Brain: 0.9551 | CSP: 0.7294 | LV: 0.6241
+  HD ανά δομή   -> Brain: 25.70px | CSP: 75.35px | LV: 132.61px
+  ASD ανά δομή  -> Brain: 8.15px | CSP: 72.91px | LV: 129.46px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 13/15 epochs (Best: 0.7914 @ Epoch 31)
+Train Epoch: 45 [400/2451 (16%)]	Loss: 0.312394
+Train Epoch: 45 [800/2451 (33%)]	Loss: 0.213569
+Train Epoch: 45 [1200/2451 (49%)]	Loss: 0.088979
+Train Epoch: 45 [1600/2451 (65%)]	Loss: 0.313602
+Train Epoch: 45 [2000/2451 (82%)]	Loss: 0.102049
+Train Epoch: 45 [2400/2451 (98%)]	Loss: 0.243340
+Train Epoch: 45 [2451/2451 (100%)]	Loss: 0.215326
+
+Fold 1 Validation set: Average loss: 0.4647, Average IOU: 0.6107, Average Dice: 0.7336, Average HD: 90.58px, Average ASD: 82.32px
+  IoU ανά δομή  -> Brain: 0.9222 | CSP: 0.5402 | LV: 0.3696
+  Dice ανά δομή -> Brain: 0.9595 | CSP: 0.7014 | LV: 0.5397
+  HD ανά δομή   -> Brain: 27.28px | CSP: 102.18px | LV: 142.29px
+  ASD ανά δομή  -> Brain: 8.15px | CSP: 100.03px | LV: 138.79px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 14/15 epochs (Best: 0.7914 @ Epoch 31)
+Train Epoch: 46 [400/2451 (16%)]	Loss: 0.549189
+Train Epoch: 46 [800/2451 (33%)]	Loss: 0.180750
+Train Epoch: 46 [1200/2451 (49%)]	Loss: 0.208837
+Train Epoch: 46 [1600/2451 (65%)]	Loss: 0.342146
+Train Epoch: 46 [2000/2451 (82%)]	Loss: 0.294685
+Train Epoch: 46 [2400/2451 (98%)]	Loss: 0.084913
+Train Epoch: 46 [2451/2451 (100%)]	Loss: 0.266087
+
+Fold 1 Validation set: Average loss: 0.3864, Average IOU: 0.6642, Average Dice: 0.7835, Average HD: 75.82px, Average ASD: 68.73px
+  IoU ανά δομή  -> Brain: 0.9205 | CSP: 0.5947 | LV: 0.4773
+  Dice ανά δομή -> Brain: 0.9586 | CSP: 0.7458 | LV: 0.6462
+  HD ανά δομή   -> Brain: 23.94px | CSP: 78.75px | LV: 124.79px
+  ASD ανά δομή  -> Brain: 7.93px | CSP: 76.67px | LV: 121.57px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 15/15 epochs (Best: 0.7914 @ Epoch 31)
+
+>>> Early Stopping ενεργοποιήθηκε στο Fold 1 (Epoch 46)! <<<
+
+----------------------------------------------------------------------
+ΚΑΛΥΤΕΡΑ ΑΠΟΤΕΛΕΣΜΑΤΑ FOLD 1 (R2AttU_Net)
+----------------------------------------------------------------------
+Model Complexity (R2AttU_Net) -> Params: 39.44M (Trainable: 39.44M) | Size: 150.52 MB | Complexity: 307.14 GFLOPs
+Best Average Dice Score (Epoch 31): 0.7914
+  Best Dice ανά δομή -> Brain: 0.9606 | CSP: 0.7403 | LV: 0.6732
+IoU (at Best Dice): 0.6731
+  IoU ανά δομή       -> Brain: 0.9243 | CSP: 0.5876 | LV: 0.5074
+Hausdorff Distance (at Best Dice): 71.46px
+  HD ανά δομή        -> Brain: 24.08px | CSP: 78.02px | LV: 112.27px
+Average Surface Distance (at Best Dice): 64.24px
+  ASD ανά δομή       -> Brain: 7.85px | CSP: 75.76px | LV: 109.11px
+----------------------------------------------------------------------
+
+
+################################################################################
+ΕΚΚΙΝΗΣΗ FOLD 2 / 4  (Model = R2AttU_Net, Seed = 44)
+  Train CSV : /home/mkolliniatis/Dataset/splits/fold_2_train.csv
+  Val CSV   : /home/mkolliniatis/Dataset/splits/fold_2_val.csv
+################################################################################
+Train Epoch: 1 [400/2453 (16%)]	Loss: 1.011584
+Train Epoch: 1 [800/2453 (33%)]	Loss: 0.790384
+Train Epoch: 1 [1200/2453 (49%)]	Loss: 0.509283
+Train Epoch: 1 [1600/2453 (65%)]	Loss: 0.682264
+Train Epoch: 1 [2000/2453 (81%)]	Loss: 0.780108
+Train Epoch: 1 [2400/2453 (98%)]	Loss: 0.270344
+Train Epoch: 1 [2453/2453 (100%)]	Loss: 0.290266
+
+Fold 2 Validation set: Average loss: 1.1036, Average IOU: 0.3388, Average Dice: 0.4180, Average HD: 199.81px, Average ASD: 188.29px
+  IoU ανά δομή  -> Brain: 0.7982 | CSP: 0.2051 | LV: 0.0130
+  Dice ανά δομή -> Brain: 0.8878 | CSP: 0.3404 | LV: 0.0257
+  HD ανά δομή   -> Brain: 47.19px | CSP: 209.99px | LV: 342.26px
+  ASD ανά δομή  -> Brain: 15.38px | CSP: 207.59px | LV: 341.89px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.4180) στο Epoch 1 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold2_best.pt
+Train Epoch: 2 [400/2453 (16%)]	Loss: 0.608496
+Train Epoch: 2 [800/2453 (33%)]	Loss: 0.554597
+Train Epoch: 2 [1200/2453 (49%)]	Loss: 0.323005
+Train Epoch: 2 [1600/2453 (65%)]	Loss: 0.445928
+Train Epoch: 2 [2000/2453 (81%)]	Loss: 0.456162
+Train Epoch: 2 [2400/2453 (98%)]	Loss: 0.464784
+Train Epoch: 2 [2453/2453 (100%)]	Loss: 0.449577
+
+Fold 2 Validation set: Average loss: 0.9442, Average IOU: 0.4504, Average Dice: 0.5840, Average HD: 141.75px, Average ASD: 130.91px
+  IoU ανά δομή  -> Brain: 0.8019 | CSP: 0.2744 | LV: 0.2750
+  Dice ανά δομή -> Brain: 0.8901 | CSP: 0.4306 | LV: 0.4313
+  HD ανά δομή   -> Brain: 42.78px | CSP: 198.48px | LV: 183.99px
+  ASD ανά δομή  -> Brain: 15.00px | CSP: 196.70px | LV: 181.04px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.5840) στο Epoch 2 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold2_best.pt
+Train Epoch: 3 [400/2453 (16%)]	Loss: 0.324439
+Train Epoch: 3 [800/2453 (33%)]	Loss: 0.348854
+Train Epoch: 3 [1200/2453 (49%)]	Loss: 0.499500
+Train Epoch: 3 [1600/2453 (65%)]	Loss: 0.353370
+Train Epoch: 3 [2000/2453 (81%)]	Loss: 0.392149
+Train Epoch: 3 [2400/2453 (98%)]	Loss: 0.526502
+Train Epoch: 3 [2453/2453 (100%)]	Loss: 0.477969
+
+Fold 2 Validation set: Average loss: 0.5220, Average IOU: 0.5679, Average Dice: 0.6990, Average HD: 104.60px, Average ASD: 94.11px
+  IoU ανά δομή  -> Brain: 0.8868 | CSP: 0.4534 | LV: 0.3635
+  Dice ανά δομή -> Brain: 0.9400 | CSP: 0.6239 | LV: 0.5332
+  HD ανά δομή   -> Brain: 33.70px | CSP: 122.30px | LV: 157.80px
+  ASD ανά δομή  -> Brain: 9.73px | CSP: 119.91px | LV: 152.68px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.6990) στο Epoch 3 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold2_best.pt
+Train Epoch: 4 [400/2453 (16%)]	Loss: 0.374406
+Train Epoch: 4 [800/2453 (33%)]	Loss: 0.412386
+Train Epoch: 4 [1200/2453 (49%)]	Loss: 0.267998
+Train Epoch: 4 [1600/2453 (65%)]	Loss: 0.328977
+Train Epoch: 4 [2000/2453 (81%)]	Loss: 0.330036
+Train Epoch: 4 [2400/2453 (98%)]	Loss: 0.213676
+Train Epoch: 4 [2453/2453 (100%)]	Loss: 0.184448
+
+Fold 2 Validation set: Average loss: 0.4547, Average IOU: 0.5858, Average Dice: 0.7130, Average HD: 105.68px, Average ASD: 95.38px
+  IoU ανά δομή  -> Brain: 0.9003 | CSP: 0.5069 | LV: 0.3503
+  Dice ανά δομή -> Brain: 0.9475 | CSP: 0.6727 | LV: 0.5189
+  HD ανά δομή   -> Brain: 32.63px | CSP: 111.38px | LV: 173.05px
+  ASD ανά δομή  -> Brain: 9.09px | CSP: 108.76px | LV: 168.28px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7130) στο Epoch 4 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold2_best.pt
+Train Epoch: 5 [400/2453 (16%)]	Loss: 0.763036
+Train Epoch: 5 [800/2453 (33%)]	Loss: 0.285168
+Train Epoch: 5 [1200/2453 (49%)]	Loss: 0.246397
+Train Epoch: 5 [1600/2453 (65%)]	Loss: 0.455801
+Train Epoch: 5 [2000/2453 (81%)]	Loss: 0.357905
+Train Epoch: 5 [2400/2453 (98%)]	Loss: 0.307268
+Train Epoch: 5 [2453/2453 (100%)]	Loss: 0.594800
+
+Fold 2 Validation set: Average loss: 0.5161, Average IOU: 0.5599, Average Dice: 0.6824, Average HD: 114.76px, Average ASD: 105.18px
+  IoU ανά δομή  -> Brain: 0.9027 | CSP: 0.5067 | LV: 0.2704
+  Dice ανά δομή -> Brain: 0.9489 | CSP: 0.6726 | LV: 0.4257
+  HD ανά δομή   -> Brain: 31.83px | CSP: 108.57px | LV: 203.88px
+  ASD ανά δομή  -> Brain: 9.07px | CSP: 105.64px | LV: 200.82px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.7130 @ Epoch 4)
+Train Epoch: 6 [400/2453 (16%)]	Loss: 0.282047
+Train Epoch: 6 [800/2453 (33%)]	Loss: 0.457352
+Train Epoch: 6 [1200/2453 (49%)]	Loss: 0.491776
+Train Epoch: 6 [1600/2453 (65%)]	Loss: 0.217741
+Train Epoch: 6 [2000/2453 (81%)]	Loss: 0.243945
+Train Epoch: 6 [2400/2453 (98%)]	Loss: 0.172443
+Train Epoch: 6 [2453/2453 (100%)]	Loss: 0.129315
+
+Fold 2 Validation set: Average loss: 0.4630, Average IOU: 0.6132, Average Dice: 0.7400, Average HD: 90.69px, Average ASD: 82.70px
+  IoU ανά δομή  -> Brain: 0.9110 | CSP: 0.5009 | LV: 0.4276
+  Dice ανά δομή -> Brain: 0.9534 | CSP: 0.6675 | LV: 0.5991
+  HD ανά δομή   -> Brain: 26.94px | CSP: 107.57px | LV: 137.57px
+  ASD ανά δομή  -> Brain: 8.55px | CSP: 105.09px | LV: 134.45px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7400) στο Epoch 6 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold2_best.pt
+Train Epoch: 7 [400/2453 (16%)]	Loss: 0.261374
+Train Epoch: 7 [800/2453 (33%)]	Loss: 0.469833
+Train Epoch: 7 [1200/2453 (49%)]	Loss: 0.261691
+Train Epoch: 7 [1600/2453 (65%)]	Loss: 0.261417
+Train Epoch: 7 [2000/2453 (81%)]	Loss: 0.232013
+Train Epoch: 7 [2400/2453 (98%)]	Loss: 0.545867
+Train Epoch: 7 [2453/2453 (100%)]	Loss: 0.080085
+
+Fold 2 Validation set: Average loss: 0.4952, Average IOU: 0.6107, Average Dice: 0.7393, Average HD: 99.37px, Average ASD: 89.26px
+  IoU ανά δομή  -> Brain: 0.8864 | CSP: 0.5424 | LV: 0.4032
+  Dice ανά δομή -> Brain: 0.9398 | CSP: 0.7033 | LV: 0.5746
+  HD ανά δομή   -> Brain: 33.74px | CSP: 106.80px | LV: 157.59px
+  ASD ανά δομή  -> Brain: 9.66px | CSP: 104.51px | LV: 153.60px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.7400 @ Epoch 6)
+Train Epoch: 8 [400/2453 (16%)]	Loss: 0.355073
+Train Epoch: 8 [800/2453 (33%)]	Loss: 0.363324
+Train Epoch: 8 [1200/2453 (49%)]	Loss: 0.388525
+Train Epoch: 8 [1600/2453 (65%)]	Loss: 0.208455
+Train Epoch: 8 [2000/2453 (81%)]	Loss: 0.483482
+Train Epoch: 8 [2400/2453 (98%)]	Loss: 0.306759
+Train Epoch: 8 [2453/2453 (100%)]	Loss: 0.275320
+
+Fold 2 Validation set: Average loss: 0.4755, Average IOU: 0.5987, Average Dice: 0.7258, Average HD: 102.76px, Average ASD: 94.56px
+  IoU ανά δομή  -> Brain: 0.9088 | CSP: 0.4982 | LV: 0.3890
+  Dice ανά δομή -> Brain: 0.9522 | CSP: 0.6651 | LV: 0.5601
+  HD ανά δομή   -> Brain: 28.47px | CSP: 116.75px | LV: 163.07px
+  ASD ανά δομή  -> Brain: 8.83px | CSP: 114.61px | LV: 160.25px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 2/15 epochs (Best: 0.7400 @ Epoch 6)
+Train Epoch: 9 [400/2453 (16%)]	Loss: 0.348402
+Train Epoch: 9 [800/2453 (33%)]	Loss: 0.481043
+Train Epoch: 9 [1200/2453 (49%)]	Loss: 0.493969
+Train Epoch: 9 [1600/2453 (65%)]	Loss: 0.543778
+Train Epoch: 9 [2000/2453 (81%)]	Loss: 0.268311
+Train Epoch: 9 [2400/2453 (98%)]	Loss: 0.290506
+Train Epoch: 9 [2453/2453 (100%)]	Loss: 0.271012
+
+Fold 2 Validation set: Average loss: 0.4297, Average IOU: 0.6104, Average Dice: 0.7368, Average HD: 101.14px, Average ASD: 90.59px
+  IoU ανά δομή  -> Brain: 0.9088 | CSP: 0.5184 | LV: 0.4039
+  Dice ανά δομή -> Brain: 0.9522 | CSP: 0.6828 | LV: 0.5754
+  HD ανά δομή   -> Brain: 33.35px | CSP: 108.08px | LV: 161.98px
+  ASD ανά δομή  -> Brain: 8.90px | CSP: 105.65px | LV: 157.24px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 3/15 epochs (Best: 0.7400 @ Epoch 6)
+Train Epoch: 10 [400/2453 (16%)]	Loss: 0.207092
+Train Epoch: 10 [800/2453 (33%)]	Loss: 0.336810
+Train Epoch: 10 [1200/2453 (49%)]	Loss: 0.206512
+Train Epoch: 10 [1600/2453 (65%)]	Loss: 0.392847
+Train Epoch: 10 [2000/2453 (81%)]	Loss: 0.245283
+Train Epoch: 10 [2400/2453 (98%)]	Loss: 0.440950
+Train Epoch: 10 [2453/2453 (100%)]	Loss: 0.267059
+
+Fold 2 Validation set: Average loss: 0.4086, Average IOU: 0.6204, Average Dice: 0.7459, Average HD: 93.69px, Average ASD: 85.46px
+  IoU ανά δομή  -> Brain: 0.9144 | CSP: 0.5208 | LV: 0.4261
+  Dice ανά δομή -> Brain: 0.9553 | CSP: 0.6849 | LV: 0.5976
+  HD ανά δομή   -> Brain: 27.92px | CSP: 105.92px | LV: 147.23px
+  ASD ανά δομή  -> Brain: 8.51px | CSP: 103.41px | LV: 144.47px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7459) στο Epoch 10 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold2_best.pt
+Train Epoch: 11 [400/2453 (16%)]	Loss: 0.099324
+Train Epoch: 11 [800/2453 (33%)]	Loss: 0.271958
+Train Epoch: 11 [1200/2453 (49%)]	Loss: 0.456548
+Train Epoch: 11 [1600/2453 (65%)]	Loss: 0.587321
+Train Epoch: 11 [2000/2453 (81%)]	Loss: 0.420647
+Train Epoch: 11 [2400/2453 (98%)]	Loss: 0.306848
+Train Epoch: 11 [2453/2453 (100%)]	Loss: 0.129112
+
+Fold 2 Validation set: Average loss: 0.3794, Average IOU: 0.6470, Average Dice: 0.7699, Average HD: 85.01px, Average ASD: 76.39px
+  IoU ανά δομή  -> Brain: 0.9165 | CSP: 0.5508 | LV: 0.4737
+  Dice ανά δομή -> Brain: 0.9564 | CSP: 0.7104 | LV: 0.6429
+  HD ανά δομή   -> Brain: 28.04px | CSP: 112.55px | LV: 114.45px
+  ASD ανά δομή  -> Brain: 8.35px | CSP: 109.72px | LV: 111.10px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7699) στο Epoch 11 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold2_best.pt
+Train Epoch: 12 [400/2453 (16%)]	Loss: 0.342145
+Train Epoch: 12 [800/2453 (33%)]	Loss: 0.740799
+Train Epoch: 12 [1200/2453 (49%)]	Loss: 0.256569
+Train Epoch: 12 [1600/2453 (65%)]	Loss: 0.391424
+Train Epoch: 12 [2000/2453 (81%)]	Loss: 0.472416
+Train Epoch: 12 [2400/2453 (98%)]	Loss: 0.173327
+Train Epoch: 12 [2453/2453 (100%)]	Loss: 0.076671
+
+Fold 2 Validation set: Average loss: 0.3759, Average IOU: 0.6406, Average Dice: 0.7635, Average HD: 86.59px, Average ASD: 78.45px
+  IoU ανά δομή  -> Brain: 0.9166 | CSP: 0.5591 | LV: 0.4460
+  Dice ανά δομή -> Brain: 0.9565 | CSP: 0.7172 | LV: 0.6169
+  HD ανά δομή   -> Brain: 27.39px | CSP: 94.09px | LV: 138.28px
+  ASD ανά δομή  -> Brain: 8.39px | CSP: 91.89px | LV: 135.07px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.7699 @ Epoch 11)
+Train Epoch: 13 [400/2453 (16%)]	Loss: 0.234023
+Train Epoch: 13 [800/2453 (33%)]	Loss: 0.314597
+Train Epoch: 13 [1200/2453 (49%)]	Loss: 0.217045
+Train Epoch: 13 [1600/2453 (65%)]	Loss: 0.554684
+Train Epoch: 13 [2000/2453 (81%)]	Loss: 0.325522
+Train Epoch: 13 [2400/2453 (98%)]	Loss: 0.403525
+Train Epoch: 13 [2453/2453 (100%)]	Loss: 0.320185
+
+Fold 2 Validation set: Average loss: 0.4186, Average IOU: 0.6365, Average Dice: 0.7602, Average HD: 90.12px, Average ASD: 82.49px
+  IoU ανά δομή  -> Brain: 0.9170 | CSP: 0.5447 | LV: 0.4479
+  Dice ανά δομή -> Brain: 0.9567 | CSP: 0.7052 | LV: 0.6187
+  HD ανά δομή   -> Brain: 26.37px | CSP: 104.32px | LV: 139.67px
+  ASD ανά δομή  -> Brain: 8.42px | CSP: 102.32px | LV: 136.73px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 2/15 epochs (Best: 0.7699 @ Epoch 11)
+Train Epoch: 14 [400/2453 (16%)]	Loss: 0.171384
+Train Epoch: 14 [800/2453 (33%)]	Loss: 0.395332
+Train Epoch: 14 [1200/2453 (49%)]	Loss: 0.233891
+Train Epoch: 14 [1600/2453 (65%)]	Loss: 0.227096
+Train Epoch: 14 [2000/2453 (81%)]	Loss: 0.163439
+Train Epoch: 14 [2400/2453 (98%)]	Loss: 0.088674
+Train Epoch: 14 [2453/2453 (100%)]	Loss: 0.104677
+
+Fold 2 Validation set: Average loss: 0.4134, Average IOU: 0.6365, Average Dice: 0.7607, Average HD: 84.24px, Average ASD: 76.22px
+  IoU ανά δομή  -> Brain: 0.9105 | CSP: 0.5540 | LV: 0.4450
+  Dice ανά δομή -> Brain: 0.9532 | CSP: 0.7130 | LV: 0.6160
+  HD ανά δομή   -> Brain: 27.14px | CSP: 101.85px | LV: 123.74px
+  ASD ανά δομή  -> Brain: 8.66px | CSP: 99.63px | LV: 120.37px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 3/15 epochs (Best: 0.7699 @ Epoch 11)
+Train Epoch: 15 [400/2453 (16%)]	Loss: 0.220776
+Train Epoch: 15 [800/2453 (33%)]	Loss: 0.378633
+Train Epoch: 15 [1200/2453 (49%)]	Loss: 0.228079
+Train Epoch: 15 [1600/2453 (65%)]	Loss: 0.322776
+Train Epoch: 15 [2000/2453 (81%)]	Loss: 0.498509
+Train Epoch: 15 [2400/2453 (98%)]	Loss: 0.359261
+Train Epoch: 15 [2453/2453 (100%)]	Loss: 0.305452
+
+Fold 2 Validation set: Average loss: 0.3682, Average IOU: 0.6417, Average Dice: 0.7657, Average HD: 84.89px, Average ASD: 76.62px
+  IoU ανά δομή  -> Brain: 0.9144 | CSP: 0.5358 | LV: 0.4750
+  Dice ανά δομή -> Brain: 0.9553 | CSP: 0.6977 | LV: 0.6441
+  HD ανά δομή   -> Brain: 27.14px | CSP: 106.28px | LV: 121.25px
+  ASD ανά δομή  -> Brain: 8.41px | CSP: 103.61px | LV: 117.85px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 4/15 epochs (Best: 0.7699 @ Epoch 11)
+Train Epoch: 16 [400/2453 (16%)]	Loss: 0.319101
+Train Epoch: 16 [800/2453 (33%)]	Loss: 0.280015
+Train Epoch: 16 [1200/2453 (49%)]	Loss: 0.410920
+Train Epoch: 16 [1600/2453 (65%)]	Loss: 0.155344
+Train Epoch: 16 [2000/2453 (81%)]	Loss: 0.309957
+Train Epoch: 16 [2400/2453 (98%)]	Loss: 0.475060
+Train Epoch: 16 [2453/2453 (100%)]	Loss: 0.095828
+
+Fold 2 Validation set: Average loss: 0.4080, Average IOU: 0.6235, Average Dice: 0.7492, Average HD: 91.47px, Average ASD: 82.61px
+  IoU ανά δομή  -> Brain: 0.9088 | CSP: 0.5341 | LV: 0.4277
+  Dice ανά δομή -> Brain: 0.9522 | CSP: 0.6963 | LV: 0.5991
+  HD ανά δομή   -> Brain: 29.31px | CSP: 108.95px | LV: 136.16px
+  ASD ανά δομή  -> Brain: 8.84px | CSP: 106.28px | LV: 132.70px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 5/15 epochs (Best: 0.7699 @ Epoch 11)
+Train Epoch: 17 [400/2453 (16%)]	Loss: 0.380250
+Train Epoch: 17 [800/2453 (33%)]	Loss: 0.233050
+Train Epoch: 17 [1200/2453 (49%)]	Loss: 0.280482
+Train Epoch: 17 [1600/2453 (65%)]	Loss: 0.253973
+Train Epoch: 17 [2000/2453 (81%)]	Loss: 0.322203
+Train Epoch: 17 [2400/2453 (98%)]	Loss: 0.331302
+Train Epoch: 17 [2453/2453 (100%)]	Loss: 0.219231
+
+Fold 2 Validation set: Average loss: 0.4870, Average IOU: 0.6056, Average Dice: 0.7316, Average HD: 105.39px, Average ASD: 97.33px
+  IoU ανά δομή  -> Brain: 0.9139 | CSP: 0.5080 | LV: 0.3947
+  Dice ανά δομή -> Brain: 0.9550 | CSP: 0.6738 | LV: 0.5660
+  HD ανά δομή   -> Brain: 28.52px | CSP: 121.48px | LV: 166.18px
+  ASD ανά δομή  -> Brain: 8.70px | CSP: 119.53px | LV: 163.78px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 6/15 epochs (Best: 0.7699 @ Epoch 11)
+Train Epoch: 18 [400/2453 (16%)]	Loss: 0.357728
+Train Epoch: 18 [800/2453 (33%)]	Loss: 0.228998
+Train Epoch: 18 [1200/2453 (49%)]	Loss: 0.386855
+Train Epoch: 18 [1600/2453 (65%)]	Loss: 0.265289
+Train Epoch: 18 [2000/2453 (81%)]	Loss: 0.321339
+Train Epoch: 18 [2400/2453 (98%)]	Loss: 0.237862
+Train Epoch: 18 [2453/2453 (100%)]	Loss: 0.263196
+
+Fold 2 Validation set: Average loss: 0.3569, Average IOU: 0.6516, Average Dice: 0.7729, Average HD: 84.02px, Average ASD: 76.10px
+  IoU ανά δομή  -> Brain: 0.9216 | CSP: 0.5688 | LV: 0.4645
+  Dice ανά δομή -> Brain: 0.9592 | CSP: 0.7252 | LV: 0.6344
+  HD ανά δομή   -> Brain: 26.97px | CSP: 95.02px | LV: 130.08px
+  ASD ανά δομή  -> Brain: 8.30px | CSP: 93.07px | LV: 126.92px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7729) στο Epoch 18 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold2_best.pt
+Train Epoch: 19 [400/2453 (16%)]	Loss: 0.296361
+Train Epoch: 19 [800/2453 (33%)]	Loss: 0.381351
+Train Epoch: 19 [1200/2453 (49%)]	Loss: 0.249556
+Train Epoch: 19 [1600/2453 (65%)]	Loss: 0.422010
+Train Epoch: 19 [2000/2453 (81%)]	Loss: 0.239682
+Train Epoch: 19 [2400/2453 (98%)]	Loss: 0.350105
+Train Epoch: 19 [2453/2453 (100%)]	Loss: 0.093656
+
+Fold 2 Validation set: Average loss: 0.4076, Average IOU: 0.6457, Average Dice: 0.7691, Average HD: 81.21px, Average ASD: 73.38px
+  IoU ανά δομή  -> Brain: 0.9097 | CSP: 0.5635 | LV: 0.4637
+  Dice ανά δομή -> Brain: 0.9527 | CSP: 0.7208 | LV: 0.6336
+  HD ανά δομή   -> Brain: 27.15px | CSP: 92.27px | LV: 124.22px
+  ASD ανά δομή  -> Brain: 8.71px | CSP: 90.26px | LV: 121.16px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.7729 @ Epoch 18)
+Train Epoch: 20 [400/2453 (16%)]	Loss: 0.301510
+Train Epoch: 20 [800/2453 (33%)]	Loss: 0.317525
+Train Epoch: 20 [1200/2453 (49%)]	Loss: 0.238456
+Train Epoch: 20 [1600/2453 (65%)]	Loss: 0.199444
+Train Epoch: 20 [2000/2453 (81%)]	Loss: 0.438972
+Train Epoch: 20 [2400/2453 (98%)]	Loss: 0.227903
+Train Epoch: 20 [2453/2453 (100%)]	Loss: 0.245101
+
+Fold 2 Validation set: Average loss: 0.3919, Average IOU: 0.6448, Average Dice: 0.7664, Average HD: 82.68px, Average ASD: 75.35px
+  IoU ανά δομή  -> Brain: 0.9230 | CSP: 0.5655 | LV: 0.4458
+  Dice ανά δομή -> Brain: 0.9600 | CSP: 0.7224 | LV: 0.6167
+  HD ανά δομή   -> Brain: 24.58px | CSP: 90.05px | LV: 133.40px
+  ASD ανά δομή  -> Brain: 8.13px | CSP: 87.64px | LV: 130.29px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 2/15 epochs (Best: 0.7729 @ Epoch 18)
+Train Epoch: 21 [400/2453 (16%)]	Loss: 0.368864
+Train Epoch: 21 [800/2453 (33%)]	Loss: 0.161926
+Train Epoch: 21 [1200/2453 (49%)]	Loss: 0.265434
+Train Epoch: 21 [1600/2453 (65%)]	Loss: 0.252787
+Train Epoch: 21 [2000/2453 (81%)]	Loss: 0.300080
+Train Epoch: 21 [2400/2453 (98%)]	Loss: 0.310101
+Train Epoch: 21 [2453/2453 (100%)]	Loss: 0.145683
+
+Fold 2 Validation set: Average loss: 0.4028, Average IOU: 0.6206, Average Dice: 0.7480, Average HD: 98.94px, Average ASD: 88.64px
+  IoU ανά δομή  -> Brain: 0.9059 | CSP: 0.4882 | LV: 0.4676
+  Dice ανά δομή -> Brain: 0.9506 | CSP: 0.6561 | LV: 0.6372
+  HD ανά δομή   -> Brain: 33.10px | CSP: 135.78px | LV: 127.94px
+  ASD ανά δομή  -> Brain: 9.18px | CSP: 131.99px | LV: 124.76px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 3/15 epochs (Best: 0.7729 @ Epoch 18)
+Train Epoch: 22 [400/2453 (16%)]	Loss: 0.244633
+Train Epoch: 22 [800/2453 (33%)]	Loss: 0.140599
+Train Epoch: 22 [1200/2453 (49%)]	Loss: 0.226618
+Train Epoch: 22 [1600/2453 (65%)]	Loss: 0.276202
+Train Epoch: 22 [2000/2453 (81%)]	Loss: 0.206476
+Train Epoch: 22 [2400/2453 (98%)]	Loss: 0.346422
+Train Epoch: 22 [2453/2453 (100%)]	Loss: 0.338614
+
+Fold 2 Validation set: Average loss: 0.4234, Average IOU: 0.6292, Average Dice: 0.7521, Average HD: 87.17px, Average ASD: 79.40px
+  IoU ανά δομή  -> Brain: 0.9161 | CSP: 0.5656 | LV: 0.4060
+  Dice ανά δομή -> Brain: 0.9562 | CSP: 0.7226 | LV: 0.5775
+  HD ανά δομή   -> Brain: 26.43px | CSP: 97.83px | LV: 137.24px
+  ASD ανά δομή  -> Brain: 8.33px | CSP: 95.68px | LV: 134.18px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 4/15 epochs (Best: 0.7729 @ Epoch 18)
+Train Epoch: 23 [400/2453 (16%)]	Loss: 0.199271
+Train Epoch: 23 [800/2453 (33%)]	Loss: 0.111330
+Train Epoch: 23 [1200/2453 (49%)]	Loss: 0.342971
+Train Epoch: 23 [1600/2453 (65%)]	Loss: 0.193928
+Train Epoch: 23 [2000/2453 (81%)]	Loss: 0.273508
+Train Epoch: 23 [2400/2453 (98%)]	Loss: 0.295258
+Train Epoch: 23 [2453/2453 (100%)]	Loss: 0.273351
+
+Fold 2 Validation set: Average loss: 0.4635, Average IOU: 0.6375, Average Dice: 0.7622, Average HD: 89.32px, Average ASD: 81.41px
+  IoU ανά δομή  -> Brain: 0.9036 | CSP: 0.5613 | LV: 0.4475
+  Dice ανά δομή -> Brain: 0.9494 | CSP: 0.7190 | LV: 0.6183
+  HD ανά δομή   -> Brain: 27.94px | CSP: 99.28px | LV: 140.75px
+  ASD ανά δομή  -> Brain: 8.97px | CSP: 97.26px | LV: 138.00px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 5/15 epochs (Best: 0.7729 @ Epoch 18)
+Train Epoch: 24 [400/2453 (16%)]	Loss: 0.364623
+Train Epoch: 24 [800/2453 (33%)]	Loss: 0.298857
+Train Epoch: 24 [1200/2453 (49%)]	Loss: 0.513236
+Train Epoch: 24 [1600/2453 (65%)]	Loss: 0.290857
+Train Epoch: 24 [2000/2453 (81%)]	Loss: 0.218146
+Train Epoch: 24 [2400/2453 (98%)]	Loss: 0.338741
+Train Epoch: 24 [2453/2453 (100%)]	Loss: 0.244533
+
+Fold 2 Validation set: Average loss: 0.3936, Average IOU: 0.6474, Average Dice: 0.7702, Average HD: 79.95px, Average ASD: 72.27px
+  IoU ανά δομή  -> Brain: 0.9166 | CSP: 0.5510 | LV: 0.4746
+  Dice ανά δομή -> Brain: 0.9565 | CSP: 0.7105 | LV: 0.6437
+  HD ανά δομή   -> Brain: 26.09px | CSP: 99.19px | LV: 114.56px
+  ASD ανά δομή  -> Brain: 8.43px | CSP: 97.09px | LV: 111.30px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 6/15 epochs (Best: 0.7729 @ Epoch 18)
+Train Epoch: 25 [400/2453 (16%)]	Loss: 0.327893
+Train Epoch: 25 [800/2453 (33%)]	Loss: 0.188960
+Train Epoch: 25 [1200/2453 (49%)]	Loss: 0.445674
+Train Epoch: 25 [1600/2453 (65%)]	Loss: 0.190785
+Train Epoch: 25 [2000/2453 (81%)]	Loss: 0.240687
+Train Epoch: 25 [2400/2453 (98%)]	Loss: 0.236440
+Train Epoch: 25 [2453/2453 (100%)]	Loss: 0.220102
+
+Fold 2 Validation set: Average loss: 0.3802, Average IOU: 0.6360, Average Dice: 0.7587, Average HD: 90.36px, Average ASD: 82.43px
+  IoU ανά δομή  -> Brain: 0.9241 | CSP: 0.5452 | LV: 0.4388
+  Dice ανά δομή -> Brain: 0.9606 | CSP: 0.7056 | LV: 0.6100
+  HD ανά δομή   -> Brain: 26.67px | CSP: 106.36px | LV: 138.05px
+  ASD ανά δομή  -> Brain: 8.13px | CSP: 103.83px | LV: 135.33px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 7/15 epochs (Best: 0.7729 @ Epoch 18)
+Train Epoch: 26 [400/2453 (16%)]	Loss: 0.376321
+Train Epoch: 26 [800/2453 (33%)]	Loss: 0.201119
+Train Epoch: 26 [1200/2453 (49%)]	Loss: 0.203504
+Train Epoch: 26 [1600/2453 (65%)]	Loss: 0.166232
+Train Epoch: 26 [2000/2453 (81%)]	Loss: 0.296451
+Train Epoch: 26 [2400/2453 (98%)]	Loss: 0.234063
+Train Epoch: 26 [2453/2453 (100%)]	Loss: 0.075351
+
+Fold 2 Validation set: Average loss: 0.3714, Average IOU: 0.6630, Average Dice: 0.7831, Average HD: 77.34px, Average ASD: 70.41px
+  IoU ανά δομή  -> Brain: 0.9207 | CSP: 0.5772 | LV: 0.4912
+  Dice ανά δομή -> Brain: 0.9587 | CSP: 0.7319 | LV: 0.6588
+  HD ανά δομή   -> Brain: 24.00px | CSP: 94.21px | LV: 113.82px
+  ASD ανά δομή  -> Brain: 8.17px | CSP: 92.09px | LV: 110.97px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7831) στο Epoch 26 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold2_best.pt
+Train Epoch: 27 [400/2453 (16%)]	Loss: 0.197526
+Train Epoch: 27 [800/2453 (33%)]	Loss: 0.258477
+Train Epoch: 27 [1200/2453 (49%)]	Loss: 0.326459
+Train Epoch: 27 [1600/2453 (65%)]	Loss: 0.235511
+Train Epoch: 27 [2000/2453 (81%)]	Loss: 0.318891
+Train Epoch: 27 [2400/2453 (98%)]	Loss: 0.182470
+Train Epoch: 27 [2453/2453 (100%)]	Loss: 0.094175
+
+Fold 2 Validation set: Average loss: 0.4527, Average IOU: 0.6154, Average Dice: 0.7395, Average HD: 89.73px, Average ASD: 82.27px
+  IoU ανά δομή  -> Brain: 0.9204 | CSP: 0.5291 | LV: 0.3967
+  Dice ανά δομή -> Brain: 0.9586 | CSP: 0.6920 | LV: 0.5680
+  HD ανά δομή   -> Brain: 25.60px | CSP: 105.71px | LV: 137.87px
+  ASD ανά δομή  -> Brain: 8.21px | CSP: 103.61px | LV: 134.98px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.7831 @ Epoch 26)
+Train Epoch: 28 [400/2453 (16%)]	Loss: 0.344439
+Train Epoch: 28 [800/2453 (33%)]	Loss: 0.336172
+Train Epoch: 28 [1200/2453 (49%)]	Loss: 0.306760
+Train Epoch: 28 [1600/2453 (65%)]	Loss: 0.415649
+Train Epoch: 28 [2000/2453 (81%)]	Loss: 0.266258
+Train Epoch: 28 [2400/2453 (98%)]	Loss: 0.122180
+Train Epoch: 28 [2453/2453 (100%)]	Loss: 0.089827
+
+Fold 2 Validation set: Average loss: 0.3823, Average IOU: 0.6535, Average Dice: 0.7755, Average HD: 77.90px, Average ASD: 70.08px
+  IoU ανά δομή  -> Brain: 0.9179 | CSP: 0.5549 | LV: 0.4877
+  Dice ανά δομή -> Brain: 0.9572 | CSP: 0.7137 | LV: 0.6557
+  HD ανά δομή   -> Brain: 25.88px | CSP: 99.42px | LV: 108.38px
+  ASD ανά δομή  -> Brain: 8.37px | CSP: 97.14px | LV: 104.73px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 2/15 epochs (Best: 0.7831 @ Epoch 26)
+Train Epoch: 29 [400/2453 (16%)]	Loss: 0.378264
+Train Epoch: 29 [800/2453 (33%)]	Loss: 0.276751
+Train Epoch: 29 [1200/2453 (49%)]	Loss: 0.261742
+Train Epoch: 29 [1600/2453 (65%)]	Loss: 0.903413
+Train Epoch: 29 [2000/2453 (81%)]	Loss: 0.387892
+Train Epoch: 29 [2400/2453 (98%)]	Loss: 0.391362
+Train Epoch: 29 [2453/2453 (100%)]	Loss: 0.103209
+
+Fold 2 Validation set: Average loss: 0.4152, Average IOU: 0.6482, Average Dice: 0.7705, Average HD: 83.29px, Average ASD: 75.81px
+  IoU ανά δομή  -> Brain: 0.9228 | CSP: 0.5399 | LV: 0.4820
+  Dice ανά δομή -> Brain: 0.9599 | CSP: 0.7012 | LV: 0.6505
+  HD ανά δομή   -> Brain: 25.73px | CSP: 102.98px | LV: 121.16px
+  ASD ανά δομή  -> Brain: 8.18px | CSP: 101.09px | LV: 118.16px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 3/15 epochs (Best: 0.7831 @ Epoch 26)
+Train Epoch: 30 [400/2453 (16%)]	Loss: 0.187754
+Train Epoch: 30 [800/2453 (33%)]	Loss: 0.366469
+Train Epoch: 30 [1200/2453 (49%)]	Loss: 0.182838
+Train Epoch: 30 [1600/2453 (65%)]	Loss: 0.242851
+Train Epoch: 30 [2000/2453 (81%)]	Loss: 0.298309
+Train Epoch: 30 [2400/2453 (98%)]	Loss: 0.889085
+Train Epoch: 30 [2453/2453 (100%)]	Loss: 0.062443
+
+Fold 2 Validation set: Average loss: 0.4745, Average IOU: 0.6253, Average Dice: 0.7514, Average HD: 90.16px, Average ASD: 81.99px
+  IoU ανά δομή  -> Brain: 0.9033 | CSP: 0.5426 | LV: 0.4301
+  Dice ανά δομή -> Brain: 0.9492 | CSP: 0.7035 | LV: 0.6015
+  HD ανά δομή   -> Brain: 28.67px | CSP: 104.41px | LV: 137.41px
+  ASD ανά δομή  -> Brain: 9.01px | CSP: 102.28px | LV: 134.68px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 4/15 epochs (Best: 0.7831 @ Epoch 26)
+Train Epoch: 31 [400/2453 (16%)]	Loss: 0.325351
+Train Epoch: 31 [800/2453 (33%)]	Loss: 0.244518
+Train Epoch: 31 [1200/2453 (49%)]	Loss: 0.281790
+Train Epoch: 31 [1600/2453 (65%)]	Loss: 0.220058
+Train Epoch: 31 [2000/2453 (81%)]	Loss: 0.176201
+Train Epoch: 31 [2400/2453 (98%)]	Loss: 0.323142
+Train Epoch: 31 [2453/2453 (100%)]	Loss: 0.161958
+
+Fold 2 Validation set: Average loss: 0.3987, Average IOU: 0.6523, Average Dice: 0.7740, Average HD: 78.81px, Average ASD: 71.74px
+  IoU ανά δομή  -> Brain: 0.9176 | CSP: 0.5703 | LV: 0.4690
+  Dice ανά δομή -> Brain: 0.9570 | CSP: 0.7264 | LV: 0.6385
+  HD ανά δομή   -> Brain: 24.67px | CSP: 98.94px | LV: 112.83px
+  ASD ανά δομή  -> Brain: 8.34px | CSP: 97.09px | LV: 109.78px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 5/15 epochs (Best: 0.7831 @ Epoch 26)
+Train Epoch: 32 [400/2453 (16%)]	Loss: 0.270398
+Train Epoch: 32 [800/2453 (33%)]	Loss: 0.324170
+Train Epoch: 32 [1200/2453 (49%)]	Loss: 0.286087
+Train Epoch: 32 [1600/2453 (65%)]	Loss: 0.095440
+Train Epoch: 32 [2000/2453 (81%)]	Loss: 0.275003
+Train Epoch: 32 [2400/2453 (98%)]	Loss: 0.312633
+Train Epoch: 32 [2453/2453 (100%)]	Loss: 0.184948
+
+Fold 2 Validation set: Average loss: 0.4822, Average IOU: 0.6218, Average Dice: 0.7459, Average HD: 92.85px, Average ASD: 85.00px
+  IoU ανά δομή  -> Brain: 0.9094 | CSP: 0.5611 | LV: 0.3950
+  Dice ανά δομή -> Brain: 0.9525 | CSP: 0.7189 | LV: 0.5663
+  HD ανά δομή   -> Brain: 26.99px | CSP: 101.93px | LV: 149.64px
+  ASD ανά δομή  -> Brain: 8.77px | CSP: 99.50px | LV: 146.72px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 6/15 epochs (Best: 0.7831 @ Epoch 26)
+Train Epoch: 33 [400/2453 (16%)]	Loss: 0.264489
+Train Epoch: 33 [800/2453 (33%)]	Loss: 0.214332
+Train Epoch: 33 [1200/2453 (49%)]	Loss: 0.379956
+Train Epoch: 33 [1600/2453 (65%)]	Loss: 0.205729
+Train Epoch: 33 [2000/2453 (81%)]	Loss: 0.136829
+Train Epoch: 33 [2400/2453 (98%)]	Loss: 0.148896
+Train Epoch: 33 [2453/2453 (100%)]	Loss: 0.205991
+
+Fold 2 Validation set: Average loss: 0.4512, Average IOU: 0.6311, Average Dice: 0.7551, Average HD: 91.55px, Average ASD: 83.81px
+  IoU ανά δομή  -> Brain: 0.9143 | CSP: 0.5501 | LV: 0.4288
+  Dice ανά δομή -> Brain: 0.9552 | CSP: 0.7098 | LV: 0.6003
+  HD ανά δομή   -> Brain: 27.14px | CSP: 104.78px | LV: 142.73px
+  ASD ανά δομή  -> Brain: 8.59px | CSP: 102.67px | LV: 140.16px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 7/15 epochs (Best: 0.7831 @ Epoch 26)
+Train Epoch: 34 [400/2453 (16%)]	Loss: 0.174915
+Train Epoch: 34 [800/2453 (33%)]	Loss: 0.445820
+Train Epoch: 34 [1200/2453 (49%)]	Loss: 0.274708
+Train Epoch: 34 [1600/2453 (65%)]	Loss: 0.218051
+Train Epoch: 34 [2000/2453 (81%)]	Loss: 0.571296
+Train Epoch: 34 [2400/2453 (98%)]	Loss: 0.394245
+Train Epoch: 34 [2453/2453 (100%)]	Loss: 0.145807
+
+Fold 2 Validation set: Average loss: 0.3852, Average IOU: 0.6478, Average Dice: 0.7696, Average HD: 84.82px, Average ASD: 76.87px
+  IoU ανά δομή  -> Brain: 0.9230 | CSP: 0.5563 | LV: 0.4642
+  Dice ανά δομή -> Brain: 0.9600 | CSP: 0.7149 | LV: 0.6340
+  HD ανά δομή   -> Brain: 26.62px | CSP: 108.39px | LV: 119.45px
+  ASD ανά δομή  -> Brain: 8.18px | CSP: 106.03px | LV: 116.41px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 8/15 epochs (Best: 0.7831 @ Epoch 26)
+Train Epoch: 35 [400/2453 (16%)]	Loss: 0.213922
+Train Epoch: 35 [800/2453 (33%)]	Loss: 0.221351
+Train Epoch: 35 [1200/2453 (49%)]	Loss: 0.338477
+Train Epoch: 35 [1600/2453 (65%)]	Loss: 0.190819
+Train Epoch: 35 [2000/2453 (81%)]	Loss: 0.379757
+Train Epoch: 35 [2400/2453 (98%)]	Loss: 0.404937
+Train Epoch: 35 [2453/2453 (100%)]	Loss: 0.133919
+
+Fold 2 Validation set: Average loss: 0.4566, Average IOU: 0.6406, Average Dice: 0.7659, Average HD: 84.60px, Average ASD: 76.90px
+  IoU ανά δομή  -> Brain: 0.9053 | CSP: 0.5311 | LV: 0.4856
+  Dice ανά δομή -> Brain: 0.9503 | CSP: 0.6937 | LV: 0.6537
+  HD ανά δομή   -> Brain: 27.06px | CSP: 107.21px | LV: 119.54px
+  ASD ανά δομή  -> Brain: 8.93px | CSP: 105.22px | LV: 116.56px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 9/15 epochs (Best: 0.7831 @ Epoch 26)
+Train Epoch: 36 [400/2453 (16%)]	Loss: 0.208971
+Train Epoch: 36 [800/2453 (33%)]	Loss: 0.353888
+Train Epoch: 36 [1200/2453 (49%)]	Loss: 0.150606
+Train Epoch: 36 [1600/2453 (65%)]	Loss: 0.237865
+Train Epoch: 36 [2000/2453 (81%)]	Loss: 0.194462
+Train Epoch: 36 [2400/2453 (98%)]	Loss: 0.179525
+Train Epoch: 36 [2453/2453 (100%)]	Loss: 0.077740
+
+Fold 2 Validation set: Average loss: 0.4012, Average IOU: 0.6485, Average Dice: 0.7709, Average HD: 88.13px, Average ASD: 79.95px
+  IoU ανά δομή  -> Brain: 0.9200 | CSP: 0.5486 | LV: 0.4770
+  Dice ανά δομή -> Brain: 0.9583 | CSP: 0.7085 | LV: 0.6459
+  HD ανά δομή   -> Brain: 27.06px | CSP: 112.32px | LV: 125.01px
+  ASD ανά δομή  -> Brain: 8.35px | CSP: 109.47px | LV: 122.02px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 10/15 epochs (Best: 0.7831 @ Epoch 26)
+Train Epoch: 37 [400/2453 (16%)]	Loss: 0.565255
+Train Epoch: 37 [800/2453 (33%)]	Loss: 0.257689
+Train Epoch: 37 [1200/2453 (49%)]	Loss: 0.235382
+Train Epoch: 37 [1600/2453 (65%)]	Loss: 0.350824
+Train Epoch: 37 [2000/2453 (81%)]	Loss: 0.217234
+Train Epoch: 37 [2400/2453 (98%)]	Loss: 0.352076
+Train Epoch: 37 [2453/2453 (100%)]	Loss: 0.074270
+
+Fold 2 Validation set: Average loss: 0.4067, Average IOU: 0.6648, Average Dice: 0.7850, Average HD: 70.87px, Average ASD: 63.97px
+  IoU ανά δομή  -> Brain: 0.9200 | CSP: 0.5691 | LV: 0.5053
+  Dice ανά δομή -> Brain: 0.9583 | CSP: 0.7254 | LV: 0.6713
+  HD ανά δομή   -> Brain: 23.35px | CSP: 89.10px | LV: 100.17px
+  ASD ανά δομή  -> Brain: 8.11px | CSP: 86.99px | LV: 96.81px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7850) στο Epoch 37 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold2_best.pt
+Train Epoch: 38 [400/2453 (16%)]	Loss: 0.306138
+Train Epoch: 38 [800/2453 (33%)]	Loss: 0.274353
+Train Epoch: 38 [1200/2453 (49%)]	Loss: 0.221309
+Train Epoch: 38 [1600/2453 (65%)]	Loss: 0.069864
+Train Epoch: 38 [2000/2453 (81%)]	Loss: 0.333367
+Train Epoch: 38 [2400/2453 (98%)]	Loss: 0.217890
+Train Epoch: 38 [2453/2453 (100%)]	Loss: 0.088091
+
+Fold 2 Validation set: Average loss: 0.4520, Average IOU: 0.6384, Average Dice: 0.7602, Average HD: 86.28px, Average ASD: 79.19px
+  IoU ανά δομή  -> Brain: 0.9214 | CSP: 0.5693 | LV: 0.4244
+  Dice ανά δομή -> Brain: 0.9591 | CSP: 0.7256 | LV: 0.5959
+  HD ανά δομή   -> Brain: 24.56px | CSP: 91.18px | LV: 143.11px
+  ASD ανά δομή  -> Brain: 7.71px | CSP: 89.18px | LV: 140.68px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.7850 @ Epoch 37)
+Train Epoch: 39 [400/2453 (16%)]	Loss: 0.221016
+Train Epoch: 39 [800/2453 (33%)]	Loss: 0.380070
+Train Epoch: 39 [1200/2453 (49%)]	Loss: 0.151297
+Train Epoch: 39 [1600/2453 (65%)]	Loss: 0.199234
+Train Epoch: 39 [2000/2453 (81%)]	Loss: 0.322028
+Train Epoch: 39 [2400/2453 (98%)]	Loss: 0.243064
+Train Epoch: 39 [2453/2453 (100%)]	Loss: 0.092875
+
+Fold 2 Validation set: Average loss: 0.5690, Average IOU: 0.6385, Average Dice: 0.7682, Average HD: 80.59px, Average ASD: 70.86px
+  IoU ανά δομή  -> Brain: 0.8637 | CSP: 0.5560 | LV: 0.4958
+  Dice ανά δομή -> Brain: 0.9269 | CSP: 0.7147 | LV: 0.6630
+  HD ανά δομή   -> Brain: 34.25px | CSP: 101.99px | LV: 105.54px
+  ASD ανά δομή  -> Brain: 10.37px | CSP: 99.61px | LV: 102.61px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 2/15 epochs (Best: 0.7850 @ Epoch 37)
+Train Epoch: 40 [400/2453 (16%)]	Loss: 0.294203
+Train Epoch: 40 [800/2453 (33%)]	Loss: 0.233341
+Train Epoch: 40 [1200/2453 (49%)]	Loss: 0.248288
+Train Epoch: 40 [1600/2453 (65%)]	Loss: 0.244613
+Train Epoch: 40 [2000/2453 (81%)]	Loss: 0.178065
+Train Epoch: 40 [2400/2453 (98%)]	Loss: 0.185158
+Train Epoch: 40 [2453/2453 (100%)]	Loss: 0.358947
+
+Fold 2 Validation set: Average loss: 0.3840, Average IOU: 0.6589, Average Dice: 0.7795, Average HD: 74.36px, Average ASD: 67.34px
+  IoU ανά δομή  -> Brain: 0.9243 | CSP: 0.5602 | LV: 0.4923
+  Dice ανά δομή -> Brain: 0.9606 | CSP: 0.7181 | LV: 0.6598
+  HD ανά δομή   -> Brain: 24.07px | CSP: 100.03px | LV: 98.98px
+  ASD ανά δομή  -> Brain: 8.13px | CSP: 98.19px | LV: 95.71px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 3/15 epochs (Best: 0.7850 @ Epoch 37)
+Train Epoch: 41 [400/2453 (16%)]	Loss: 0.176930
+Train Epoch: 41 [800/2453 (33%)]	Loss: 0.271985
+Train Epoch: 41 [1200/2453 (49%)]	Loss: 0.333590
+Train Epoch: 41 [1600/2453 (65%)]	Loss: 0.341698
+Train Epoch: 41 [2000/2453 (81%)]	Loss: 0.156952
+Train Epoch: 41 [2400/2453 (98%)]	Loss: 0.243441
+Train Epoch: 41 [2453/2453 (100%)]	Loss: 0.179970
+
+Fold 2 Validation set: Average loss: 0.4992, Average IOU: 0.6290, Average Dice: 0.7568, Average HD: 82.78px, Average ASD: 74.43px
+  IoU ανά δομή  -> Brain: 0.8912 | CSP: 0.5378 | LV: 0.4581
+  Dice ανά δομή -> Brain: 0.9425 | CSP: 0.6994 | LV: 0.6284
+  HD ανά δομή   -> Brain: 28.62px | CSP: 105.24px | LV: 114.47px
+  ASD ανά δομή  -> Brain: 9.05px | CSP: 103.11px | LV: 111.13px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 4/15 epochs (Best: 0.7850 @ Epoch 37)
+Train Epoch: 42 [400/2453 (16%)]	Loss: 0.332377
+Train Epoch: 42 [800/2453 (33%)]	Loss: 0.252923
+Train Epoch: 42 [1200/2453 (49%)]	Loss: 0.252054
+Train Epoch: 42 [1600/2453 (65%)]	Loss: 0.371137
+Train Epoch: 42 [2000/2453 (81%)]	Loss: 0.205841
+Train Epoch: 42 [2400/2453 (98%)]	Loss: 0.270541
+Train Epoch: 42 [2453/2453 (100%)]	Loss: 0.271156
+
+Fold 2 Validation set: Average loss: 0.4577, Average IOU: 0.6473, Average Dice: 0.7712, Average HD: 78.52px, Average ASD: 70.72px
+  IoU ανά δομή  -> Brain: 0.9054 | CSP: 0.5604 | LV: 0.4761
+  Dice ανά δομή -> Brain: 0.9503 | CSP: 0.7183 | LV: 0.6451
+  HD ανά δομή   -> Brain: 27.21px | CSP: 91.35px | LV: 117.01px
+  ASD ανά δομή  -> Brain: 8.90px | CSP: 89.09px | LV: 114.18px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 5/15 epochs (Best: 0.7850 @ Epoch 37)
+Train Epoch: 43 [400/2453 (16%)]	Loss: 0.283540
+Train Epoch: 43 [800/2453 (33%)]	Loss: 0.264712
+Train Epoch: 43 [1200/2453 (49%)]	Loss: 0.205538
+Train Epoch: 43 [1600/2453 (65%)]	Loss: 0.222936
+Train Epoch: 43 [2000/2453 (81%)]	Loss: 0.239548
+Train Epoch: 43 [2400/2453 (98%)]	Loss: 0.176309
+Train Epoch: 43 [2453/2453 (100%)]	Loss: 0.081408
+
+Fold 2 Validation set: Average loss: 0.4271, Average IOU: 0.6572, Average Dice: 0.7791, Average HD: 80.22px, Average ASD: 72.72px
+  IoU ανά δομή  -> Brain: 0.9175 | CSP: 0.5462 | LV: 0.5080
+  Dice ανά δομή -> Brain: 0.9570 | CSP: 0.7065 | LV: 0.6737
+  HD ανά δομή   -> Brain: 25.68px | CSP: 102.73px | LV: 112.26px
+  ASD ανά δομή  -> Brain: 8.47px | CSP: 100.86px | LV: 108.83px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 6/15 epochs (Best: 0.7850 @ Epoch 37)
+Train Epoch: 44 [400/2453 (16%)]	Loss: 0.192703
+Train Epoch: 44 [800/2453 (33%)]	Loss: 0.243812
+Train Epoch: 44 [1200/2453 (49%)]	Loss: 0.286936
+Train Epoch: 44 [1600/2453 (65%)]	Loss: 0.226202
+Train Epoch: 44 [2000/2453 (81%)]	Loss: 0.379420
+Train Epoch: 44 [2400/2453 (98%)]	Loss: 0.221148
+Train Epoch: 44 [2453/2453 (100%)]	Loss: 0.189197
+
+Fold 2 Validation set: Average loss: 0.4612, Average IOU: 0.6348, Average Dice: 0.7570, Average HD: 91.26px, Average ASD: 83.65px
+  IoU ανά δομή  -> Brain: 0.9162 | CSP: 0.5760 | LV: 0.4121
+  Dice ανά δομή -> Brain: 0.9563 | CSP: 0.7310 | LV: 0.5837
+  HD ανά δομή   -> Brain: 26.52px | CSP: 95.22px | LV: 152.03px
+  ASD ανά δομή  -> Brain: 8.51px | CSP: 92.88px | LV: 149.57px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 7/15 epochs (Best: 0.7850 @ Epoch 37)
+Train Epoch: 45 [400/2453 (16%)]	Loss: 0.229100
+Train Epoch: 45 [800/2453 (33%)]	Loss: 0.744250
+Train Epoch: 45 [1200/2453 (49%)]	Loss: 0.167507
+Train Epoch: 45 [1600/2453 (65%)]	Loss: 0.267380
+Train Epoch: 45 [2000/2453 (81%)]	Loss: 0.250984
+Train Epoch: 45 [2400/2453 (98%)]	Loss: 0.206243
+Train Epoch: 45 [2453/2453 (100%)]	Loss: 0.363464
+
+Fold 2 Validation set: Average loss: 0.4033, Average IOU: 0.6387, Average Dice: 0.7603, Average HD: 82.28px, Average ASD: 75.13px
+  IoU ανά δομή  -> Brain: 0.9240 | CSP: 0.5656 | LV: 0.4265
+  Dice ανά δομή -> Brain: 0.9605 | CSP: 0.7225 | LV: 0.5980
+  HD ανά δομή   -> Brain: 24.82px | CSP: 91.25px | LV: 130.75px
+  ASD ανά δομή  -> Brain: 8.20px | CSP: 89.32px | LV: 127.88px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 8/15 epochs (Best: 0.7850 @ Epoch 37)
+Train Epoch: 46 [400/2453 (16%)]	Loss: 0.339416
+Train Epoch: 46 [800/2453 (33%)]	Loss: 0.259150
+Train Epoch: 46 [1200/2453 (49%)]	Loss: 0.263115
+Train Epoch: 46 [1600/2453 (65%)]	Loss: 0.355528
+Train Epoch: 46 [2000/2453 (81%)]	Loss: 0.228220
+Train Epoch: 46 [2400/2453 (98%)]	Loss: 0.214791
+Train Epoch: 46 [2453/2453 (100%)]	Loss: 0.275156
+
+Fold 2 Validation set: Average loss: 0.4343, Average IOU: 0.6516, Average Dice: 0.7736, Average HD: 73.72px, Average ASD: 66.51px
+  IoU ανά δομή  -> Brain: 0.9147 | CSP: 0.5728 | LV: 0.4674
+  Dice ανά δομή -> Brain: 0.9554 | CSP: 0.7284 | LV: 0.6370
+  HD ανά δομή   -> Brain: 24.46px | CSP: 92.21px | LV: 104.50px
+  ASD ανά δομή  -> Brain: 8.02px | CSP: 90.38px | LV: 101.13px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 9/15 epochs (Best: 0.7850 @ Epoch 37)
+Train Epoch: 47 [400/2453 (16%)]	Loss: 0.175742
+Train Epoch: 47 [800/2453 (33%)]	Loss: 0.202927
+Train Epoch: 47 [1200/2453 (49%)]	Loss: 0.219008
+Train Epoch: 47 [1600/2453 (65%)]	Loss: 0.110577
+Train Epoch: 47 [2000/2453 (81%)]	Loss: 0.193482
+Train Epoch: 47 [2400/2453 (98%)]	Loss: 0.168901
+Train Epoch: 47 [2453/2453 (100%)]	Loss: 0.094177
+
+Fold 2 Validation set: Average loss: 0.4545, Average IOU: 0.6355, Average Dice: 0.7586, Average HD: 85.82px, Average ASD: 78.69px
+  IoU ανά δομή  -> Brain: 0.9178 | CSP: 0.5567 | LV: 0.4321
+  Dice ανά δομή -> Brain: 0.9571 | CSP: 0.7152 | LV: 0.6035
+  HD ανά δομή   -> Brain: 25.08px | CSP: 96.92px | LV: 135.45px
+  ASD ανά δομή  -> Brain: 8.34px | CSP: 95.08px | LV: 132.64px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 10/15 epochs (Best: 0.7850 @ Epoch 37)
+Train Epoch: 48 [400/2453 (16%)]	Loss: 0.205130
+Train Epoch: 48 [800/2453 (33%)]	Loss: 0.238761
+Train Epoch: 48 [1200/2453 (49%)]	Loss: 0.318453
+Train Epoch: 48 [1600/2453 (65%)]	Loss: 0.257920
+Train Epoch: 48 [2000/2453 (81%)]	Loss: 0.200979
+Train Epoch: 48 [2400/2453 (98%)]	Loss: 0.201729
+Train Epoch: 48 [2453/2453 (100%)]	Loss: 0.173992
+
+Fold 2 Validation set: Average loss: 0.4470, Average IOU: 0.6302, Average Dice: 0.7516, Average HD: 84.63px, Average ASD: 77.43px
+  IoU ανά δομή  -> Brain: 0.9191 | CSP: 0.5791 | LV: 0.3923
+  Dice ανά δομή -> Brain: 0.9579 | CSP: 0.7334 | LV: 0.5635
+  HD ανά δομή   -> Brain: 25.20px | CSP: 95.85px | LV: 132.84px
+  ASD ανά δομή  -> Brain: 8.33px | CSP: 94.09px | LV: 129.89px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 11/15 epochs (Best: 0.7850 @ Epoch 37)
+Train Epoch: 49 [400/2453 (16%)]	Loss: 0.249092
+Train Epoch: 49 [800/2453 (33%)]	Loss: 0.209817
+Train Epoch: 49 [1200/2453 (49%)]	Loss: 0.350337
+Train Epoch: 49 [1600/2453 (65%)]	Loss: 0.322247
+Train Epoch: 49 [2000/2453 (81%)]	Loss: 0.103995
+Train Epoch: 49 [2400/2453 (98%)]	Loss: 0.332467
+Train Epoch: 49 [2453/2453 (100%)]	Loss: 0.128137
+
+Fold 2 Validation set: Average loss: 0.4955, Average IOU: 0.6087, Average Dice: 0.7334, Average HD: 92.98px, Average ASD: 85.58px
+  IoU ανά δομή  -> Brain: 0.9105 | CSP: 0.5415 | LV: 0.3740
+  Dice ανά δομή -> Brain: 0.9532 | CSP: 0.7026 | LV: 0.5444
+  HD ανά δομή   -> Brain: 26.01px | CSP: 103.67px | LV: 149.25px
+  ASD ανά δομή  -> Brain: 8.65px | CSP: 101.75px | LV: 146.35px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 12/15 epochs (Best: 0.7850 @ Epoch 37)
+Train Epoch: 50 [400/2453 (16%)]	Loss: 0.176190
+Train Epoch: 50 [800/2453 (33%)]	Loss: 0.276095
+Train Epoch: 50 [1200/2453 (49%)]	Loss: 0.206856
+Train Epoch: 50 [1600/2453 (65%)]	Loss: 0.284364
+Train Epoch: 50 [2000/2453 (81%)]	Loss: 0.238816
+Train Epoch: 50 [2400/2453 (98%)]	Loss: 0.219252
+Train Epoch: 50 [2453/2453 (100%)]	Loss: 0.063499
+
+Fold 2 Validation set: Average loss: 0.5162, Average IOU: 0.6415, Average Dice: 0.7679, Average HD: 82.79px, Average ASD: 74.47px
+  IoU ανά δομή  -> Brain: 0.8859 | CSP: 0.5725 | LV: 0.4663
+  Dice ανά δομή -> Brain: 0.9395 | CSP: 0.7281 | LV: 0.6360
+  HD ανά δομή   -> Brain: 29.91px | CSP: 100.14px | LV: 118.32px
+  ASD ανά δομή  -> Brain: 9.75px | CSP: 98.37px | LV: 115.30px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 13/15 epochs (Best: 0.7850 @ Epoch 37)
+Train Epoch: 51 [400/2453 (16%)]	Loss: 0.265294
+Train Epoch: 51 [800/2453 (33%)]	Loss: 0.171237
+Train Epoch: 51 [1200/2453 (49%)]	Loss: 0.170989
+Train Epoch: 51 [1600/2453 (65%)]	Loss: 0.119537
+Train Epoch: 51 [2000/2453 (81%)]	Loss: 0.280258
+Train Epoch: 51 [2400/2453 (98%)]	Loss: 0.202787
+Train Epoch: 51 [2453/2453 (100%)]	Loss: 0.075006
+
+Fold 2 Validation set: Average loss: 0.4188, Average IOU: 0.6546, Average Dice: 0.7750, Average HD: 73.90px, Average ASD: 67.12px
+  IoU ανά δομή  -> Brain: 0.9220 | CSP: 0.5833 | LV: 0.4585
+  Dice ανά δομή -> Brain: 0.9594 | CSP: 0.7368 | LV: 0.6287
+  HD ανά δομή   -> Brain: 23.30px | CSP: 84.07px | LV: 114.34px
+  ASD ανά δομή  -> Brain: 8.20px | CSP: 82.04px | LV: 111.12px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 14/15 epochs (Best: 0.7850 @ Epoch 37)
+Train Epoch: 52 [400/2453 (16%)]	Loss: 0.098450
+Train Epoch: 52 [800/2453 (33%)]	Loss: 0.347993
+Train Epoch: 52 [1200/2453 (49%)]	Loss: 0.149396
+Train Epoch: 52 [1600/2453 (65%)]	Loss: 0.395747
+Train Epoch: 52 [2000/2453 (81%)]	Loss: 0.193733
+Train Epoch: 52 [2400/2453 (98%)]	Loss: 0.136859
+Train Epoch: 52 [2453/2453 (100%)]	Loss: 0.052298
+
+Fold 2 Validation set: Average loss: 0.4245, Average IOU: 0.6655, Average Dice: 0.7860, Average HD: 79.35px, Average ASD: 72.03px
+  IoU ανά δομή  -> Brain: 0.9145 | CSP: 0.5799 | LV: 0.5021
+  Dice ανά δομή -> Brain: 0.9553 | CSP: 0.7341 | LV: 0.6685
+  HD ανά δομή   -> Brain: 24.73px | CSP: 89.44px | LV: 123.89px
+  ASD ανά δομή  -> Brain: 7.26px | CSP: 87.63px | LV: 121.18px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7860) στο Epoch 52 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold2_best.pt
+Train Epoch: 53 [400/2453 (16%)]	Loss: 0.464092
+Train Epoch: 53 [800/2453 (33%)]	Loss: 0.339394
+Train Epoch: 53 [1200/2453 (49%)]	Loss: 0.129073
+Train Epoch: 53 [1600/2453 (65%)]	Loss: 0.202622
+Train Epoch: 53 [2000/2453 (81%)]	Loss: 0.086025
+Train Epoch: 53 [2400/2453 (98%)]	Loss: 0.214681
+Train Epoch: 53 [2453/2453 (100%)]	Loss: 0.061743
+
+Fold 2 Validation set: Average loss: 0.5022, Average IOU: 0.6377, Average Dice: 0.7614, Average HD: 88.76px, Average ASD: 81.42px
+  IoU ανά δομή  -> Brain: 0.9240 | CSP: 0.4866 | LV: 0.5026
+  Dice ανά δομή -> Brain: 0.9605 | CSP: 0.6547 | LV: 0.6690
+  HD ανά δομή   -> Brain: 25.10px | CSP: 127.16px | LV: 114.02px
+  ASD ανά δομή  -> Brain: 7.64px | CSP: 125.34px | LV: 111.27px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.7860 @ Epoch 52)
+Train Epoch: 54 [400/2453 (16%)]	Loss: 0.133359
+Train Epoch: 54 [800/2453 (33%)]	Loss: 0.101712
+Train Epoch: 54 [1200/2453 (49%)]	Loss: 0.207589
+Train Epoch: 54 [1600/2453 (65%)]	Loss: 0.239035
+Train Epoch: 54 [2000/2453 (81%)]	Loss: 0.240737
+Train Epoch: 54 [2400/2453 (98%)]	Loss: 0.500457
+Train Epoch: 54 [2453/2453 (100%)]	Loss: 0.115083
+
+Fold 2 Validation set: Average loss: 0.4358, Average IOU: 0.6494, Average Dice: 0.7710, Average HD: 80.42px, Average ASD: 73.33px
+  IoU ανά δομή  -> Brain: 0.9178 | CSP: 0.5754 | LV: 0.4550
+  Dice ανά δομή -> Brain: 0.9571 | CSP: 0.7305 | LV: 0.6254
+  HD ανά δομή   -> Brain: 24.79px | CSP: 97.36px | LV: 119.09px
+  ASD ανά δομή  -> Brain: 8.43px | CSP: 95.47px | LV: 116.11px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 2/15 epochs (Best: 0.7860 @ Epoch 52)
+Train Epoch: 55 [400/2453 (16%)]	Loss: 0.174742
+Train Epoch: 55 [800/2453 (33%)]	Loss: 0.140862
+Train Epoch: 55 [1200/2453 (49%)]	Loss: 0.140619
+Train Epoch: 55 [1600/2453 (65%)]	Loss: 0.424416
+Train Epoch: 55 [2000/2453 (81%)]	Loss: 0.155972
+Train Epoch: 55 [2400/2453 (98%)]	Loss: 0.226381
+Train Epoch: 55 [2453/2453 (100%)]	Loss: 0.126665
+
+Fold 2 Validation set: Average loss: 0.4469, Average IOU: 0.6440, Average Dice: 0.7646, Average HD: 84.02px, Average ASD: 77.09px
+  IoU ανά δομή  -> Brain: 0.9239 | CSP: 0.5833 | LV: 0.4250
+  Dice ανά δομή -> Brain: 0.9604 | CSP: 0.7368 | LV: 0.5965
+  HD ανά δομή   -> Brain: 24.44px | CSP: 93.88px | LV: 133.74px
+  ASD ανά δομή  -> Brain: 8.13px | CSP: 92.02px | LV: 131.13px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 3/15 epochs (Best: 0.7860 @ Epoch 52)
+Train Epoch: 56 [400/2453 (16%)]	Loss: 0.271307
+Train Epoch: 56 [800/2453 (33%)]	Loss: 0.318760
+Train Epoch: 56 [1200/2453 (49%)]	Loss: 0.273663
+Train Epoch: 56 [1600/2453 (65%)]	Loss: 0.186538
+Train Epoch: 56 [2000/2453 (81%)]	Loss: 0.319091
+Train Epoch: 56 [2400/2453 (98%)]	Loss: 0.200754
+Train Epoch: 56 [2453/2453 (100%)]	Loss: 0.156327
+
+Fold 2 Validation set: Average loss: 0.4562, Average IOU: 0.6554, Average Dice: 0.7768, Average HD: 81.75px, Average ASD: 74.85px
+  IoU ανά δομή  -> Brain: 0.9210 | CSP: 0.5576 | LV: 0.4876
+  Dice ανά δομή -> Brain: 0.9589 | CSP: 0.7159 | LV: 0.6556
+  HD ανά δομή   -> Brain: 23.85px | CSP: 99.91px | LV: 121.50px
+  ASD ανά δομή  -> Brain: 7.67px | CSP: 98.07px | LV: 118.83px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 4/15 epochs (Best: 0.7860 @ Epoch 52)
+Train Epoch: 57 [400/2453 (16%)]	Loss: 0.259781
+Train Epoch: 57 [800/2453 (33%)]	Loss: 0.128106
+Train Epoch: 57 [1200/2453 (49%)]	Loss: 0.423983
+Train Epoch: 57 [1600/2453 (65%)]	Loss: 0.152307
+Train Epoch: 57 [2000/2453 (81%)]	Loss: 0.187402
+Train Epoch: 57 [2400/2453 (98%)]	Loss: 0.117645
+Train Epoch: 57 [2453/2453 (100%)]	Loss: 0.185097
+
+Fold 2 Validation set: Average loss: 0.4410, Average IOU: 0.6400, Average Dice: 0.7619, Average HD: 79.52px, Average ASD: 72.67px
+  IoU ανά δομή  -> Brain: 0.9201 | CSP: 0.5697 | LV: 0.4301
+  Dice ανά δομή -> Brain: 0.9584 | CSP: 0.7259 | LV: 0.6014
+  HD ανά δομή   -> Brain: 23.85px | CSP: 88.26px | LV: 126.44px
+  ASD ανά δομή  -> Brain: 8.24px | CSP: 86.27px | LV: 123.51px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 5/15 epochs (Best: 0.7860 @ Epoch 52)
+Train Epoch: 58 [400/2453 (16%)]	Loss: 0.281951
+Train Epoch: 58 [800/2453 (33%)]	Loss: 0.163273
+Train Epoch: 58 [1200/2453 (49%)]	Loss: 0.284682
+Train Epoch: 58 [1600/2453 (65%)]	Loss: 0.173283
+Train Epoch: 58 [2000/2453 (81%)]	Loss: 0.189019
+Train Epoch: 58 [2400/2453 (98%)]	Loss: 0.182449
+Train Epoch: 58 [2453/2453 (100%)]	Loss: 0.349549
+
+Fold 2 Validation set: Average loss: 0.4899, Average IOU: 0.6159, Average Dice: 0.7379, Average HD: 88.75px, Average ASD: 81.41px
+  IoU ανά δομή  -> Brain: 0.9103 | CSP: 0.5808 | LV: 0.3568
+  Dice ανά δομή -> Brain: 0.9530 | CSP: 0.7348 | LV: 0.5259
+  HD ανά δομή   -> Brain: 25.88px | CSP: 87.20px | LV: 153.18px
+  ASD ανά δομή  -> Brain: 8.64px | CSP: 85.03px | LV: 150.54px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 6/15 epochs (Best: 0.7860 @ Epoch 52)
+Train Epoch: 59 [400/2453 (16%)]	Loss: 0.219201
+Train Epoch: 59 [800/2453 (33%)]	Loss: 0.253020
+Train Epoch: 59 [1200/2453 (49%)]	Loss: 0.260862
+Train Epoch: 59 [1600/2453 (65%)]	Loss: 0.257185
+Train Epoch: 59 [2000/2453 (81%)]	Loss: 0.301957
+Train Epoch: 59 [2400/2453 (98%)]	Loss: 0.161706
+Train Epoch: 59 [2453/2453 (100%)]	Loss: 0.078253
+
+Fold 2 Validation set: Average loss: 0.5048, Average IOU: 0.6179, Average Dice: 0.7410, Average HD: 96.43px, Average ASD: 89.14px
+  IoU ανά δομή  -> Brain: 0.9242 | CSP: 0.5379 | LV: 0.3917
+  Dice ανά δομή -> Brain: 0.9606 | CSP: 0.6995 | LV: 0.5629
+  HD ανά δομή   -> Brain: 25.42px | CSP: 107.27px | LV: 156.59px
+  ASD ανά δομή  -> Brain: 8.17px | CSP: 105.37px | LV: 153.88px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 7/15 epochs (Best: 0.7860 @ Epoch 52)
+Train Epoch: 60 [400/2453 (16%)]	Loss: 0.614605
+Train Epoch: 60 [800/2453 (33%)]	Loss: 0.210714
+Train Epoch: 60 [1200/2453 (49%)]	Loss: 0.169606
+Train Epoch: 60 [1600/2453 (65%)]	Loss: 0.545941
+Train Epoch: 60 [2000/2453 (81%)]	Loss: 0.189812
+Train Epoch: 60 [2400/2453 (98%)]	Loss: 0.301520
+Train Epoch: 60 [2453/2453 (100%)]	Loss: 0.146817
+
+Fold 2 Validation set: Average loss: 0.6336, Average IOU: 0.5665, Average Dice: 0.6906, Average HD: 116.16px, Average ASD: 107.36px
+  IoU ανά δομή  -> Brain: 0.8894 | CSP: 0.5306 | LV: 0.2795
+  Dice ανά δομή -> Brain: 0.9415 | CSP: 0.6933 | LV: 0.4369
+  HD ανά δομή   -> Brain: 32.04px | CSP: 107.50px | LV: 208.93px
+  ASD ανά δομή  -> Brain: 9.60px | CSP: 105.56px | LV: 206.92px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 8/15 epochs (Best: 0.7860 @ Epoch 52)
+Train Epoch: 61 [400/2453 (16%)]	Loss: 0.377675
+Train Epoch: 61 [800/2453 (33%)]	Loss: 0.193244
+Train Epoch: 61 [1200/2453 (49%)]	Loss: 0.362603
+Train Epoch: 61 [1600/2453 (65%)]	Loss: 0.241365
+Train Epoch: 61 [2000/2453 (81%)]	Loss: 0.188230
+Train Epoch: 61 [2400/2453 (98%)]	Loss: 0.200962
+Train Epoch: 61 [2453/2453 (100%)]	Loss: 0.057319
+
+Fold 2 Validation set: Average loss: 0.6372, Average IOU: 0.5655, Average Dice: 0.6925, Average HD: 116.49px, Average ASD: 108.21px
+  IoU ανά δομή  -> Brain: 0.9132 | CSP: 0.4362 | LV: 0.3472
+  Dice ανά δομή -> Brain: 0.9546 | CSP: 0.6074 | LV: 0.5155
+  HD ανά δομή   -> Brain: 29.55px | CSP: 146.29px | LV: 173.62px
+  ASD ανά δομή  -> Brain: 8.85px | CSP: 144.55px | LV: 171.24px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 9/15 epochs (Best: 0.7860 @ Epoch 52)
+Train Epoch: 62 [400/2453 (16%)]	Loss: 0.195374
+Train Epoch: 62 [800/2453 (33%)]	Loss: 0.201182
+Train Epoch: 62 [1200/2453 (49%)]	Loss: 0.203039
+Train Epoch: 62 [1600/2453 (65%)]	Loss: 0.186052
+Train Epoch: 62 [2000/2453 (81%)]	Loss: 0.214553
+Train Epoch: 62 [2400/2453 (98%)]	Loss: 0.180385
+Train Epoch: 62 [2453/2453 (100%)]	Loss: 0.054919
+
+Fold 2 Validation set: Average loss: 0.5848, Average IOU: 0.5718, Average Dice: 0.6905, Average HD: 104.00px, Average ASD: 96.45px
+  IoU ανά δομή  -> Brain: 0.9149 | CSP: 0.5375 | LV: 0.2632
+  Dice ανά δομή -> Brain: 0.9556 | CSP: 0.6992 | LV: 0.4167
+  HD ανά δομή   -> Brain: 26.70px | CSP: 93.80px | LV: 191.51px
+  ASD ανά δομή  -> Brain: 8.53px | CSP: 91.71px | LV: 189.11px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 10/15 epochs (Best: 0.7860 @ Epoch 52)
+Train Epoch: 63 [400/2453 (16%)]	Loss: 0.218762
+Train Epoch: 63 [800/2453 (33%)]	Loss: 0.218766
+Train Epoch: 63 [1200/2453 (49%)]	Loss: 0.207898
+Train Epoch: 63 [1600/2453 (65%)]	Loss: 0.258280
+Train Epoch: 63 [2000/2453 (81%)]	Loss: 0.148027
+Train Epoch: 63 [2400/2453 (98%)]	Loss: 0.203270
+Train Epoch: 63 [2453/2453 (100%)]	Loss: 0.237340
+
+Fold 2 Validation set: Average loss: 0.6827, Average IOU: 0.5709, Average Dice: 0.6986, Average HD: 106.94px, Average ASD: 98.78px
+  IoU ανά δομή  -> Brain: 0.9064 | CSP: 0.3470 | LV: 0.4594
+  Dice ανά δομή -> Brain: 0.9509 | CSP: 0.5153 | LV: 0.6296
+  HD ανά δομή   -> Brain: 28.91px | CSP: 160.90px | LV: 131.00px
+  ASD ανά δομή  -> Brain: 8.98px | CSP: 158.96px | LV: 128.39px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 11/15 epochs (Best: 0.7860 @ Epoch 52)
+Train Epoch: 64 [400/2453 (16%)]	Loss: 0.292487
+Train Epoch: 64 [800/2453 (33%)]	Loss: 0.176781
+Train Epoch: 64 [1200/2453 (49%)]	Loss: 0.258610
+Train Epoch: 64 [1600/2453 (65%)]	Loss: 0.257813
+Train Epoch: 64 [2000/2453 (81%)]	Loss: 0.156849
+Train Epoch: 64 [2400/2453 (98%)]	Loss: 0.149193
+Train Epoch: 64 [2453/2453 (100%)]	Loss: 0.180056
+
+Fold 2 Validation set: Average loss: 0.4336, Average IOU: 0.6562, Average Dice: 0.7772, Average HD: 76.97px, Average ASD: 70.11px
+  IoU ανά δομή  -> Brain: 0.9206 | CSP: 0.5722 | LV: 0.4760
+  Dice ανά δομή -> Brain: 0.9586 | CSP: 0.7279 | LV: 0.6450
+  HD ανά δομή   -> Brain: 24.11px | CSP: 79.74px | LV: 127.06px
+  ASD ανά δομή  -> Brain: 8.78px | CSP: 77.39px | LV: 124.17px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 12/15 epochs (Best: 0.7860 @ Epoch 52)
+Train Epoch: 65 [400/2453 (16%)]	Loss: 0.208680
+Train Epoch: 65 [800/2453 (33%)]	Loss: 0.147795
+Train Epoch: 65 [1200/2453 (49%)]	Loss: 0.233117
+Train Epoch: 65 [1600/2453 (65%)]	Loss: 0.111822
+Train Epoch: 65 [2000/2453 (81%)]	Loss: 0.286992
+Train Epoch: 65 [2400/2453 (98%)]	Loss: 0.156439
+Train Epoch: 65 [2453/2453 (100%)]	Loss: 0.291291
+
+Fold 2 Validation set: Average loss: 0.5503, Average IOU: 0.5876, Average Dice: 0.7103, Average HD: 108.57px, Average ASD: 101.03px
+  IoU ανά δομή  -> Brain: 0.9141 | CSP: 0.5310 | LV: 0.3177
+  Dice ανά δομή -> Brain: 0.9551 | CSP: 0.6937 | LV: 0.4822
+  HD ανά δομή   -> Brain: 27.22px | CSP: 115.93px | LV: 182.57px
+  ASD ανά δομή  -> Brain: 8.65px | CSP: 114.12px | LV: 180.31px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 13/15 epochs (Best: 0.7860 @ Epoch 52)
+Train Epoch: 66 [400/2453 (16%)]	Loss: 0.187171
+Train Epoch: 66 [800/2453 (33%)]	Loss: 0.148694
+Train Epoch: 66 [1200/2453 (49%)]	Loss: 0.374865
+Train Epoch: 66 [1600/2453 (65%)]	Loss: 0.620562
+Train Epoch: 66 [2000/2453 (81%)]	Loss: 0.146738
+Train Epoch: 66 [2400/2453 (98%)]	Loss: 0.289866
+Train Epoch: 66 [2453/2453 (100%)]	Loss: 0.067414
+
+Fold 2 Validation set: Average loss: 0.5314, Average IOU: 0.6229, Average Dice: 0.7479, Average HD: 89.73px, Average ASD: 82.52px
+  IoU ανά δομή  -> Brain: 0.9202 | CSP: 0.5082 | LV: 0.4402
+  Dice ανά δομή -> Brain: 0.9584 | CSP: 0.6739 | LV: 0.6113
+  HD ανά δομή   -> Brain: 25.21px | CSP: 112.68px | LV: 131.30px
+  ASD ανά δομή  -> Brain: 8.30px | CSP: 110.69px | LV: 128.59px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 14/15 epochs (Best: 0.7860 @ Epoch 52)
+Train Epoch: 67 [400/2453 (16%)]	Loss: 0.190764
+Train Epoch: 67 [800/2453 (33%)]	Loss: 0.136858
+Train Epoch: 67 [1200/2453 (49%)]	Loss: 0.197468
+Train Epoch: 67 [1600/2453 (65%)]	Loss: 0.220364
+Train Epoch: 67 [2000/2453 (81%)]	Loss: 0.310958
+Train Epoch: 67 [2400/2453 (98%)]	Loss: 0.144838
+Train Epoch: 67 [2453/2453 (100%)]	Loss: 0.215306
+
+Fold 2 Validation set: Average loss: 0.5566, Average IOU: 0.5979, Average Dice: 0.7229, Average HD: 98.53px, Average ASD: 91.23px
+  IoU ανά δομή  -> Brain: 0.9194 | CSP: 0.5038 | LV: 0.3704
+  Dice ανά δομή -> Brain: 0.9580 | CSP: 0.6700 | LV: 0.5406
+  HD ανά δομή   -> Brain: 25.82px | CSP: 113.67px | LV: 156.10px
+  ASD ανά δομή  -> Brain: 8.38px | CSP: 111.68px | LV: 153.63px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 15/15 epochs (Best: 0.7860 @ Epoch 52)
+
+>>> Early Stopping ενεργοποιήθηκε στο Fold 2 (Epoch 67)! <<<
+
+----------------------------------------------------------------------
+ΚΑΛΥΤΕΡΑ ΑΠΟΤΕΛΕΣΜΑΤΑ FOLD 2 (R2AttU_Net)
+----------------------------------------------------------------------
+Model Complexity (R2AttU_Net) -> Params: 39.44M (Trainable: 39.44M) | Size: 150.52 MB | Complexity: 307.14 GFLOPs
+Best Average Dice Score (Epoch 52): 0.7860
+  Best Dice ανά δομή -> Brain: 0.9553 | CSP: 0.7341 | LV: 0.6685
+IoU (at Best Dice): 0.6655
+  IoU ανά δομή       -> Brain: 0.9145 | CSP: 0.5799 | LV: 0.5021
+Hausdorff Distance (at Best Dice): 79.35px
+  HD ανά δομή        -> Brain: 24.73px | CSP: 89.44px | LV: 123.89px
+Average Surface Distance (at Best Dice): 72.03px
+  ASD ανά δομή       -> Brain: 7.26px | CSP: 87.63px | LV: 121.18px
+----------------------------------------------------------------------
+
+
+################################################################################
+ΕΚΚΙΝΗΣΗ FOLD 3 / 4  (Model = R2AttU_Net, Seed = 45)
+  Train CSV : /home/mkolliniatis/Dataset/splits/fold_3_train.csv
+  Val CSV   : /home/mkolliniatis/Dataset/splits/fold_3_val.csv
+################################################################################
+Train Epoch: 1 [400/2451 (16%)]	Loss: 0.957627
+Train Epoch: 1 [800/2451 (33%)]	Loss: 0.737872
+Train Epoch: 1 [1200/2451 (49%)]	Loss: 0.873290
+Train Epoch: 1 [1600/2451 (65%)]	Loss: 0.530545
+Train Epoch: 1 [2000/2451 (82%)]	Loss: 0.593727
+Train Epoch: 1 [2400/2451 (98%)]	Loss: 0.717417
+Train Epoch: 1 [2451/2451 (100%)]	Loss: 0.612677
+
+Fold 3 Validation set: Average loss: 0.6373, Average IOU: 0.5025, Average Dice: 0.6270, Average HD: 135.67px, Average ASD: 123.38px
+  IoU ανά δομή  -> Brain: 0.8735 | CSP: 0.4064 | LV: 0.2274
+  Dice ανά δομή -> Brain: 0.9325 | CSP: 0.5779 | LV: 0.3706
+  HD ανά δομή   -> Brain: 35.39px | CSP: 154.52px | LV: 217.09px
+  ASD ανά δομή  -> Brain: 7.14px | CSP: 149.68px | LV: 213.31px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.6270) στο Epoch 1 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold3_best.pt
+Train Epoch: 2 [400/2451 (16%)]	Loss: 0.333773
+Train Epoch: 2 [800/2451 (33%)]	Loss: 0.354480
+Train Epoch: 2 [1200/2451 (49%)]	Loss: 0.499804
+Train Epoch: 2 [1600/2451 (65%)]	Loss: 0.177355
+Train Epoch: 2 [2000/2451 (82%)]	Loss: 0.679643
+Train Epoch: 2 [2400/2451 (98%)]	Loss: 0.724638
+Train Epoch: 2 [2451/2451 (100%)]	Loss: 0.292307
+
+Fold 3 Validation set: Average loss: 0.6442, Average IOU: 0.5309, Average Dice: 0.6653, Average HD: 109.39px, Average ASD: 97.89px
+  IoU ανά δομή  -> Brain: 0.8606 | CSP: 0.3941 | LV: 0.3380
+  Dice ανά δομή -> Brain: 0.9251 | CSP: 0.5654 | LV: 0.5052
+  HD ανά δομή   -> Brain: 34.54px | CSP: 138.45px | LV: 155.18px
+  ASD ανά δομή  -> Brain: 7.15px | CSP: 135.65px | LV: 150.87px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.6653) στο Epoch 2 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold3_best.pt
+Train Epoch: 3 [400/2451 (16%)]	Loss: 0.348102
+Train Epoch: 3 [800/2451 (33%)]	Loss: 0.370766
+Train Epoch: 3 [1200/2451 (49%)]	Loss: 0.397631
+Train Epoch: 3 [1600/2451 (65%)]	Loss: 0.284836
+Train Epoch: 3 [2000/2451 (82%)]	Loss: 0.562936
+Train Epoch: 3 [2400/2451 (98%)]	Loss: 0.358291
+Train Epoch: 3 [2451/2451 (100%)]	Loss: 0.336106
+
+Fold 3 Validation set: Average loss: 0.5439, Average IOU: 0.5747, Average Dice: 0.7059, Average HD: 115.85px, Average ASD: 105.93px
+  IoU ανά δομή  -> Brain: 0.8915 | CSP: 0.4399 | LV: 0.3929
+  Dice ανά δομή -> Brain: 0.9426 | CSP: 0.6110 | LV: 0.5641
+  HD ανά δομή   -> Brain: 30.61px | CSP: 146.15px | LV: 170.80px
+  ASD ανά δομή  -> Brain: 6.71px | CSP: 143.92px | LV: 167.16px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7059) στο Epoch 3 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold3_best.pt
+Train Epoch: 4 [400/2451 (16%)]	Loss: 0.225435
+Train Epoch: 4 [800/2451 (33%)]	Loss: 0.246075
+Train Epoch: 4 [1200/2451 (49%)]	Loss: 0.371220
+Train Epoch: 4 [1600/2451 (65%)]	Loss: 0.432396
+Train Epoch: 4 [2000/2451 (82%)]	Loss: 0.562408
+Train Epoch: 4 [2400/2451 (98%)]	Loss: 0.280174
+Train Epoch: 4 [2451/2451 (100%)]	Loss: 0.286135
+
+Fold 3 Validation set: Average loss: 0.4673, Average IOU: 0.5959, Average Dice: 0.7237, Average HD: 99.63px, Average ASD: 89.61px
+  IoU ανά δομή  -> Brain: 0.9060 | CSP: 0.4908 | LV: 0.3908
+  Dice ανά δομή -> Brain: 0.9507 | CSP: 0.6585 | LV: 0.5620
+  HD ανά δομή   -> Brain: 28.51px | CSP: 114.12px | LV: 156.25px
+  ASD ανά δομή  -> Brain: 6.02px | CSP: 111.25px | LV: 151.56px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7237) στο Epoch 4 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold3_best.pt
+Train Epoch: 5 [400/2451 (16%)]	Loss: 0.222116
+Train Epoch: 5 [800/2451 (33%)]	Loss: 0.310175
+Train Epoch: 5 [1200/2451 (49%)]	Loss: 0.673958
+Train Epoch: 5 [1600/2451 (65%)]	Loss: 0.448784
+Train Epoch: 5 [2000/2451 (82%)]	Loss: 0.667460
+Train Epoch: 5 [2400/2451 (98%)]	Loss: 0.433394
+Train Epoch: 5 [2451/2451 (100%)]	Loss: 0.266628
+
+Fold 3 Validation set: Average loss: 0.6995, Average IOU: 0.4885, Average Dice: 0.6122, Average HD: 144.33px, Average ASD: 134.80px
+  IoU ανά δομή  -> Brain: 0.8875 | CSP: 0.3058 | LV: 0.2721
+  Dice ανά δομή -> Brain: 0.9404 | CSP: 0.4684 | LV: 0.4278
+  HD ανά δομή   -> Brain: 30.22px | CSP: 204.01px | LV: 198.75px
+  ASD ανά δομή  -> Brain: 6.13px | CSP: 202.36px | LV: 195.90px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.7237 @ Epoch 4)
+Train Epoch: 6 [400/2451 (16%)]	Loss: 0.319028
+Train Epoch: 6 [800/2451 (33%)]	Loss: 0.407669
+Train Epoch: 6 [1200/2451 (49%)]	Loss: 0.259321
+Train Epoch: 6 [1600/2451 (65%)]	Loss: 0.508193
+Train Epoch: 6 [2000/2451 (82%)]	Loss: 0.372212
+Train Epoch: 6 [2400/2451 (98%)]	Loss: 1.075022
+Train Epoch: 6 [2451/2451 (100%)]	Loss: 0.243937
+
+Fold 3 Validation set: Average loss: 0.4247, Average IOU: 0.6220, Average Dice: 0.7458, Average HD: 88.62px, Average ASD: 79.47px
+  IoU ανά δομή  -> Brain: 0.9237 | CSP: 0.5267 | LV: 0.4156
+  Dice ανά δομή -> Brain: 0.9603 | CSP: 0.6900 | LV: 0.5872
+  HD ανά δομή   -> Brain: 25.01px | CSP: 93.00px | LV: 147.85px
+  ASD ανά δομή  -> Brain: 4.69px | CSP: 88.96px | LV: 144.77px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7458) στο Epoch 6 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold3_best.pt
+Train Epoch: 7 [400/2451 (16%)]	Loss: 0.313612
+Train Epoch: 7 [800/2451 (33%)]	Loss: 0.330165
+Train Epoch: 7 [1200/2451 (49%)]	Loss: 0.330512
+Train Epoch: 7 [1600/2451 (65%)]	Loss: 0.359478
+Train Epoch: 7 [2000/2451 (82%)]	Loss: 0.501225
+Train Epoch: 7 [2400/2451 (98%)]	Loss: 0.264284
+Train Epoch: 7 [2451/2451 (100%)]	Loss: 0.241910
+
+Fold 3 Validation set: Average loss: 0.3709, Average IOU: 0.6307, Average Dice: 0.7544, Average HD: 80.14px, Average ASD: 71.19px
+  IoU ανά δομή  -> Brain: 0.9234 | CSP: 0.5262 | LV: 0.4424
+  Dice ανά δομή -> Brain: 0.9602 | CSP: 0.6895 | LV: 0.6134
+  HD ανά δομή   -> Brain: 23.26px | CSP: 103.71px | LV: 113.45px
+  ASD ανά δομή  -> Brain: 4.41px | CSP: 100.21px | LV: 108.93px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7544) στο Epoch 7 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold3_best.pt
+Train Epoch: 8 [400/2451 (16%)]	Loss: 0.307959
+Train Epoch: 8 [800/2451 (33%)]	Loss: 0.322720
+Train Epoch: 8 [1200/2451 (49%)]	Loss: 0.341773
+Train Epoch: 8 [1600/2451 (65%)]	Loss: 0.375878
+Train Epoch: 8 [2000/2451 (82%)]	Loss: 0.225645
+Train Epoch: 8 [2400/2451 (98%)]	Loss: 0.409537
+Train Epoch: 8 [2451/2451 (100%)]	Loss: 0.353166
+
+Fold 3 Validation set: Average loss: 0.3857, Average IOU: 0.6436, Average Dice: 0.7665, Average HD: 77.90px, Average ASD: 69.98px
+  IoU ανά δομή  -> Brain: 0.9158 | CSP: 0.5588 | LV: 0.4561
+  Dice ανά δομή -> Brain: 0.9561 | CSP: 0.7169 | LV: 0.6264
+  HD ανά δομή   -> Brain: 22.25px | CSP: 93.31px | LV: 118.15px
+  ASD ανά δομή  -> Brain: 4.58px | CSP: 91.11px | LV: 114.25px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7665) στο Epoch 8 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold3_best.pt
+Train Epoch: 9 [400/2451 (16%)]	Loss: 0.277335
+Train Epoch: 9 [800/2451 (33%)]	Loss: 0.206943
+Train Epoch: 9 [1200/2451 (49%)]	Loss: 0.248333
+Train Epoch: 9 [1600/2451 (65%)]	Loss: 0.362802
+Train Epoch: 9 [2000/2451 (82%)]	Loss: 0.343858
+Train Epoch: 9 [2400/2451 (98%)]	Loss: 0.326740
+Train Epoch: 9 [2451/2451 (100%)]	Loss: 0.203531
+
+Fold 3 Validation set: Average loss: 0.4368, Average IOU: 0.6353, Average Dice: 0.7599, Average HD: 80.69px, Average ASD: 72.67px
+  IoU ανά δομή  -> Brain: 0.9072 | CSP: 0.5568 | LV: 0.4419
+  Dice ανά δομή -> Brain: 0.9514 | CSP: 0.7153 | LV: 0.6129
+  HD ανά δομή   -> Brain: 24.93px | CSP: 94.02px | LV: 123.11px
+  ASD ανά δομή  -> Brain: 7.11px | CSP: 91.81px | LV: 119.11px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.7665 @ Epoch 8)
+Train Epoch: 10 [400/2451 (16%)]	Loss: 0.232075
+Train Epoch: 10 [800/2451 (33%)]	Loss: 0.530345
+Train Epoch: 10 [1200/2451 (49%)]	Loss: 0.290033
+Train Epoch: 10 [1600/2451 (65%)]	Loss: 0.364378
+Train Epoch: 10 [2000/2451 (82%)]	Loss: 0.266574
+Train Epoch: 10 [2400/2451 (98%)]	Loss: 0.344570
+Train Epoch: 10 [2451/2451 (100%)]	Loss: 0.269493
+
+Fold 3 Validation set: Average loss: 0.4020, Average IOU: 0.6314, Average Dice: 0.7536, Average HD: 91.31px, Average ASD: 83.10px
+  IoU ανά δομή  -> Brain: 0.9222 | CSP: 0.5608 | LV: 0.4111
+  Dice ανά δομή -> Brain: 0.9595 | CSP: 0.7186 | LV: 0.5827
+  HD ανά δομή   -> Brain: 24.55px | CSP: 104.83px | LV: 144.55px
+  ASD ανά δομή  -> Brain: 5.62px | CSP: 102.43px | LV: 141.26px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 2/15 epochs (Best: 0.7665 @ Epoch 8)
+Train Epoch: 11 [400/2451 (16%)]	Loss: 0.213500
+Train Epoch: 11 [800/2451 (33%)]	Loss: 0.325680
+Train Epoch: 11 [1200/2451 (49%)]	Loss: 0.432034
+Train Epoch: 11 [1600/2451 (65%)]	Loss: 0.329227
+Train Epoch: 11 [2000/2451 (82%)]	Loss: 0.236316
+Train Epoch: 11 [2400/2451 (98%)]	Loss: 0.213959
+Train Epoch: 11 [2451/2451 (100%)]	Loss: 0.337733
+
+Fold 3 Validation set: Average loss: 0.3601, Average IOU: 0.6461, Average Dice: 0.7694, Average HD: 76.39px, Average ASD: 68.39px
+  IoU ανά δομή  -> Brain: 0.9145 | CSP: 0.5492 | LV: 0.4747
+  Dice ανά δομή -> Brain: 0.9554 | CSP: 0.7090 | LV: 0.6438
+  HD ανά δομή   -> Brain: 22.67px | CSP: 92.22px | LV: 114.28px
+  ASD ανά δομή  -> Brain: 4.90px | CSP: 89.38px | LV: 110.88px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7694) στο Epoch 11 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold3_best.pt
+Train Epoch: 12 [400/2451 (16%)]	Loss: 0.376678
+Train Epoch: 12 [800/2451 (33%)]	Loss: 0.266006
+Train Epoch: 12 [1200/2451 (49%)]	Loss: 0.281288
+Train Epoch: 12 [1600/2451 (65%)]	Loss: 0.509129
+Train Epoch: 12 [2000/2451 (82%)]	Loss: 0.362835
+Train Epoch: 12 [2400/2451 (98%)]	Loss: 0.340251
+Train Epoch: 12 [2451/2451 (100%)]	Loss: 0.121311
+
+Fold 3 Validation set: Average loss: 0.3728, Average IOU: 0.6459, Average Dice: 0.7673, Average HD: 85.50px, Average ASD: 77.00px
+  IoU ανά δομή  -> Brain: 0.9250 | CSP: 0.5630 | LV: 0.4497
+  Dice ανά δομή -> Brain: 0.9610 | CSP: 0.7204 | LV: 0.6204
+  HD ανά δομή   -> Brain: 23.40px | CSP: 95.33px | LV: 137.76px
+  ASD ανά δομή  -> Brain: 4.41px | CSP: 92.96px | LV: 133.62px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.7694 @ Epoch 11)
+Train Epoch: 13 [400/2451 (16%)]	Loss: 0.248661
+Train Epoch: 13 [800/2451 (33%)]	Loss: 0.130783
+Train Epoch: 13 [1200/2451 (49%)]	Loss: 0.297354
+Train Epoch: 13 [1600/2451 (65%)]	Loss: 0.231170
+Train Epoch: 13 [2000/2451 (82%)]	Loss: 0.417188
+Train Epoch: 13 [2400/2451 (98%)]	Loss: 0.180449
+Train Epoch: 13 [2451/2451 (100%)]	Loss: 0.792984
+
+Fold 3 Validation set: Average loss: 0.3357, Average IOU: 0.6623, Average Dice: 0.7807, Average HD: 75.32px, Average ASD: 67.66px
+  IoU ανά δομή  -> Brain: 0.9277 | CSP: 0.5976 | LV: 0.4616
+  Dice ανά δομή -> Brain: 0.9625 | CSP: 0.7481 | LV: 0.6316
+  HD ανά δομή   -> Brain: 21.02px | CSP: 85.18px | LV: 119.77px
+  ASD ανά δομή  -> Brain: 4.14px | CSP: 82.86px | LV: 115.99px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7807) στο Epoch 13 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold3_best.pt
+Train Epoch: 14 [400/2451 (16%)]	Loss: 0.257727
+Train Epoch: 14 [800/2451 (33%)]	Loss: 0.354745
+Train Epoch: 14 [1200/2451 (49%)]	Loss: 0.222049
+Train Epoch: 14 [1600/2451 (65%)]	Loss: 0.311867
+Train Epoch: 14 [2000/2451 (82%)]	Loss: 0.271981
+Train Epoch: 14 [2400/2451 (98%)]	Loss: 0.269695
+Train Epoch: 14 [2451/2451 (100%)]	Loss: 0.619203
+
+Fold 3 Validation set: Average loss: 0.3475, Average IOU: 0.6526, Average Dice: 0.7733, Average HD: 76.85px, Average ASD: 69.38px
+  IoU ανά δομή  -> Brain: 0.9239 | CSP: 0.5730 | LV: 0.4609
+  Dice ανά δομή -> Brain: 0.9604 | CSP: 0.7285 | LV: 0.6310
+  HD ανά δομή   -> Brain: 21.17px | CSP: 92.27px | LV: 117.13px
+  ASD ανά δομή  -> Brain: 4.37px | CSP: 90.35px | LV: 113.41px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.7807 @ Epoch 13)
+Train Epoch: 15 [400/2451 (16%)]	Loss: 0.256787
+Train Epoch: 15 [800/2451 (33%)]	Loss: 0.427849
+Train Epoch: 15 [1200/2451 (49%)]	Loss: 0.323642
+Train Epoch: 15 [1600/2451 (65%)]	Loss: 0.159480
+Train Epoch: 15 [2000/2451 (82%)]	Loss: 0.300036
+Train Epoch: 15 [2400/2451 (98%)]	Loss: 0.277035
+Train Epoch: 15 [2451/2451 (100%)]	Loss: 0.289860
+
+Fold 3 Validation set: Average loss: 0.3367, Average IOU: 0.6586, Average Dice: 0.7782, Average HD: 75.48px, Average ASD: 67.83px
+  IoU ανά δομή  -> Brain: 0.9295 | CSP: 0.5734 | LV: 0.4731
+  Dice ανά δομή -> Brain: 0.9634 | CSP: 0.7289 | LV: 0.6423
+  HD ανά δομή   -> Brain: 21.33px | CSP: 85.55px | LV: 119.56px
+  ASD ανά δομή  -> Brain: 4.15px | CSP: 83.42px | LV: 115.92px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 2/15 epochs (Best: 0.7807 @ Epoch 13)
+Train Epoch: 16 [400/2451 (16%)]	Loss: 0.474006
+Train Epoch: 16 [800/2451 (33%)]	Loss: 0.294664
+Train Epoch: 16 [1200/2451 (49%)]	Loss: 0.207431
+Train Epoch: 16 [1600/2451 (65%)]	Loss: 0.509822
+Train Epoch: 16 [2000/2451 (82%)]	Loss: 0.292967
+Train Epoch: 16 [2400/2451 (98%)]	Loss: 0.388272
+Train Epoch: 16 [2451/2451 (100%)]	Loss: 0.273735
+
+Fold 3 Validation set: Average loss: 0.3407, Average IOU: 0.6472, Average Dice: 0.7676, Average HD: 77.67px, Average ASD: 69.46px
+  IoU ανά δομή  -> Brain: 0.9219 | CSP: 0.5900 | LV: 0.4298
+  Dice ανά δομή -> Brain: 0.9594 | CSP: 0.7421 | LV: 0.6012
+  HD ανά δομή   -> Brain: 22.84px | CSP: 83.77px | LV: 126.41px
+  ASD ανά δομή  -> Brain: 4.45px | CSP: 81.62px | LV: 122.32px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 3/15 epochs (Best: 0.7807 @ Epoch 13)
+Train Epoch: 17 [400/2451 (16%)]	Loss: 0.419957
+Train Epoch: 17 [800/2451 (33%)]	Loss: 0.298747
+Train Epoch: 17 [1200/2451 (49%)]	Loss: 0.314488
+Train Epoch: 17 [1600/2451 (65%)]	Loss: 0.720502
+Train Epoch: 17 [2000/2451 (82%)]	Loss: 0.254227
+Train Epoch: 17 [2400/2451 (98%)]	Loss: 0.402832
+Train Epoch: 17 [2451/2451 (100%)]	Loss: 0.183438
+
+Fold 3 Validation set: Average loss: 0.3373, Average IOU: 0.6375, Average Dice: 0.7608, Average HD: 84.33px, Average ASD: 75.44px
+  IoU ανά δομή  -> Brain: 0.9192 | CSP: 0.5454 | LV: 0.4480
+  Dice ανά δομή -> Brain: 0.9579 | CSP: 0.7058 | LV: 0.6187
+  HD ανά δομή   -> Brain: 25.39px | CSP: 98.52px | LV: 129.08px
+  ASD ανά δομή  -> Brain: 4.73px | CSP: 95.99px | LV: 125.58px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 4/15 epochs (Best: 0.7807 @ Epoch 13)
+Train Epoch: 18 [400/2451 (16%)]	Loss: 0.338171
+Train Epoch: 18 [800/2451 (33%)]	Loss: 0.313325
+Train Epoch: 18 [1200/2451 (49%)]	Loss: 0.508262
+Train Epoch: 18 [1600/2451 (65%)]	Loss: 0.268493
+Train Epoch: 18 [2000/2451 (82%)]	Loss: 0.349852
+Train Epoch: 18 [2400/2451 (98%)]	Loss: 0.185693
+Train Epoch: 18 [2451/2451 (100%)]	Loss: 0.222032
+
+Fold 3 Validation set: Average loss: 0.4019, Average IOU: 0.6537, Average Dice: 0.7755, Average HD: 70.16px, Average ASD: 63.04px
+  IoU ανά δομή  -> Brain: 0.9149 | CSP: 0.5736 | LV: 0.4727
+  Dice ανά δομή -> Brain: 0.9556 | CSP: 0.7290 | LV: 0.6419
+  HD ανά δομή   -> Brain: 20.56px | CSP: 84.35px | LV: 105.57px
+  ASD ανά δομή  -> Brain: 5.04px | CSP: 82.16px | LV: 101.92px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 5/15 epochs (Best: 0.7807 @ Epoch 13)
+Train Epoch: 19 [400/2451 (16%)]	Loss: 0.163269
+Train Epoch: 19 [800/2451 (33%)]	Loss: 0.330060
+Train Epoch: 19 [1200/2451 (49%)]	Loss: 0.178213
+Train Epoch: 19 [1600/2451 (65%)]	Loss: 0.315366
+Train Epoch: 19 [2000/2451 (82%)]	Loss: 0.225992
+Train Epoch: 19 [2400/2451 (98%)]	Loss: 0.272171
+Train Epoch: 19 [2451/2451 (100%)]	Loss: 0.285314
+
+Fold 3 Validation set: Average loss: 0.3303, Average IOU: 0.6617, Average Dice: 0.7802, Average HD: 70.42px, Average ASD: 63.15px
+  IoU ανά δομή  -> Brain: 0.9278 | CSP: 0.5953 | LV: 0.4618
+  Dice ανά δομή -> Brain: 0.9626 | CSP: 0.7463 | LV: 0.6319
+  HD ανά δομή   -> Brain: 20.06px | CSP: 81.59px | LV: 109.61px
+  ASD ανά δομή  -> Brain: 4.14px | CSP: 79.56px | LV: 105.76px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 6/15 epochs (Best: 0.7807 @ Epoch 13)
+Train Epoch: 20 [400/2451 (16%)]	Loss: 0.419509
+Train Epoch: 20 [800/2451 (33%)]	Loss: 0.231101
+Train Epoch: 20 [1200/2451 (49%)]	Loss: 0.158103
+Train Epoch: 20 [1600/2451 (65%)]	Loss: 0.225950
+Train Epoch: 20 [2000/2451 (82%)]	Loss: 0.217827
+Train Epoch: 20 [2400/2451 (98%)]	Loss: 0.342266
+Train Epoch: 20 [2451/2451 (100%)]	Loss: 0.297606
+
+Fold 3 Validation set: Average loss: 0.3680, Average IOU: 0.6570, Average Dice: 0.7760, Average HD: 78.96px, Average ASD: 71.81px
+  IoU ανά δομή  -> Brain: 0.9270 | CSP: 0.5939 | LV: 0.4500
+  Dice ανά δομή -> Brain: 0.9621 | CSP: 0.7453 | LV: 0.6207
+  HD ανά δομή   -> Brain: 20.47px | CSP: 83.93px | LV: 132.47px
+  ASD ανά δομή  -> Brain: 4.25px | CSP: 81.76px | LV: 129.43px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 7/15 epochs (Best: 0.7807 @ Epoch 13)
+Train Epoch: 21 [400/2451 (16%)]	Loss: 0.236614
+Train Epoch: 21 [800/2451 (33%)]	Loss: 0.242467
+Train Epoch: 21 [1200/2451 (49%)]	Loss: 0.492588
+Train Epoch: 21 [1600/2451 (65%)]	Loss: 0.332783
+Train Epoch: 21 [2000/2451 (82%)]	Loss: 0.361821
+Train Epoch: 21 [2400/2451 (98%)]	Loss: 0.411051
+Train Epoch: 21 [2451/2451 (100%)]	Loss: 0.329786
+
+Fold 3 Validation set: Average loss: 0.3638, Average IOU: 0.6478, Average Dice: 0.7688, Average HD: 78.23px, Average ASD: 70.57px
+  IoU ανά δομή  -> Brain: 0.9282 | CSP: 0.5610 | LV: 0.4543
+  Dice ανά δομή -> Brain: 0.9628 | CSP: 0.7188 | LV: 0.6248
+  HD ανά δομή   -> Brain: 21.26px | CSP: 99.01px | LV: 114.44px
+  ASD ανά δομή  -> Brain: 4.20px | CSP: 96.60px | LV: 110.90px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 8/15 epochs (Best: 0.7807 @ Epoch 13)
+Train Epoch: 22 [400/2451 (16%)]	Loss: 0.201976
+Train Epoch: 22 [800/2451 (33%)]	Loss: 0.411195
+Train Epoch: 22 [1200/2451 (49%)]	Loss: 0.104799
+Train Epoch: 22 [1600/2451 (65%)]	Loss: 0.169153
+Train Epoch: 22 [2000/2451 (82%)]	Loss: 0.236516
+Train Epoch: 22 [2400/2451 (98%)]	Loss: 0.310360
+Train Epoch: 22 [2451/2451 (100%)]	Loss: 0.257906
+
+Fold 3 Validation set: Average loss: 0.3981, Average IOU: 0.6461, Average Dice: 0.7679, Average HD: 82.33px, Average ASD: 75.30px
+  IoU ανά δομή  -> Brain: 0.9278 | CSP: 0.5404 | LV: 0.4701
+  Dice ανά δομή -> Brain: 0.9625 | CSP: 0.7016 | LV: 0.6395
+  HD ανά δομή   -> Brain: 20.19px | CSP: 97.43px | LV: 129.36px
+  ASD ανά δομή  -> Brain: 4.24px | CSP: 95.27px | LV: 126.40px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 9/15 epochs (Best: 0.7807 @ Epoch 13)
+Train Epoch: 23 [400/2451 (16%)]	Loss: 0.294330
+Train Epoch: 23 [800/2451 (33%)]	Loss: 0.315672
+Train Epoch: 23 [1200/2451 (49%)]	Loss: 0.248972
+Train Epoch: 23 [1600/2451 (65%)]	Loss: 0.159473
+Train Epoch: 23 [2000/2451 (82%)]	Loss: 0.191898
+Train Epoch: 23 [2400/2451 (98%)]	Loss: 0.413782
+Train Epoch: 23 [2451/2451 (100%)]	Loss: 0.305368
+
+Fold 3 Validation set: Average loss: 0.3361, Average IOU: 0.6591, Average Dice: 0.7774, Average HD: 78.57px, Average ASD: 70.47px
+  IoU ανά δομή  -> Brain: 0.9305 | CSP: 0.5965 | LV: 0.4504
+  Dice ανά δομή -> Brain: 0.9640 | CSP: 0.7473 | LV: 0.6210
+  HD ανά δομή   -> Brain: 22.40px | CSP: 96.98px | LV: 116.32px
+  ASD ανά δομή  -> Brain: 4.31px | CSP: 94.36px | LV: 112.74px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 10/15 epochs (Best: 0.7807 @ Epoch 13)
+Train Epoch: 24 [400/2451 (16%)]	Loss: 0.185506
+Train Epoch: 24 [800/2451 (33%)]	Loss: 0.227476
+Train Epoch: 24 [1200/2451 (49%)]	Loss: 0.504047
+Train Epoch: 24 [1600/2451 (65%)]	Loss: 0.358746
+Train Epoch: 24 [2000/2451 (82%)]	Loss: 0.429235
+Train Epoch: 24 [2400/2451 (98%)]	Loss: 0.367286
+Train Epoch: 24 [2451/2451 (100%)]	Loss: 0.455823
+
+Fold 3 Validation set: Average loss: 0.3470, Average IOU: 0.6559, Average Dice: 0.7753, Average HD: 72.27px, Average ASD: 64.97px
+  IoU ανά δομή  -> Brain: 0.9365 | CSP: 0.5589 | LV: 0.4724
+  Dice ανά δομή -> Brain: 0.9672 | CSP: 0.7171 | LV: 0.6417
+  HD ανά δομή   -> Brain: 19.68px | CSP: 91.75px | LV: 105.38px
+  ASD ανά δομή  -> Brain: 3.90px | CSP: 89.22px | LV: 101.78px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 11/15 epochs (Best: 0.7807 @ Epoch 13)
+Train Epoch: 25 [400/2451 (16%)]	Loss: 0.175889
+Train Epoch: 25 [800/2451 (33%)]	Loss: 0.441336
+Train Epoch: 25 [1200/2451 (49%)]	Loss: 0.103709
+Train Epoch: 25 [1600/2451 (65%)]	Loss: 0.344624
+Train Epoch: 25 [2000/2451 (82%)]	Loss: 0.180698
+Train Epoch: 25 [2400/2451 (98%)]	Loss: 0.377430
+Train Epoch: 25 [2451/2451 (100%)]	Loss: 0.235334
+
+Fold 3 Validation set: Average loss: 0.3323, Average IOU: 0.6538, Average Dice: 0.7737, Average HD: 77.85px, Average ASD: 70.17px
+  IoU ανά δομή  -> Brain: 0.9324 | CSP: 0.5638 | LV: 0.4652
+  Dice ανά δομή -> Brain: 0.9650 | CSP: 0.7211 | LV: 0.6350
+  HD ανά δομή   -> Brain: 21.30px | CSP: 98.88px | LV: 113.35px
+  ASD ανά δομή  -> Brain: 4.11px | CSP: 96.65px | LV: 109.74px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 12/15 epochs (Best: 0.7807 @ Epoch 13)
+Train Epoch: 26 [400/2451 (16%)]	Loss: 0.326368
+Train Epoch: 26 [800/2451 (33%)]	Loss: 0.420760
+Train Epoch: 26 [1200/2451 (49%)]	Loss: 0.214981
+Train Epoch: 26 [1600/2451 (65%)]	Loss: 0.249390
+Train Epoch: 26 [2000/2451 (82%)]	Loss: 0.222224
+Train Epoch: 26 [2400/2451 (98%)]	Loss: 0.249268
+Train Epoch: 26 [2451/2451 (100%)]	Loss: 0.186912
+
+Fold 3 Validation set: Average loss: 0.3997, Average IOU: 0.6364, Average Dice: 0.7590, Average HD: 83.64px, Average ASD: 75.67px
+  IoU ανά δομή  -> Brain: 0.9179 | CSP: 0.5653 | LV: 0.4261
+  Dice ανά δομή -> Brain: 0.9572 | CSP: 0.7223 | LV: 0.5976
+  HD ανά δομή   -> Brain: 22.40px | CSP: 93.28px | LV: 135.25px
+  ASD ανά δομή  -> Brain: 4.53px | CSP: 90.68px | LV: 131.80px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 13/15 epochs (Best: 0.7807 @ Epoch 13)
+Train Epoch: 27 [400/2451 (16%)]	Loss: 0.474121
+Train Epoch: 27 [800/2451 (33%)]	Loss: 0.328704
+Train Epoch: 27 [1200/2451 (49%)]	Loss: 0.214218
+Train Epoch: 27 [1600/2451 (65%)]	Loss: 0.278758
+Train Epoch: 27 [2000/2451 (82%)]	Loss: 0.499180
+Train Epoch: 27 [2400/2451 (98%)]	Loss: 0.283699
+Train Epoch: 27 [2451/2451 (100%)]	Loss: 0.174120
+
+Fold 3 Validation set: Average loss: 0.3600, Average IOU: 0.6517, Average Dice: 0.7715, Average HD: 76.69px, Average ASD: 69.43px
+  IoU ανά δομή  -> Brain: 0.9292 | CSP: 0.5794 | LV: 0.4466
+  Dice ανά δομή -> Brain: 0.9633 | CSP: 0.7337 | LV: 0.6175
+  HD ανά δομή   -> Brain: 20.42px | CSP: 85.85px | LV: 123.80px
+  ASD ανά δομή  -> Brain: 4.15px | CSP: 83.61px | LV: 120.52px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 14/15 epochs (Best: 0.7807 @ Epoch 13)
+Train Epoch: 28 [400/2451 (16%)]	Loss: 0.132998
+Train Epoch: 28 [800/2451 (33%)]	Loss: 0.320174
+Train Epoch: 28 [1200/2451 (49%)]	Loss: 0.374461
+Train Epoch: 28 [1600/2451 (65%)]	Loss: 0.301671
+Train Epoch: 28 [2000/2451 (82%)]	Loss: 0.311126
+Train Epoch: 28 [2400/2451 (98%)]	Loss: 0.374827
+Train Epoch: 28 [2451/2451 (100%)]	Loss: 0.273656
+
+Fold 3 Validation set: Average loss: 0.3753, Average IOU: 0.6442, Average Dice: 0.7634, Average HD: 86.15px, Average ASD: 79.01px
+  IoU ανά δομή  -> Brain: 0.9350 | CSP: 0.5771 | LV: 0.4203
+  Dice ανά δομή -> Brain: 0.9664 | CSP: 0.7319 | LV: 0.5919
+  HD ανά δομή   -> Brain: 20.59px | CSP: 93.10px | LV: 144.78px
+  ASD ανά δομή  -> Brain: 4.02px | CSP: 91.10px | LV: 141.92px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 15/15 epochs (Best: 0.7807 @ Epoch 13)
+
+>>> Early Stopping ενεργοποιήθηκε στο Fold 3 (Epoch 28)! <<<
+
+----------------------------------------------------------------------
+ΚΑΛΥΤΕΡΑ ΑΠΟΤΕΛΕΣΜΑΤΑ FOLD 3 (R2AttU_Net)
+----------------------------------------------------------------------
+Model Complexity (R2AttU_Net) -> Params: 39.44M (Trainable: 39.44M) | Size: 150.52 MB | Complexity: 307.14 GFLOPs
+Best Average Dice Score (Epoch 13): 0.7807
+  Best Dice ανά δομή -> Brain: 0.9625 | CSP: 0.7481 | LV: 0.6316
+IoU (at Best Dice): 0.6623
+  IoU ανά δομή       -> Brain: 0.9277 | CSP: 0.5976 | LV: 0.4616
+Hausdorff Distance (at Best Dice): 75.32px
+  HD ανά δομή        -> Brain: 21.02px | CSP: 85.18px | LV: 119.77px
+Average Surface Distance (at Best Dice): 67.66px
+  ASD ανά δομή       -> Brain: 4.14px | CSP: 82.86px | LV: 115.99px
+----------------------------------------------------------------------
+
+
+################################################################################
+ΕΚΚΙΝΗΣΗ FOLD 4 / 4  (Model = R2AttU_Net, Seed = 46)
+  Train CSV : /home/mkolliniatis/Dataset/splits/fold_4_train.csv
+  Val CSV   : /home/mkolliniatis/Dataset/splits/fold_4_val.csv
+################################################################################
+Train Epoch: 1 [400/2454 (16%)]	Loss: 0.866983
+Train Epoch: 1 [800/2454 (33%)]	Loss: 0.364266
+Train Epoch: 1 [1200/2454 (49%)]	Loss: 0.721833
+Train Epoch: 1 [1600/2454 (65%)]	Loss: 0.422616
+Train Epoch: 1 [2000/2454 (81%)]	Loss: 0.310016
+Train Epoch: 1 [2400/2454 (98%)]	Loss: 0.640495
+Train Epoch: 1 [2454/2454 (100%)]	Loss: 0.453031
+
+Fold 4 Validation set: Average loss: 0.6715, Average IOU: 0.5092, Average Dice: 0.6343, Average HD: 121.36px, Average ASD: 108.34px
+  IoU ανά δομή  -> Brain: 0.8805 | CSP: 0.4045 | LV: 0.2426
+  Dice ανά δομή -> Brain: 0.9364 | CSP: 0.5760 | LV: 0.3904
+  HD ανά δομή   -> Brain: 38.43px | CSP: 150.23px | LV: 175.40px
+  ASD ανά δομή  -> Brain: 8.22px | CSP: 145.44px | LV: 171.35px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.6343) στο Epoch 1 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold4_best.pt
+Train Epoch: 2 [400/2454 (16%)]	Loss: 0.416407
+Train Epoch: 2 [800/2454 (33%)]	Loss: 0.496283
+Train Epoch: 2 [1200/2454 (49%)]	Loss: 0.575634
+Train Epoch: 2 [1600/2454 (65%)]	Loss: 0.778433
+Train Epoch: 2 [2000/2454 (81%)]	Loss: 0.700609
+Train Epoch: 2 [2400/2454 (98%)]	Loss: 0.398956
+Train Epoch: 2 [2454/2454 (100%)]	Loss: 0.575484
+
+Fold 4 Validation set: Average loss: 0.4735, Average IOU: 0.6079, Average Dice: 0.7359, Average HD: 89.50px, Average ASD: 78.55px
+  IoU ανά δομή  -> Brain: 0.9023 | CSP: 0.5055 | LV: 0.4159
+  Dice ανά δομή -> Brain: 0.9486 | CSP: 0.6716 | LV: 0.5875
+  HD ανά δομή   -> Brain: 29.98px | CSP: 112.95px | LV: 125.57px
+  ASD ανά δομή  -> Brain: 6.69px | CSP: 107.84px | LV: 121.13px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7359) στο Epoch 2 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold4_best.pt
+Train Epoch: 3 [400/2454 (16%)]	Loss: 0.418347
+Train Epoch: 3 [800/2454 (33%)]	Loss: 0.383340
+Train Epoch: 3 [1200/2454 (49%)]	Loss: 0.490709
+Train Epoch: 3 [1600/2454 (65%)]	Loss: 0.296008
+Train Epoch: 3 [2000/2454 (81%)]	Loss: 0.413823
+Train Epoch: 3 [2400/2454 (98%)]	Loss: 0.410808
+Train Epoch: 3 [2454/2454 (100%)]	Loss: 0.289533
+
+Fold 4 Validation set: Average loss: 0.5177, Average IOU: 0.5897, Average Dice: 0.7189, Average HD: 98.32px, Average ASD: 88.79px
+  IoU ανά δομή  -> Brain: 0.9051 | CSP: 0.4464 | LV: 0.4176
+  Dice ανά δομή -> Brain: 0.9502 | CSP: 0.6172 | LV: 0.5891
+  HD ανά δομή   -> Brain: 29.24px | CSP: 130.50px | LV: 135.22px
+  ASD ανά δομή  -> Brain: 6.65px | CSP: 128.21px | LV: 131.51px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.7359 @ Epoch 2)
+Train Epoch: 4 [400/2454 (16%)]	Loss: 0.172578
+Train Epoch: 4 [800/2454 (33%)]	Loss: 0.513191
+Train Epoch: 4 [1200/2454 (49%)]	Loss: 0.473185
+Train Epoch: 4 [1600/2454 (65%)]	Loss: 0.331198
+Train Epoch: 4 [2000/2454 (81%)]	Loss: 0.738261
+Train Epoch: 4 [2400/2454 (98%)]	Loss: 0.376929
+Train Epoch: 4 [2454/2454 (100%)]	Loss: 0.565896
+
+Fold 4 Validation set: Average loss: 0.5072, Average IOU: 0.5861, Average Dice: 0.7118, Average HD: 101.72px, Average ASD: 92.08px
+  IoU ανά δομή  -> Brain: 0.9130 | CSP: 0.4945 | LV: 0.3507
+  Dice ανά δομή -> Brain: 0.9545 | CSP: 0.6618 | LV: 0.5192
+  HD ανά δομή   -> Brain: 29.25px | CSP: 125.62px | LV: 150.29px
+  ASD ανά δομή  -> Brain: 6.38px | CSP: 123.31px | LV: 146.56px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 2/15 epochs (Best: 0.7359 @ Epoch 2)
+Train Epoch: 5 [400/2454 (16%)]	Loss: 0.283217
+Train Epoch: 5 [800/2454 (33%)]	Loss: 0.626017
+Train Epoch: 5 [1200/2454 (49%)]	Loss: 0.284650
+Train Epoch: 5 [1600/2454 (65%)]	Loss: 0.307419
+Train Epoch: 5 [2000/2454 (81%)]	Loss: 0.229812
+Train Epoch: 5 [2400/2454 (98%)]	Loss: 0.254590
+Train Epoch: 5 [2454/2454 (100%)]	Loss: 0.149861
+
+Fold 4 Validation set: Average loss: 0.4287, Average IOU: 0.6237, Average Dice: 0.7484, Average HD: 80.67px, Average ASD: 72.27px
+  IoU ανά δομή  -> Brain: 0.9190 | CSP: 0.5221 | LV: 0.4301
+  Dice ανά δομή -> Brain: 0.9578 | CSP: 0.6860 | LV: 0.6015
+  HD ανά δομή   -> Brain: 24.59px | CSP: 102.84px | LV: 114.59px
+  ASD ανά δομή  -> Brain: 5.83px | CSP: 100.49px | LV: 110.50px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7484) στο Epoch 5 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold4_best.pt
+Train Epoch: 6 [400/2454 (16%)]	Loss: 0.644253
+Train Epoch: 6 [800/2454 (33%)]	Loss: 0.299800
+Train Epoch: 6 [1200/2454 (49%)]	Loss: 0.465946
+Train Epoch: 6 [1600/2454 (65%)]	Loss: 0.282644
+Train Epoch: 6 [2000/2454 (81%)]	Loss: 0.394932
+Train Epoch: 6 [2400/2454 (98%)]	Loss: 0.626662
+Train Epoch: 6 [2454/2454 (100%)]	Loss: 0.876536
+
+Fold 4 Validation set: Average loss: 0.4405, Average IOU: 0.5874, Average Dice: 0.7142, Average HD: 106.62px, Average ASD: 94.97px
+  IoU ανά δομή  -> Brain: 0.9029 | CSP: 0.5087 | LV: 0.3507
+  Dice ανά δομή -> Brain: 0.9490 | CSP: 0.6743 | LV: 0.5193
+  HD ανά δομή   -> Brain: 32.87px | CSP: 108.43px | LV: 178.56px
+  ASD ανά δομή  -> Brain: 6.80px | CSP: 105.66px | LV: 172.47px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.7484 @ Epoch 5)
+Train Epoch: 7 [400/2454 (16%)]	Loss: 0.370790
+Train Epoch: 7 [800/2454 (33%)]	Loss: 0.331481
+Train Epoch: 7 [1200/2454 (49%)]	Loss: 0.399963
+Train Epoch: 7 [1600/2454 (65%)]	Loss: 0.439601
+Train Epoch: 7 [2000/2454 (81%)]	Loss: 0.279468
+Train Epoch: 7 [2400/2454 (98%)]	Loss: 0.333776
+Train Epoch: 7 [2454/2454 (100%)]	Loss: 0.326814
+
+Fold 4 Validation set: Average loss: 0.5338, Average IOU: 0.5856, Average Dice: 0.7140, Average HD: 98.27px, Average ASD: 87.76px
+  IoU ανά δομή  -> Brain: 0.9107 | CSP: 0.4451 | LV: 0.4011
+  Dice ανά δομή -> Brain: 0.9533 | CSP: 0.6161 | LV: 0.5725
+  HD ανά δομή   -> Brain: 28.58px | CSP: 140.71px | LV: 125.51px
+  ASD ανά δομή  -> Brain: 6.51px | CSP: 135.25px | LV: 121.53px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 2/15 epochs (Best: 0.7484 @ Epoch 5)
+Train Epoch: 8 [400/2454 (16%)]	Loss: 0.709681
+Train Epoch: 8 [800/2454 (33%)]	Loss: 0.262600
+Train Epoch: 8 [1200/2454 (49%)]	Loss: 0.208632
+Train Epoch: 8 [1600/2454 (65%)]	Loss: 0.229771
+Train Epoch: 8 [2000/2454 (81%)]	Loss: 0.283446
+Train Epoch: 8 [2400/2454 (98%)]	Loss: 0.367569
+Train Epoch: 8 [2454/2454 (100%)]	Loss: 0.250144
+
+Fold 4 Validation set: Average loss: 0.4475, Average IOU: 0.6164, Average Dice: 0.7423, Average HD: 86.98px, Average ASD: 77.86px
+  IoU ανά δομή  -> Brain: 0.9117 | CSP: 0.5198 | LV: 0.4176
+  Dice ανά δομή -> Brain: 0.9538 | CSP: 0.6841 | LV: 0.5892
+  HD ανά δομή   -> Brain: 28.41px | CSP: 106.90px | LV: 125.65px
+  ASD ανά δομή  -> Brain: 7.34px | CSP: 104.22px | LV: 122.03px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 3/15 epochs (Best: 0.7484 @ Epoch 5)
+Train Epoch: 9 [400/2454 (16%)]	Loss: 0.275421
+Train Epoch: 9 [800/2454 (33%)]	Loss: 0.317565
+Train Epoch: 9 [1200/2454 (49%)]	Loss: 0.404755
+Train Epoch: 9 [1600/2454 (65%)]	Loss: 0.408513
+Train Epoch: 9 [2000/2454 (81%)]	Loss: 0.371928
+Train Epoch: 9 [2400/2454 (98%)]	Loss: 0.324124
+Train Epoch: 9 [2454/2454 (100%)]	Loss: 0.239790
+
+Fold 4 Validation set: Average loss: 0.3781, Average IOU: 0.6324, Average Dice: 0.7548, Average HD: 91.20px, Average ASD: 81.29px
+  IoU ανά δομή  -> Brain: 0.9181 | CSP: 0.5678 | LV: 0.4112
+  Dice ανά δομή -> Brain: 0.9573 | CSP: 0.7244 | LV: 0.5827
+  HD ανά δομή   -> Brain: 29.60px | CSP: 93.03px | LV: 150.97px
+  ASD ανά δομή  -> Brain: 6.47px | CSP: 90.67px | LV: 146.73px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7548) στο Epoch 9 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold4_best.pt
+Train Epoch: 10 [400/2454 (16%)]	Loss: 0.380328
+Train Epoch: 10 [800/2454 (33%)]	Loss: 0.455567
+Train Epoch: 10 [1200/2454 (49%)]	Loss: 0.347680
+Train Epoch: 10 [1600/2454 (65%)]	Loss: 0.272868
+Train Epoch: 10 [2000/2454 (81%)]	Loss: 0.247148
+Train Epoch: 10 [2400/2454 (98%)]	Loss: 0.262770
+Train Epoch: 10 [2454/2454 (100%)]	Loss: 0.258501
+
+Fold 4 Validation set: Average loss: 0.4096, Average IOU: 0.6488, Average Dice: 0.7713, Average HD: 76.51px, Average ASD: 68.12px
+  IoU ανά δομή  -> Brain: 0.9218 | CSP: 0.5309 | LV: 0.4937
+  Dice ανά δομή -> Brain: 0.9593 | CSP: 0.6936 | LV: 0.6610
+  HD ανά δομή   -> Brain: 24.67px | CSP: 105.66px | LV: 99.20px
+  ASD ανά δομή  -> Brain: 5.71px | CSP: 103.45px | LV: 95.20px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7713) στο Epoch 10 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold4_best.pt
+Train Epoch: 11 [400/2454 (16%)]	Loss: 0.253754
+Train Epoch: 11 [800/2454 (33%)]	Loss: 0.341842
+Train Epoch: 11 [1200/2454 (49%)]	Loss: 0.254850
+Train Epoch: 11 [1600/2454 (65%)]	Loss: 0.346986
+Train Epoch: 11 [2000/2454 (81%)]	Loss: 0.295892
+Train Epoch: 11 [2400/2454 (98%)]	Loss: 0.141441
+Train Epoch: 11 [2454/2454 (100%)]	Loss: 0.287981
+
+Fold 4 Validation set: Average loss: 0.3974, Average IOU: 0.6466, Average Dice: 0.7700, Average HD: 78.75px, Average ASD: 69.50px
+  IoU ανά δομή  -> Brain: 0.9124 | CSP: 0.5513 | LV: 0.4762
+  Dice ανά δομή -> Brain: 0.9542 | CSP: 0.7108 | LV: 0.6452
+  HD ανά δομή   -> Brain: 27.45px | CSP: 102.93px | LV: 105.88px
+  ASD ανά δομή  -> Brain: 6.61px | CSP: 99.90px | LV: 101.98px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.7713 @ Epoch 10)
+Train Epoch: 12 [400/2454 (16%)]	Loss: 0.518636
+Train Epoch: 12 [800/2454 (33%)]	Loss: 0.300778
+Train Epoch: 12 [1200/2454 (49%)]	Loss: 0.171401
+Train Epoch: 12 [1600/2454 (65%)]	Loss: 0.435977
+Train Epoch: 12 [2000/2454 (81%)]	Loss: 0.411532
+Train Epoch: 12 [2400/2454 (98%)]	Loss: 0.394912
+Train Epoch: 12 [2454/2454 (100%)]	Loss: 0.169053
+
+Fold 4 Validation set: Average loss: 0.3860, Average IOU: 0.6441, Average Dice: 0.7667, Average HD: 81.35px, Average ASD: 72.94px
+  IoU ανά δομή  -> Brain: 0.9242 | CSP: 0.5340 | LV: 0.4741
+  Dice ανά δομή -> Brain: 0.9606 | CSP: 0.6962 | LV: 0.6432
+  HD ανά δομή   -> Brain: 24.83px | CSP: 113.09px | LV: 106.12px
+  ASD ανά δομή  -> Brain: 5.57px | CSP: 110.84px | LV: 102.42px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 2/15 epochs (Best: 0.7713 @ Epoch 10)
+Train Epoch: 13 [400/2454 (16%)]	Loss: 0.463443
+Train Epoch: 13 [800/2454 (33%)]	Loss: 0.274314
+Train Epoch: 13 [1200/2454 (49%)]	Loss: 0.327837
+Train Epoch: 13 [1600/2454 (65%)]	Loss: 0.246197
+Train Epoch: 13 [2000/2454 (81%)]	Loss: 0.206795
+Train Epoch: 13 [2400/2454 (98%)]	Loss: 0.755903
+Train Epoch: 13 [2454/2454 (100%)]	Loss: 0.490303
+
+Fold 4 Validation set: Average loss: 0.4327, Average IOU: 0.6335, Average Dice: 0.7576, Average HD: 82.02px, Average ASD: 73.85px
+  IoU ανά δομή  -> Brain: 0.9243 | CSP: 0.4891 | LV: 0.4872
+  Dice ανά δομή -> Brain: 0.9607 | CSP: 0.6569 | LV: 0.6552
+  HD ανά δομή   -> Brain: 24.68px | CSP: 116.74px | LV: 104.65px
+  ASD ανά δομή  -> Brain: 5.68px | CSP: 114.52px | LV: 101.35px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 3/15 epochs (Best: 0.7713 @ Epoch 10)
+Train Epoch: 14 [400/2454 (16%)]	Loss: 0.234149
+Train Epoch: 14 [800/2454 (33%)]	Loss: 0.496439
+Train Epoch: 14 [1200/2454 (49%)]	Loss: 0.259803
+Train Epoch: 14 [1600/2454 (65%)]	Loss: 0.366176
+Train Epoch: 14 [2000/2454 (81%)]	Loss: 0.493077
+Train Epoch: 14 [2400/2454 (98%)]	Loss: 0.361956
+Train Epoch: 14 [2454/2454 (100%)]	Loss: 0.636605
+
+Fold 4 Validation set: Average loss: 0.3822, Average IOU: 0.6396, Average Dice: 0.7625, Average HD: 81.33px, Average ASD: 72.91px
+  IoU ανά δομή  -> Brain: 0.9218 | CSP: 0.5441 | LV: 0.4531
+  Dice ανά δομή -> Brain: 0.9593 | CSP: 0.7047 | LV: 0.6236
+  HD ανά δομή   -> Brain: 24.62px | CSP: 93.68px | LV: 125.70px
+  ASD ανά δομή  -> Brain: 5.63px | CSP: 91.30px | LV: 121.81px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 4/15 epochs (Best: 0.7713 @ Epoch 10)
+Train Epoch: 15 [400/2454 (16%)]	Loss: 0.233052
+Train Epoch: 15 [800/2454 (33%)]	Loss: 0.237838
+Train Epoch: 15 [1200/2454 (49%)]	Loss: 0.094786
+Train Epoch: 15 [1600/2454 (65%)]	Loss: 0.181692
+Train Epoch: 15 [2000/2454 (81%)]	Loss: 0.290010
+Train Epoch: 15 [2400/2454 (98%)]	Loss: 0.289678
+Train Epoch: 15 [2454/2454 (100%)]	Loss: 0.296107
+
+Fold 4 Validation set: Average loss: 0.3611, Average IOU: 0.6653, Average Dice: 0.7853, Average HD: 71.74px, Average ASD: 64.20px
+  IoU ανά δομή  -> Brain: 0.9220 | CSP: 0.5682 | LV: 0.5058
+  Dice ανά δομή -> Brain: 0.9594 | CSP: 0.7247 | LV: 0.6718
+  HD ανά δομή   -> Brain: 22.69px | CSP: 90.27px | LV: 102.26px
+  ASD ανά δομή  -> Brain: 5.62px | CSP: 88.19px | LV: 98.79px
+
+  [Checkpoint] Νέο καλύτερο Validation Dice (0.7853) στο Epoch 15 -> Αποθηκεύτηκε στο /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_fold4_best.pt
+Train Epoch: 16 [400/2454 (16%)]	Loss: 0.361994
+Train Epoch: 16 [800/2454 (33%)]	Loss: 0.204336
+Train Epoch: 16 [1200/2454 (49%)]	Loss: 0.411844
+Train Epoch: 16 [1600/2454 (65%)]	Loss: 0.175150
+Train Epoch: 16 [2000/2454 (81%)]	Loss: 0.234756
+Train Epoch: 16 [2400/2454 (98%)]	Loss: 0.565104
+Train Epoch: 16 [2454/2454 (100%)]	Loss: 0.116038
+
+Fold 4 Validation set: Average loss: 0.3543, Average IOU: 0.6557, Average Dice: 0.7767, Average HD: 72.80px, Average ASD: 65.12px
+  IoU ανά δομή  -> Brain: 0.9264 | CSP: 0.5490 | LV: 0.4919
+  Dice ανά δομή -> Brain: 0.9618 | CSP: 0.7088 | LV: 0.6594
+  HD ανά δομή   -> Brain: 22.43px | CSP: 88.57px | LV: 107.40px
+  ASD ανά δομή  -> Brain: 5.36px | CSP: 86.32px | LV: 103.68px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 1/15 epochs (Best: 0.7853 @ Epoch 15)
+Train Epoch: 17 [400/2454 (16%)]	Loss: 0.292161
+Train Epoch: 17 [800/2454 (33%)]	Loss: 0.287900
+Train Epoch: 17 [1200/2454 (49%)]	Loss: 0.340222
+Train Epoch: 17 [1600/2454 (65%)]	Loss: 0.267661
+Train Epoch: 17 [2000/2454 (81%)]	Loss: 0.309283
+Train Epoch: 17 [2400/2454 (98%)]	Loss: 0.179657
+Train Epoch: 17 [2454/2454 (100%)]	Loss: 0.532120
+
+Fold 4 Validation set: Average loss: 0.3498, Average IOU: 0.6555, Average Dice: 0.7762, Average HD: 76.39px, Average ASD: 67.89px
+  IoU ανά δομή  -> Brain: 0.9266 | CSP: 0.5569 | LV: 0.4831
+  Dice ανά δομή -> Brain: 0.9619 | CSP: 0.7154 | LV: 0.6514
+  HD ανά δομή   -> Brain: 24.35px | CSP: 91.61px | LV: 113.22px
+  ASD ανά δομή  -> Brain: 5.47px | CSP: 88.68px | LV: 109.52px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 2/15 epochs (Best: 0.7853 @ Epoch 15)
+Train Epoch: 18 [400/2454 (16%)]	Loss: 0.268403
+Train Epoch: 18 [800/2454 (33%)]	Loss: 0.288219
+Train Epoch: 18 [1200/2454 (49%)]	Loss: 0.171263
+Train Epoch: 18 [1600/2454 (65%)]	Loss: 0.241946
+Train Epoch: 18 [2000/2454 (81%)]	Loss: 0.269943
+Train Epoch: 18 [2400/2454 (98%)]	Loss: 0.264322
+Train Epoch: 18 [2454/2454 (100%)]	Loss: 0.304022
+
+Fold 4 Validation set: Average loss: 0.3620, Average IOU: 0.6623, Average Dice: 0.7823, Average HD: 80.26px, Average ASD: 72.22px
+  IoU ανά δομή  -> Brain: 0.9263 | CSP: 0.5606 | LV: 0.4999
+  Dice ανά δομή -> Brain: 0.9618 | CSP: 0.7184 | LV: 0.6666
+  HD ανά δομή   -> Brain: 24.44px | CSP: 94.13px | LV: 122.22px
+  ASD ανά δομή  -> Brain: 6.00px | CSP: 92.05px | LV: 118.60px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 3/15 epochs (Best: 0.7853 @ Epoch 15)
+Train Epoch: 19 [400/2454 (16%)]	Loss: 0.169650
+Train Epoch: 19 [800/2454 (33%)]	Loss: 0.195698
+Train Epoch: 19 [1200/2454 (49%)]	Loss: 0.374158
+Train Epoch: 19 [1600/2454 (65%)]	Loss: 0.274455
+Train Epoch: 19 [2000/2454 (81%)]	Loss: 0.113511
+Train Epoch: 19 [2400/2454 (98%)]	Loss: 0.415665
+Train Epoch: 19 [2454/2454 (100%)]	Loss: 0.262739
+
+Fold 4 Validation set: Average loss: 0.4292, Average IOU: 0.6489, Average Dice: 0.7729, Average HD: 78.61px, Average ASD: 70.11px
+  IoU ανά δομή  -> Brain: 0.9049 | CSP: 0.5572 | LV: 0.4846
+  Dice ανά δομή -> Brain: 0.9501 | CSP: 0.7157 | LV: 0.6528
+  HD ανά δομή   -> Brain: 28.13px | CSP: 94.60px | LV: 113.08px
+  ASD ανά δομή  -> Brain: 8.57px | CSP: 92.33px | LV: 109.42px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 4/15 epochs (Best: 0.7853 @ Epoch 15)
+Train Epoch: 20 [400/2454 (16%)]	Loss: 0.215384
+Train Epoch: 20 [800/2454 (33%)]	Loss: 0.659174
+Train Epoch: 20 [1200/2454 (49%)]	Loss: 0.668290
+Train Epoch: 20 [1600/2454 (65%)]	Loss: 0.331458
+Train Epoch: 20 [2000/2454 (81%)]	Loss: 0.657695
+Train Epoch: 20 [2400/2454 (98%)]	Loss: 0.374033
+Train Epoch: 20 [2454/2454 (100%)]	Loss: 0.261768
+
+Fold 4 Validation set: Average loss: 0.4163, Average IOU: 0.6486, Average Dice: 0.7706, Average HD: 79.89px, Average ASD: 71.86px
+  IoU ανά δομή  -> Brain: 0.9216 | CSP: 0.5546 | LV: 0.4695
+  Dice ανά δομή -> Brain: 0.9592 | CSP: 0.7135 | LV: 0.6390
+  HD ανά δομή   -> Brain: 24.51px | CSP: 93.72px | LV: 121.44px
+  ASD ανά δομή  -> Brain: 6.27px | CSP: 91.53px | LV: 117.77px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 5/15 epochs (Best: 0.7853 @ Epoch 15)
+Train Epoch: 21 [400/2454 (16%)]	Loss: 0.328879
+Train Epoch: 21 [800/2454 (33%)]	Loss: 0.313648
+Train Epoch: 21 [1200/2454 (49%)]	Loss: 0.312652
+Train Epoch: 21 [1600/2454 (65%)]	Loss: 0.218787
+Train Epoch: 21 [2000/2454 (81%)]	Loss: 0.242579
+Train Epoch: 21 [2400/2454 (98%)]	Loss: 0.164962
+Train Epoch: 21 [2454/2454 (100%)]	Loss: 0.327117
+
+Fold 4 Validation set: Average loss: 0.3710, Average IOU: 0.6391, Average Dice: 0.7629, Average HD: 85.98px, Average ASD: 75.94px
+  IoU ανά δομή  -> Brain: 0.9146 | CSP: 0.5452 | LV: 0.4573
+  Dice ανά δομή -> Brain: 0.9554 | CSP: 0.7057 | LV: 0.6276
+  HD ανά δομή   -> Brain: 28.04px | CSP: 107.83px | LV: 122.08px
+  ASD ανά δομή  -> Brain: 6.08px | CSP: 105.26px | LV: 116.48px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 6/15 epochs (Best: 0.7853 @ Epoch 15)
+Train Epoch: 22 [400/2454 (16%)]	Loss: 0.175187
+Train Epoch: 22 [800/2454 (33%)]	Loss: 0.249578
+Train Epoch: 22 [1200/2454 (49%)]	Loss: 0.188998
+Train Epoch: 22 [1600/2454 (65%)]	Loss: 0.224242
+Train Epoch: 22 [2000/2454 (81%)]	Loss: 0.420465
+Train Epoch: 22 [2400/2454 (98%)]	Loss: 0.265745
+Train Epoch: 22 [2454/2454 (100%)]	Loss: 0.330716
+
+Fold 4 Validation set: Average loss: 0.4020, Average IOU: 0.6464, Average Dice: 0.7671, Average HD: 77.07px, Average ASD: 69.37px
+  IoU ανά δομή  -> Brain: 0.9316 | CSP: 0.5573 | LV: 0.4505
+  Dice ανά δομή -> Brain: 0.9646 | CSP: 0.7157 | LV: 0.6212
+  HD ανά δομή   -> Brain: 22.48px | CSP: 93.95px | LV: 114.78px
+  ASD ανά δομή  -> Brain: 5.23px | CSP: 91.75px | LV: 111.13px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 7/15 epochs (Best: 0.7853 @ Epoch 15)
+Train Epoch: 23 [400/2454 (16%)]	Loss: 0.556249
+Train Epoch: 23 [800/2454 (33%)]	Loss: 0.311191
+Train Epoch: 23 [1200/2454 (49%)]	Loss: 0.276484
+Train Epoch: 23 [1600/2454 (65%)]	Loss: 0.529242
+Train Epoch: 23 [2000/2454 (81%)]	Loss: 0.403003
+Train Epoch: 23 [2400/2454 (98%)]	Loss: 0.301512
+Train Epoch: 23 [2454/2454 (100%)]	Loss: 0.185025
+
+Fold 4 Validation set: Average loss: 0.3846, Average IOU: 0.6542, Average Dice: 0.7751, Average HD: 82.96px, Average ASD: 74.61px
+  IoU ανά δομή  -> Brain: 0.9239 | CSP: 0.5644 | LV: 0.4742
+  Dice ανά δομή -> Brain: 0.9604 | CSP: 0.7216 | LV: 0.6434
+  HD ανά δομή   -> Brain: 24.78px | CSP: 95.51px | LV: 128.60px
+  ASD ανά δομή  -> Brain: 5.61px | CSP: 93.35px | LV: 124.87px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 8/15 epochs (Best: 0.7853 @ Epoch 15)
+Train Epoch: 24 [400/2454 (16%)]	Loss: 0.583544
+Train Epoch: 24 [800/2454 (33%)]	Loss: 0.216489
+Train Epoch: 24 [1200/2454 (49%)]	Loss: 0.249261
+Train Epoch: 24 [1600/2454 (65%)]	Loss: 0.305632
+Train Epoch: 24 [2000/2454 (81%)]	Loss: 0.141935
+Train Epoch: 24 [2400/2454 (98%)]	Loss: 0.097403
+Train Epoch: 24 [2454/2454 (100%)]	Loss: 0.168403
+
+Fold 4 Validation set: Average loss: 0.4800, Average IOU: 0.6474, Average Dice: 0.7720, Average HD: 77.76px, Average ASD: 69.24px
+  IoU ανά δομή  -> Brain: 0.8985 | CSP: 0.5629 | LV: 0.4807
+  Dice ανά δομή -> Brain: 0.9465 | CSP: 0.7203 | LV: 0.6493
+  HD ανά δομή   -> Brain: 27.27px | CSP: 87.02px | LV: 119.00px
+  ASD ανά δομή  -> Brain: 7.81px | CSP: 84.83px | LV: 115.09px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 9/15 epochs (Best: 0.7853 @ Epoch 15)
+Train Epoch: 25 [400/2454 (16%)]	Loss: 0.227791
+Train Epoch: 25 [800/2454 (33%)]	Loss: 0.246978
+Train Epoch: 25 [1200/2454 (49%)]	Loss: 0.389585
+Train Epoch: 25 [1600/2454 (65%)]	Loss: 0.218812
+Train Epoch: 25 [2000/2454 (81%)]	Loss: 0.467315
+Train Epoch: 25 [2400/2454 (98%)]	Loss: 0.231870
+Train Epoch: 25 [2454/2454 (100%)]	Loss: 0.116099
+
+Fold 4 Validation set: Average loss: 0.3922, Average IOU: 0.6409, Average Dice: 0.7636, Average HD: 85.75px, Average ASD: 77.67px
+  IoU ανά δομή  -> Brain: 0.9236 | CSP: 0.5413 | LV: 0.4578
+  Dice ανά δομή -> Brain: 0.9603 | CSP: 0.7024 | LV: 0.6281
+  HD ανά δομή   -> Brain: 24.84px | CSP: 101.53px | LV: 130.86px
+  ASD ανά δομή  -> Brain: 5.71px | CSP: 99.54px | LV: 127.78px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 10/15 epochs (Best: 0.7853 @ Epoch 15)
+Train Epoch: 26 [400/2454 (16%)]	Loss: 0.197982
+Train Epoch: 26 [800/2454 (33%)]	Loss: 0.354724
+Train Epoch: 26 [1200/2454 (49%)]	Loss: 0.145878
+Train Epoch: 26 [1600/2454 (65%)]	Loss: 0.315850
+Train Epoch: 26 [2000/2454 (81%)]	Loss: 0.331922
+Train Epoch: 26 [2400/2454 (98%)]	Loss: 0.172940
+Train Epoch: 26 [2454/2454 (100%)]	Loss: 0.152327
+
+Fold 4 Validation set: Average loss: 0.4079, Average IOU: 0.6432, Average Dice: 0.7686, Average HD: 76.26px, Average ASD: 68.08px
+  IoU ανά δομή  -> Brain: 0.9018 | CSP: 0.5273 | LV: 0.5005
+  Dice ανά δομή -> Brain: 0.9484 | CSP: 0.6905 | LV: 0.6671
+  HD ανά δομή   -> Brain: 25.84px | CSP: 94.40px | LV: 108.54px
+  ASD ανά δομή  -> Brain: 6.95px | CSP: 92.01px | LV: 105.29px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 11/15 epochs (Best: 0.7853 @ Epoch 15)
+Train Epoch: 27 [400/2454 (16%)]	Loss: 0.546056
+Train Epoch: 27 [800/2454 (33%)]	Loss: 0.209671
+Train Epoch: 27 [1200/2454 (49%)]	Loss: 0.282103
+Train Epoch: 27 [1600/2454 (65%)]	Loss: 0.189555
+Train Epoch: 27 [2000/2454 (81%)]	Loss: 0.268217
+Train Epoch: 27 [2400/2454 (98%)]	Loss: 0.595022
+Train Epoch: 27 [2454/2454 (100%)]	Loss: 0.112248
+
+Fold 4 Validation set: Average loss: 0.3681, Average IOU: 0.6653, Average Dice: 0.7851, Average HD: 73.86px, Average ASD: 66.09px
+  IoU ανά δομή  -> Brain: 0.9222 | CSP: 0.5739 | LV: 0.4996
+  Dice ανά δομή -> Brain: 0.9595 | CSP: 0.7293 | LV: 0.6663
+  HD ανά δομή   -> Brain: 23.26px | CSP: 87.10px | LV: 111.24px
+  ASD ανά δομή  -> Brain: 5.49px | CSP: 85.02px | LV: 107.74px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 12/15 epochs (Best: 0.7853 @ Epoch 15)
+Train Epoch: 28 [400/2454 (16%)]	Loss: 0.197408
+Train Epoch: 28 [800/2454 (33%)]	Loss: 0.218225
+Train Epoch: 28 [1200/2454 (49%)]	Loss: 0.194098
+Train Epoch: 28 [1600/2454 (65%)]	Loss: 0.238826
+Train Epoch: 28 [2000/2454 (81%)]	Loss: 0.192660
+Train Epoch: 28 [2400/2454 (98%)]	Loss: 0.297788
+Train Epoch: 28 [2454/2454 (100%)]	Loss: 0.255705
+
+Fold 4 Validation set: Average loss: 0.3465, Average IOU: 0.6616, Average Dice: 0.7819, Average HD: 75.22px, Average ASD: 67.21px
+  IoU ανά δομή  -> Brain: 0.9212 | CSP: 0.5728 | LV: 0.4906
+  Dice ανά δομή -> Brain: 0.9590 | CSP: 0.7284 | LV: 0.6582
+  HD ανά δομή   -> Brain: 23.69px | CSP: 90.02px | LV: 111.94px
+  ASD ανά δομή  -> Brain: 5.60px | CSP: 87.81px | LV: 108.21px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 13/15 epochs (Best: 0.7853 @ Epoch 15)
+Train Epoch: 29 [400/2454 (16%)]	Loss: 0.267975
+Train Epoch: 29 [800/2454 (33%)]	Loss: 0.424560
+Train Epoch: 29 [1200/2454 (49%)]	Loss: 0.231164
+Train Epoch: 29 [1600/2454 (65%)]	Loss: 0.380305
+Train Epoch: 29 [2000/2454 (81%)]	Loss: 0.283667
+Train Epoch: 29 [2400/2454 (98%)]	Loss: 0.383200
+Train Epoch: 29 [2454/2454 (100%)]	Loss: 0.573456
+
+Fold 4 Validation set: Average loss: 0.4610, Average IOU: 0.6260, Average Dice: 0.7522, Average HD: 85.51px, Average ASD: 76.77px
+  IoU ανά δομή  -> Brain: 0.9061 | CSP: 0.5281 | LV: 0.4438
+  Dice ανά δομή -> Brain: 0.9508 | CSP: 0.6912 | LV: 0.6148
+  HD ανά δομή   -> Brain: 27.56px | CSP: 100.84px | LV: 128.14px
+  ASD ανά δομή  -> Brain: 6.59px | CSP: 98.64px | LV: 125.09px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 14/15 epochs (Best: 0.7853 @ Epoch 15)
+Train Epoch: 30 [400/2454 (16%)]	Loss: 0.463520
+Train Epoch: 30 [800/2454 (33%)]	Loss: 0.335013
+Train Epoch: 30 [1200/2454 (49%)]	Loss: 0.598194
+Train Epoch: 30 [1600/2454 (65%)]	Loss: 0.357406
+Train Epoch: 30 [2000/2454 (81%)]	Loss: 0.203934
+Train Epoch: 30 [2400/2454 (98%)]	Loss: 0.343786
+Train Epoch: 30 [2454/2454 (100%)]	Loss: 0.227527
+
+Fold 4 Validation set: Average loss: 0.5602, Average IOU: 0.5980, Average Dice: 0.7252, Average HD: 107.45px, Average ASD: 98.47px
+  IoU ανά δομή  -> Brain: 0.9177 | CSP: 0.4249 | LV: 0.4514
+  Dice ανά δομή -> Brain: 0.9571 | CSP: 0.5964 | LV: 0.6220
+  HD ανά δομή   -> Brain: 28.31px | CSP: 160.42px | LV: 133.61px
+  ASD ανά δομή  -> Brain: 6.12px | CSP: 158.59px | LV: 130.70px
+
+  [EarlyStopping] Καμία βελτίωση στο Validation Dice για 15/15 epochs (Best: 0.7853 @ Epoch 15)
+
+>>> Early Stopping ενεργοποιήθηκε στο Fold 4 (Epoch 30)! <<<
+
+----------------------------------------------------------------------
+ΚΑΛΥΤΕΡΑ ΑΠΟΤΕΛΕΣΜΑΤΑ FOLD 4 (R2AttU_Net)
+----------------------------------------------------------------------
+Model Complexity (R2AttU_Net) -> Params: 39.44M (Trainable: 39.44M) | Size: 150.52 MB | Complexity: 307.14 GFLOPs
+Best Average Dice Score (Epoch 15): 0.7853
+  Best Dice ανά δομή -> Brain: 0.9594 | CSP: 0.7247 | LV: 0.6718
+IoU (at Best Dice): 0.6653
+  IoU ανά δομή       -> Brain: 0.9220 | CSP: 0.5682 | LV: 0.5058
+Hausdorff Distance (at Best Dice): 71.74px
+  HD ανά δομή        -> Brain: 22.69px | CSP: 90.27px | LV: 102.26px
+Average Surface Distance (at Best Dice): 64.20px
+  ASD ανά δομή       -> Brain: 5.62px | CSP: 88.19px | LV: 98.79px
+----------------------------------------------------------------------
+
+
+=====================================================================================
+ΣΥΓΚΕΝΤΡΩΤΙΚΑ ΑΠΟΤΕΛΕΣΜΑΤΑ 5-FOLD CROSS-VALIDATION [R2AttU_Net] (mean ± std)
+=====================================================================================
+  Average Dice : 0.7851 ± 0.0037  (78.51% ± 0.37%)
+  Average IoU  : 0.6656 ± 0.0040  (66.56% ± 0.40%)
+  Average HD   : 74.89 ± 2.99 px
+  Average ASD  : 67.49 ± 3.01 px
+-------------------------------------------------------------------------------------
+  ΑΝΑΛΥΣΗ ΑΝΑ ΑΝΑΤΟΜΙΚΗ ΔΟΜΗ (mean ± std):
+    [Brain] Dice: 0.9598 ± 0.0025 | IoU: 0.9228 ± 0.0045 | HD: 23.42 ± 1.40px | ASD: 6.60 ± 1.51px
+    [CSP  ] Dice: 0.7329 ± 0.0109 | IoU: 0.5785 ± 0.0136 | HD: 88.80 ± 7.52px | ASD: 86.72 ± 7.65px
+    [LV   ] Dice: 0.6626 ± 0.0156 | IoU: 0.4956 ± 0.0172 | HD: 112.46 ± 8.46px | ASD: 109.15 ± 8.61px
+-------------------------------------------------------------------------------------
+  Best Epochs ανά Fold : [21, 31, 52, 13, 15]
+  Μέσος όρος Best Epoch: 26.4 -> Προτεινόμενα epochs για `--mode final_train`: --epochs 26
+=====================================================================================
+

@@ -1,0 +1,42 @@
+Συσκευή Εκτέλεσης: cuda (NVIDIA GeForce RTX 4080)
+Αρχιτεκτονική    : TransUNet_Pretrained
+Φάκελος Dataset  : /home/mkolliniatis/Dataset
+Φάκελος Splits   : /home/mkolliniatis/Dataset/splits
+Mode Εκτέλεσης   : test
+
+################################################################################
+ΤΕΛΙΚΗ ΑΞΙΟΛΟΓΗΣΗ [TransUNet_Pretrained] ΣΤΟ ΑΝΕΞΑΡΤΗΤΟ 20% TEST SET
+  Checkpoint : models/TransUNet_Pretrained_final_dev80.pt
+  Test CSV   : /home/mkolliniatis/Dataset/splits/test.csv
+################################################################################
+
+============================================================
+Χωρητικότητα & Πολυπλοκότητα Μοντέλου (TransUNet_Pretrained)
+  Συνολικές Παράμετροι (Total):      105,322,436 (105.32M)
+  Εκπαιδεύσιμες Παράμετροι:          105,322,436 (105.32M)
+  Μέγεθος Μοντέλου στη Μνήμη:        401.78 MB
+  Υπολογιστική Πολυπλοκότητα (256²): 76.83 GFLOPs
+============================================================
+
+
+Independent Test (20%) set: Average loss: 0.3240, Average IOU: 0.6939, Average Dice: 0.8076, Average HD: 70.25px, Average ASD: 63.85px
+  IoU ανά δομή  -> Brain: 0.9393 | CSP: 0.5853 | LV: 0.5571
+  Dice ανά δομή -> Brain: 0.9687 | CSP: 0.7384 | LV: 0.7156
+  HD ανά δομή   -> Brain: 20.63px | CSP: 91.97px | LV: 98.15px
+  ASD ανά δομή  -> Brain: 6.24px | CSP: 90.04px | LV: 95.26px
+
+
+----------------------------------------------------------------------
+ΤΕΛΙΚΑ ΑΠΟΤΕΛΕΣΜΑΤΑ ΑΝΕΞΑΡΤΗΤΟΥ TEST SET (20%) (TransUNet_Pretrained)
+----------------------------------------------------------------------
+Model Complexity (TransUNet_Pretrained) -> Params: 105.32M (Trainable: 105.32M) | Size: 401.78 MB | Complexity: 76.83 GFLOPs
+Best Average Dice Score (Epoch 42): 0.8076
+  Best Dice ανά δομή -> Brain: 0.9687 | CSP: 0.7384 | LV: 0.7156
+IoU (at Best Dice): 0.6939
+  IoU ανά δομή       -> Brain: 0.9393 | CSP: 0.5853 | LV: 0.5571
+Hausdorff Distance (at Best Dice): 70.25px
+  HD ανά δομή        -> Brain: 20.63px | CSP: 91.97px | LV: 98.15px
+Average Surface Distance (at Best Dice): 63.85px
+  ASD ανά δομή       -> Brain: 6.24px | CSP: 90.04px | LV: 95.26px
+----------------------------------------------------------------------
+

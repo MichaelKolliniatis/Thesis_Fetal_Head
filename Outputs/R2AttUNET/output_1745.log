@@ -1,0 +1,42 @@
+Συσκευή Εκτέλεσης: cuda (NVIDIA GeForce RTX 4080)
+Αρχιτεκτονική    : R2AttU_Net
+Φάκελος Dataset  : /home/mkolliniatis/Dataset
+Φάκελος Splits   : /home/mkolliniatis/Dataset/splits
+Mode Εκτέλεσης   : test
+
+################################################################################
+ΤΕΛΙΚΗ ΑΞΙΟΛΟΓΗΣΗ [R2AttU_Net] ΣΤΟ ΑΝΕΞΑΡΤΗΤΟ 20% TEST SET
+  Checkpoint : models/R2AttU_Net_final_dev80.pt
+  Test CSV   : /home/mkolliniatis/Dataset/splits/test.csv
+################################################################################
+
+============================================================
+Χωρητικότητα & Πολυπλοκότητα Μοντέλου (R2AttU_Net)
+  Συνολικές Παράμετροι (Total):      39,442,992 (39.44M)
+  Εκπαιδεύσιμες Παράμετροι:          39,442,992 (39.44M)
+  Μέγεθος Μοντέλου στη Μνήμη:        150.52 MB
+  Υπολογιστική Πολυπλοκότητα (256²): 307.14 GFLOPs
+============================================================
+
+
+Independent Test (20%) set: Average loss: 0.3894, Average IOU: 0.6516, Average Dice: 0.7737, Average HD: 86.01px, Average ASD: 78.31px
+  IoU ανά δομή  -> Brain: 0.9202 | CSP: 0.5481 | LV: 0.4866
+  Dice ανά δομή -> Brain: 0.9584 | CSP: 0.7081 | LV: 0.6546
+  HD ανά δομή   -> Brain: 25.68px | CSP: 104.46px | LV: 127.89px
+  ASD ανά δομή  -> Brain: 7.44px | CSP: 102.66px | LV: 124.83px
+
+
+----------------------------------------------------------------------
+ΤΕΛΙΚΑ ΑΠΟΤΕΛΕΣΜΑΤΑ ΑΝΕΞΑΡΤΗΤΟΥ TEST SET (20%) (R2AttU_Net)
+----------------------------------------------------------------------
+Model Complexity (R2AttU_Net) -> Params: 39.44M (Trainable: 39.44M) | Size: 150.52 MB | Complexity: 307.14 GFLOPs
+Best Average Dice Score (Epoch 26): 0.7737
+  Best Dice ανά δομή -> Brain: 0.9584 | CSP: 0.7081 | LV: 0.6546
+IoU (at Best Dice): 0.6516
+  IoU ανά δομή       -> Brain: 0.9202 | CSP: 0.5481 | LV: 0.4866
+Hausdorff Distance (at Best Dice): 86.01px
+  HD ανά δομή        -> Brain: 25.68px | CSP: 104.46px | LV: 127.89px
+Average Surface Distance (at Best Dice): 78.31px
+  ASD ανά δομή       -> Brain: 7.44px | CSP: 102.66px | LV: 124.83px
+----------------------------------------------------------------------
+

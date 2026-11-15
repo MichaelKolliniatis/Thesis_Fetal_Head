@@ -1,0 +1,42 @@
+Συσκευή Εκτέλεσης: cuda (NVIDIA GeForce RTX 4080)
+Αρχιτεκτονική    : UNet
+Φάκελος Dataset  : /home/mkolliniatis/Dataset
+Φάκελος Splits   : /home/mkolliniatis/Dataset/splits
+Mode Εκτέλεσης   : test
+
+################################################################################
+ΤΕΛΙΚΗ ΑΞΙΟΛΟΓΗΣΗ [UNet] ΣΤΟ ΑΝΕΞΑΡΤΗΤΟ 20% TEST SET
+  Checkpoint : models/UNet_final_dev80.pt
+  Test CSV   : /home/mkolliniatis/Dataset/splits/test.csv
+################################################################################
+
+============================================================
+Χωρητικότητα & Πολυπλοκότητα Μοντέλου (UNet)
+  Συνολικές Παράμετροι (Total):      31,042,564 (31.04M)
+  Εκπαιδεύσιμες Παράμετροι:          31,042,564 (31.04M)
+  Μέγεθος Μοντέλου στη Μνήμη:        118.46 MB
+  Υπολογιστική Πολυπλοκότητα (256²): 96.21 GFLOPs
+============================================================
+
+
+Independent Test (20%) set: Average loss: 0.3212, Average IOU: 0.6806, Average Dice: 0.7981, Average HD: 76.32px, Average ASD: 68.07px
+  IoU ανά δομή  -> Brain: 0.9245 | CSP: 0.5644 | LV: 0.5528
+  Dice ανά δομή -> Brain: 0.9608 | CSP: 0.7216 | LV: 0.7120
+  HD ανά δομή   -> Brain: 25.26px | CSP: 107.22px | LV: 96.47px
+  ASD ανά δομή  -> Brain: 6.83px | CSP: 104.11px | LV: 93.27px
+
+
+----------------------------------------------------------------------
+ΤΕΛΙΚΑ ΑΠΟΤΕΛΕΣΜΑΤΑ ΑΝΕΞΑΡΤΗΤΟΥ TEST SET (20%) (UNet)
+----------------------------------------------------------------------
+Model Complexity (UNet) -> Params: 31.04M (Trainable: 31.04M) | Size: 118.46 MB | Complexity: 96.21 GFLOPs
+Best Average Dice Score (Epoch 31): 0.7981
+  Best Dice ανά δομή -> Brain: 0.9608 | CSP: 0.7216 | LV: 0.7120
+IoU (at Best Dice): 0.6806
+  IoU ανά δομή       -> Brain: 0.9245 | CSP: 0.5644 | LV: 0.5528
+Hausdorff Distance (at Best Dice): 76.32px
+  HD ανά δομή        -> Brain: 25.26px | CSP: 107.22px | LV: 96.47px
+Average Surface Distance (at Best Dice): 68.07px
+  ASD ανά δομή       -> Brain: 6.83px | CSP: 104.11px | LV: 93.27px
+----------------------------------------------------------------------
+

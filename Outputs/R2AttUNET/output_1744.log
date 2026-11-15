@@ -1,0 +1,260 @@
+Συσκευή Εκτέλεσης: cuda (NVIDIA GeForce RTX 4080)
+Αρχιτεκτονική    : R2AttU_Net
+Φάκελος Dataset  : /home/mkolliniatis/Dataset
+Φάκελος Splits   : /home/mkolliniatis/Dataset/splits
+Mode Εκτέλεσης   : final_train
+
+################################################################################
+ΤΕΛΙΚΗ ΕΚΠΑΙΔΕΥΣΗ [R2AttU_Net] ΣΕ ΟΛΟΚΛΗΡΟ ΤΟ 80% DEVELOPMENT SET (Epochs = 26, Seed = 42)
+  Dev 80% CSV: /home/mkolliniatis/Dataset/splits/dev_80.csv
+################################################################################
+
+============================================================
+Χωρητικότητα & Πολυπλοκότητα Μοντέλου (R2AttU_Net)
+  Συνολικές Παράμετροι (Total):      39,442,992 (39.44M)
+  Εκπαιδεύσιμες Παράμετροι:          39,442,992 (39.44M)
+  Μέγεθος Μοντέλου στη Μνήμη:        150.52 MB
+  Υπολογιστική Πολυπλοκότητα (256²): 307.14 GFLOPs
+============================================================
+
+Train Epoch: 1 [400/3065 (13%)]	Loss: 0.903107
+Train Epoch: 1 [800/3065 (26%)]	Loss: 0.892090
+Train Epoch: 1 [1200/3065 (39%)]	Loss: 0.708119
+Train Epoch: 1 [1600/3065 (52%)]	Loss: 0.599061
+Train Epoch: 1 [2000/3065 (65%)]	Loss: 0.374867
+Train Epoch: 1 [2400/3065 (78%)]	Loss: 0.424026
+Train Epoch: 1 [2800/3065 (91%)]	Loss: 0.793124
+Train Epoch: 1 [3065/3065 (100%)]	Loss: 0.264494
+Epoch 1/26 ολοκληρώθηκε -> Μέσο Train Loss: 0.7418
+Train Epoch: 2 [400/3065 (13%)]	Loss: 0.646853
+Train Epoch: 2 [800/3065 (26%)]	Loss: 0.291659
+Train Epoch: 2 [1200/3065 (39%)]	Loss: 0.535078
+Train Epoch: 2 [1600/3065 (52%)]	Loss: 0.601534
+Train Epoch: 2 [2000/3065 (65%)]	Loss: 0.334220
+Train Epoch: 2 [2400/3065 (78%)]	Loss: 0.571063
+Train Epoch: 2 [2800/3065 (91%)]	Loss: 0.327025
+Train Epoch: 2 [3065/3065 (100%)]	Loss: 0.239298
+Epoch 2/26 ολοκληρώθηκε -> Μέσο Train Loss: 0.4547
+Train Epoch: 3 [400/3065 (13%)]	Loss: 0.334558
+Train Epoch: 3 [800/3065 (26%)]	Loss: 0.142755
+Train Epoch: 3 [1200/3065 (39%)]	Loss: 0.670607
+Train Epoch: 3 [1600/3065 (52%)]	Loss: 0.221395
+Train Epoch: 3 [2000/3065 (65%)]	Loss: 0.136320
+Train Epoch: 3 [2400/3065 (78%)]	Loss: 0.415319
+Train Epoch: 3 [2800/3065 (91%)]	Loss: 0.442759
+Train Epoch: 3 [3065/3065 (100%)]	Loss: 0.241774
+Epoch 3/26 ολοκληρώθηκε -> Μέσο Train Loss: 0.4158
+Train Epoch: 4 [400/3065 (13%)]	Loss: 0.291180
+Train Epoch: 4 [800/3065 (26%)]	Loss: 0.288150
+Train Epoch: 4 [1200/3065 (39%)]	Loss: 0.285476
+Train Epoch: 4 [1600/3065 (52%)]	Loss: 0.538223
+Train Epoch: 4 [2000/3065 (65%)]	Loss: 0.295971
+Train Epoch: 4 [2400/3065 (78%)]	Loss: 0.342282
+Train Epoch: 4 [2800/3065 (91%)]	Loss: 0.322373
+Train Epoch: 4 [3065/3065 (100%)]	Loss: 0.362267
+Epoch 4/26 ολοκληρώθηκε -> Μέσο Train Loss: 0.3982
+Train Epoch: 5 [400/3065 (13%)]	Loss: 0.431806
+Train Epoch: 5 [800/3065 (26%)]	Loss: 0.391782
+Train Epoch: 5 [1200/3065 (39%)]	Loss: 0.269516
+Train Epoch: 5 [1600/3065 (52%)]	Loss: 0.402164
+Train Epoch: 5 [2000/3065 (65%)]	Loss: 0.356617
+Train Epoch: 5 [2400/3065 (78%)]	Loss: 0.416427
+Train Epoch: 5 [2800/3065 (91%)]	Loss: 0.508190
+Train Epoch: 5 [3065/3065 (100%)]	Loss: 0.284863
+Epoch 5/26 ολοκληρώθηκε -> Μέσο Train Loss: 0.3773
+Train Epoch: 6 [400/3065 (13%)]	Loss: 0.403429
+Train Epoch: 6 [800/3065 (26%)]	Loss: 0.263515
+Train Epoch: 6 [1200/3065 (39%)]	Loss: 0.410351
+Train Epoch: 6 [1600/3065 (52%)]	Loss: 0.370970
+Train Epoch: 6 [2000/3065 (65%)]	Loss: 0.308281
+Train Epoch: 6 [2400/3065 (78%)]	Loss: 0.300909
+Train Epoch: 6 [2800/3065 (91%)]	Loss: 0.291590
+Train Epoch: 6 [3065/3065 (100%)]	Loss: 0.176421
+Epoch 6/26 ολοκληρώθηκε -> Μέσο Train Loss: 0.3745
+Train Epoch: 7 [400/3065 (13%)]	Loss: 0.355672
+Train Epoch: 7 [800/3065 (26%)]	Loss: 0.542076
+Train Epoch: 7 [1200/3065 (39%)]	Loss: 0.253614
+Train Epoch: 7 [1600/3065 (52%)]	Loss: 0.460675
+Train Epoch: 7 [2000/3065 (65%)]	Loss: 0.513038
+Train Epoch: 7 [2400/3065 (78%)]	Loss: 0.198192
+Train Epoch: 7 [2800/3065 (91%)]	Loss: 0.310525
+Train Epoch: 7 [3065/3065 (100%)]	Loss: 0.094939
+Epoch 7/26 ολοκληρώθηκε -> Μέσο Train Loss: 0.3602
+Train Epoch: 8 [400/3065 (13%)]	Loss: 0.353058
+Train Epoch: 8 [800/3065 (26%)]	Loss: 0.313614
+Train Epoch: 8 [1200/3065 (39%)]	Loss: 0.251729
+Train Epoch: 8 [1600/3065 (52%)]	Loss: 0.357974
+Train Epoch: 8 [2000/3065 (65%)]	Loss: 0.319656
+Train Epoch: 8 [2400/3065 (78%)]	Loss: 0.336480
+Train Epoch: 8 [2800/3065 (91%)]	Loss: 0.464095
+Train Epoch: 8 [3065/3065 (100%)]	Loss: 0.109782
+Epoch 8/26 ολοκληρώθηκε -> Μέσο Train Loss: 0.3561
+Train Epoch: 9 [400/3065 (13%)]	Loss: 0.270510
+Train Epoch: 9 [800/3065 (26%)]	Loss: 0.281462
+Train Epoch: 9 [1200/3065 (39%)]	Loss: 0.461407
+Train Epoch: 9 [1600/3065 (52%)]	Loss: 0.384270
+Train Epoch: 9 [2000/3065 (65%)]	Loss: 0.333696
+Train Epoch: 9 [2400/3065 (78%)]	Loss: 0.349684
+Train Epoch: 9 [2800/3065 (91%)]	Loss: 0.201861
+Train Epoch: 9 [3065/3065 (100%)]	Loss: 0.496876
+Epoch 9/26 ολοκληρώθηκε -> Μέσο Train Loss: 0.3517
+Train Epoch: 10 [400/3065 (13%)]	Loss: 0.411117
+Train Epoch: 10 [800/3065 (26%)]	Loss: 0.398655
+Train Epoch: 10 [1200/3065 (39%)]	Loss: 0.401842
+Train Epoch: 10 [1600/3065 (52%)]	Loss: 0.361003
+Train Epoch: 10 [2000/3065 (65%)]	Loss: 0.320654
+Train Epoch: 10 [2400/3065 (78%)]	Loss: 0.324816
+Train Epoch: 10 [2800/3065 (91%)]	Loss: 0.277954
+Train Epoch: 10 [3065/3065 (100%)]	Loss: 0.150504
+Epoch 10/26 ολοκληρώθηκε -> Μέσο Train Loss: 0.3499
+Train Epoch: 11 [400/3065 (13%)]	Loss: 0.327332
+Train Epoch: 11 [800/3065 (26%)]	Loss: 0.224898
+Train Epoch: 11 [1200/3065 (39%)]	Loss: 0.532394
+Train Epoch: 11 [1600/3065 (52%)]	Loss: 0.226763
+Train Epoch: 11 [2000/3065 (65%)]	Loss: 0.387817
+Train Epoch: 11 [2400/3065 (78%)]	Loss: 0.095702
+Train Epoch: 11 [2800/3065 (91%)]	Loss: 0.252304
+Train Epoch: 11 [3065/3065 (100%)]	Loss: 0.140149
+Epoch 11/26 ολοκληρώθηκε -> Μέσο Train Loss: 0.3307
+Train Epoch: 12 [400/3065 (13%)]	Loss: 0.193283
+Train Epoch: 12 [800/3065 (26%)]	Loss: 0.259641
+Train Epoch: 12 [1200/3065 (39%)]	Loss: 0.529580
+Train Epoch: 12 [1600/3065 (52%)]	Loss: 0.348874
+Train Epoch: 12 [2000/3065 (65%)]	Loss: 0.458380
+Train Epoch: 12 [2400/3065 (78%)]	Loss: 0.356516
+Train Epoch: 12 [2800/3065 (91%)]	Loss: 0.104155
+Train Epoch: 12 [3065/3065 (100%)]	Loss: 0.287057
+Epoch 12/26 ολοκληρώθηκε -> Μέσο Train Loss: 0.3327
+Train Epoch: 13 [400/3065 (13%)]	Loss: 0.235495
+Train Epoch: 13 [800/3065 (26%)]	Loss: 0.221029
+Train Epoch: 13 [1200/3065 (39%)]	Loss: 0.178440
+Train Epoch: 13 [1600/3065 (52%)]	Loss: 0.477186
+Train Epoch: 13 [2000/3065 (65%)]	Loss: 0.343805
+Train Epoch: 13 [2400/3065 (78%)]	Loss: 0.297546
+Train Epoch: 13 [2800/3065 (91%)]	Loss: 0.418151
+Train Epoch: 13 [3065/3065 (100%)]	Loss: 0.229982
+Epoch 13/26 ολοκληρώθηκε -> Μέσο Train Loss: 0.3228
+Train Epoch: 14 [400/3065 (13%)]	Loss: 0.370978
+Train Epoch: 14 [800/3065 (26%)]	Loss: 0.310146
+Train Epoch: 14 [1200/3065 (39%)]	Loss: 0.335187
+Train Epoch: 14 [1600/3065 (52%)]	Loss: 0.440474
+Train Epoch: 14 [2000/3065 (65%)]	Loss: 0.196745
+Train Epoch: 14 [2400/3065 (78%)]	Loss: 0.192323
+Train Epoch: 14 [2800/3065 (91%)]	Loss: 0.238657
+Train Epoch: 14 [3065/3065 (100%)]	Loss: 0.266069
+Epoch 14/26 ολοκληρώθηκε -> Μέσο Train Loss: 0.3169
+Train Epoch: 15 [400/3065 (13%)]	Loss: 0.293788
+Train Epoch: 15 [800/3065 (26%)]	Loss: 0.235628
+Train Epoch: 15 [1200/3065 (39%)]	Loss: 0.370949
+Train Epoch: 15 [1600/3065 (52%)]	Loss: 0.274428
+Train Epoch: 15 [2000/3065 (65%)]	Loss: 0.197942
+Train Epoch: 15 [2400/3065 (78%)]	Loss: 0.168255
+Train Epoch: 15 [2800/3065 (91%)]	Loss: 0.380203
+Train Epoch: 15 [3065/3065 (100%)]	Loss: 0.152890
+Epoch 15/26 ολοκληρώθηκε -> Μέσο Train Loss: 0.3167
+Train Epoch: 16 [400/3065 (13%)]	Loss: 0.373132
+Train Epoch: 16 [800/3065 (26%)]	Loss: 0.210914
+Train Epoch: 16 [1200/3065 (39%)]	Loss: 0.233642
+Train Epoch: 16 [1600/3065 (52%)]	Loss: 0.228869
+Train Epoch: 16 [2000/3065 (65%)]	Loss: 0.234195
+Train Epoch: 16 [2400/3065 (78%)]	Loss: 0.209249
+Train Epoch: 16 [2800/3065 (91%)]	Loss: 0.444421
+Train Epoch: 16 [3065/3065 (100%)]	Loss: 0.196565
+Epoch 16/26 ολοκληρώθηκε -> Μέσο Train Loss: 0.3168
+Train Epoch: 17 [400/3065 (13%)]	Loss: 0.280872
+Train Epoch: 17 [800/3065 (26%)]	Loss: 0.293111
+Train Epoch: 17 [1200/3065 (39%)]	Loss: 0.297618
+Train Epoch: 17 [1600/3065 (52%)]	Loss: 0.234037
+Train Epoch: 17 [2000/3065 (65%)]	Loss: 0.400841
+Train Epoch: 17 [2400/3065 (78%)]	Loss: 0.394293
+Train Epoch: 17 [2800/3065 (91%)]	Loss: 0.434500
+Train Epoch: 17 [3065/3065 (100%)]	Loss: 0.081274
+Epoch 17/26 ολοκληρώθηκε -> Μέσο Train Loss: 0.3145
+Train Epoch: 18 [400/3065 (13%)]	Loss: 0.171312
+Train Epoch: 18 [800/3065 (26%)]	Loss: 0.095679
+Train Epoch: 18 [1200/3065 (39%)]	Loss: 0.222131
+Train Epoch: 18 [1600/3065 (52%)]	Loss: 0.386840
+Train Epoch: 18 [2000/3065 (65%)]	Loss: 0.214786
+Train Epoch: 18 [2400/3065 (78%)]	Loss: 0.323687
+Train Epoch: 18 [2800/3065 (91%)]	Loss: 0.314848
+Train Epoch: 18 [3065/3065 (100%)]	Loss: 0.154810
+Epoch 18/26 ολοκληρώθηκε -> Μέσο Train Loss: 0.3150
+Train Epoch: 19 [400/3065 (13%)]	Loss: 0.174504
+Train Epoch: 19 [800/3065 (26%)]	Loss: 0.196092
+Train Epoch: 19 [1200/3065 (39%)]	Loss: 0.215553
+Train Epoch: 19 [1600/3065 (52%)]	Loss: 0.219998
+Train Epoch: 19 [2000/3065 (65%)]	Loss: 0.353328
+Train Epoch: 19 [2400/3065 (78%)]	Loss: 0.170671
+Train Epoch: 19 [2800/3065 (91%)]	Loss: 0.478037
+Train Epoch: 19 [3065/3065 (100%)]	Loss: 0.286079
+Epoch 19/26 ολοκληρώθηκε -> Μέσο Train Loss: 0.3014
+Train Epoch: 20 [400/3065 (13%)]	Loss: 0.301754
+Train Epoch: 20 [800/3065 (26%)]	Loss: 0.286531
+Train Epoch: 20 [1200/3065 (39%)]	Loss: 0.285525
+Train Epoch: 20 [1600/3065 (52%)]	Loss: 0.245753
+Train Epoch: 20 [2000/3065 (65%)]	Loss: 0.369513
+Train Epoch: 20 [2400/3065 (78%)]	Loss: 0.514026
+Train Epoch: 20 [2800/3065 (91%)]	Loss: 0.290444
+Train Epoch: 20 [3065/3065 (100%)]	Loss: 0.077786
+Epoch 20/26 ολοκληρώθηκε -> Μέσο Train Loss: 0.2971
+Train Epoch: 21 [400/3065 (13%)]	Loss: 0.373674
+Train Epoch: 21 [800/3065 (26%)]	Loss: 0.557051
+Train Epoch: 21 [1200/3065 (39%)]	Loss: 0.199007
+Train Epoch: 21 [1600/3065 (52%)]	Loss: 0.334898
+Train Epoch: 21 [2000/3065 (65%)]	Loss: 0.324215
+Train Epoch: 21 [2400/3065 (78%)]	Loss: 0.269021
+Train Epoch: 21 [2800/3065 (91%)]	Loss: 0.302290
+Train Epoch: 21 [3065/3065 (100%)]	Loss: 0.092719
+Epoch 21/26 ολοκληρώθηκε -> Μέσο Train Loss: 0.3005
+Train Epoch: 22 [400/3065 (13%)]	Loss: 0.237288
+Train Epoch: 22 [800/3065 (26%)]	Loss: 0.185005
+Train Epoch: 22 [1200/3065 (39%)]	Loss: 0.226829
+Train Epoch: 22 [1600/3065 (52%)]	Loss: 0.247456
+Train Epoch: 22 [2000/3065 (65%)]	Loss: 0.377764
+Train Epoch: 22 [2400/3065 (78%)]	Loss: 0.557904
+Train Epoch: 22 [2800/3065 (91%)]	Loss: 0.242540
+Train Epoch: 22 [3065/3065 (100%)]	Loss: 0.215624
+Epoch 22/26 ολοκληρώθηκε -> Μέσο Train Loss: 0.2998
+Train Epoch: 23 [400/3065 (13%)]	Loss: 0.219225
+Train Epoch: 23 [800/3065 (26%)]	Loss: 0.251185
+Train Epoch: 23 [1200/3065 (39%)]	Loss: 0.241879
+Train Epoch: 23 [1600/3065 (52%)]	Loss: 0.307348
+Train Epoch: 23 [2000/3065 (65%)]	Loss: 0.282430
+Train Epoch: 23 [2400/3065 (78%)]	Loss: 0.242075
+Train Epoch: 23 [2800/3065 (91%)]	Loss: 0.182083
+Train Epoch: 23 [3065/3065 (100%)]	Loss: 0.140533
+Epoch 23/26 ολοκληρώθηκε -> Μέσο Train Loss: 0.2985
+Train Epoch: 24 [400/3065 (13%)]	Loss: 0.411267
+Train Epoch: 24 [800/3065 (26%)]	Loss: 0.260849
+Train Epoch: 24 [1200/3065 (39%)]	Loss: 0.220966
+Train Epoch: 24 [1600/3065 (52%)]	Loss: 0.242334
+Train Epoch: 24 [2000/3065 (65%)]	Loss: 0.335224
+Train Epoch: 24 [2400/3065 (78%)]	Loss: 0.270014
+Train Epoch: 24 [2800/3065 (91%)]	Loss: 0.249440
+Train Epoch: 24 [3065/3065 (100%)]	Loss: 0.130737
+Epoch 24/26 ολοκληρώθηκε -> Μέσο Train Loss: 0.2936
+Train Epoch: 25 [400/3065 (13%)]	Loss: 0.272642
+Train Epoch: 25 [800/3065 (26%)]	Loss: 0.161599
+Train Epoch: 25 [1200/3065 (39%)]	Loss: 0.230954
+Train Epoch: 25 [1600/3065 (52%)]	Loss: 0.420717
+Train Epoch: 25 [2000/3065 (65%)]	Loss: 0.283970
+Train Epoch: 25 [2400/3065 (78%)]	Loss: 0.262985
+Train Epoch: 25 [2800/3065 (91%)]	Loss: 0.505663
+Train Epoch: 25 [3065/3065 (100%)]	Loss: 0.203848
+Epoch 25/26 ολοκληρώθηκε -> Μέσο Train Loss: 0.2866
+Train Epoch: 26 [400/3065 (13%)]	Loss: 0.312392
+Train Epoch: 26 [800/3065 (26%)]	Loss: 0.249041
+Train Epoch: 26 [1200/3065 (39%)]	Loss: 0.313315
+Train Epoch: 26 [1600/3065 (52%)]	Loss: 0.260655
+Train Epoch: 26 [2000/3065 (65%)]	Loss: 0.320464
+Train Epoch: 26 [2400/3065 (78%)]	Loss: 0.417094
+Train Epoch: 26 [2800/3065 (91%)]	Loss: 0.283477
+Train Epoch: 26 [3065/3065 (100%)]	Loss: 0.135402
+Epoch 26/26 ολοκληρώθηκε -> Μέσο Train Loss: 0.2831
+
+================================================================================
+Η τελική εκπαίδευση στο 80% ολοκληρώθηκε επιτυχώς!
+Το τελικό μοντέλο αποθηκεύτηκε στο: /home/mkolliniatis/UNet-PyTorch/models/R2AttU_Net_final_dev80.pt
+Για την εφάπαξ αξιολόγηση στο ανεξάρτητο 20% Test Set, τρέξε με: --mode test
+================================================================================
+
